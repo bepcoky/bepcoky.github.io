@@ -35,3 +35,11 @@ Mở thẳng `index.html` bằng trình duyệt là xem được, không cần c
 
 ## Viết bài kiểm chứng mới
 Nguồn từng bài ở `kiem-chung/_nguon/<slug>.md` (phần đầu `tieu_de`, `mo_ta`, `ngay`, `thu_tu`, `khuyen_nghi`). Chạy `pip install markdown && python3 tools/kiem_chung.py` để dựng `kiem-chung/<slug>.html`, cập nhật danh sách trên trang chủ (giữa dấu `KIEM-CHUNG:BAT-DAU/KET-THUC`) và `sitemap.xml`. Quy trình đầy đủ: skill `viet-bai-kiem-chung-bepcoky`.
+
+## Kiến thức bếp (từ 26/11/2026)
+- Bài viết: `kien-thuc/_nguon/<tên-bài>.md` (đầu tệp có khối `---` ghi tiêu đề, chuyên mục, ảnh, tóm tắt, link). Ảnh để trong `img/kien-thuc/`.
+- Dựng trang: `pip install markdown` rồi `python3 _cong-cu/dung_kien_thuc.py` → sinh `kien-thuc/*.html`, `kien-thuc.js`, thêm dòng `sitemap.xml`.
+- Chuyên mục: sửa danh sách `MUC` trong `_cong-cu/dung_kien_thuc.py` (đã có sẵn Rượu – bia, Nước mắm, Gia vị ở trạng thái “sắp có”).
+- **Link Shopee:** chỉ sửa `lien-ket.js` (để `url:''` là nút tự ẩn). Không cần dựng lại trang.
+- Lời chào trang chủ: thêm câu trong `loi-chao.js`. Lịch âm – tuần trăng: `lich.js`.
+- Bộ đếm: làm theo `_dem/HUONG-DAN.md`, rồi điền địa chỉ vào `cau-hinh.js`.
