@@ -2,7 +2,6 @@
 <!-- Bếp Cô Kỹ – sơ đồ trang cho Google. Thêm trang mới: chép một khối <url>, đổi đường link và ngày. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bepcoky.com/</loc><lastmod>2026-11-25</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://bepcoky.com/soi/</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://bepcoky.com/kiem-chung/huong-dan-mua-va-bao-quan.html</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://bepcoky.com/kiem-chung/glutathion-12000mg.html</loc><lastmod>2026-11-25</lastmod></url>
   <url><loc>https://bepcoky.com/kiem-chung/combo-glutathion-vitamin-e-c.html</loc><lastmod>2026-11-25</lastmod></url>

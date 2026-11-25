@@ -28,7 +28,10 @@ Trang của Trần Thị Kỹ (Cô Kỹ), nội trợ ở Hải Phòng: món nh�
 Mở thẳng `index.html` bằng trình duyệt là xem được, không cần cài gì.
 
 ## Ứng dụng Soi cùng Cô Kỹ (`soi/`)
-Ứng dụng cài được lên điện thoại (PWA) tại https://bepcoky.com/soi/: chụp ảnh hoặc dán chữ quảng cáo, nhãn sản phẩm, bài "món này chữa bệnh" → đọc chữ ngay trên máy (Tesseract.js trong `soi/ocr/`, tiếng Việt + Anh) → soi theo bộ quy tắc.
+Ứng dụng cài được lên điện thoại (PWA) tại https://soi.bepcoky.com/ (mã nguồn: kho riêng `bepcoky/soi`; `bepcoky.com/soi/` chỉ còn trang chuyển hướng): chụp ảnh hoặc dán chữ quảng cáo, nhãn sản phẩm, bài "món này chữa bệnh" → đọc chữ ngay trên máy (Tesseract.js, tiếng Việt + Anh) → soi theo bộ quy tắc.
 - Sửa, thêm dấu hiệu: `soi/rules.js` (mẫu viết cho chữ **không dấu, chữ thường**). Bộ máy: `soi/engine.js`. Giao diện: `soi/index.html`, `soi/app.js`.
 - Sửa xong **tăng số `SHELL` trong `soi/sw.js`** (vd `soi-shell-v2`) để điện thoại nhận bản mới.
 - Ảnh của người dùng không tải lên đâu, không lưu trên trang.
+
+## Viết bài kiểm chứng mới
+Nguồn từng bài ở `kiem-chung/_nguon/<slug>.md` (phần đầu `tieu_de`, `mo_ta`, `ngay`, `thu_tu`, `khuyen_nghi`). Chạy `pip install markdown && python3 tools/kiem_chung.py` để dựng `kiem-chung/<slug>.html`, cập nhật danh sách trên trang chủ (giữa dấu `KIEM-CHUNG:BAT-DAU/KET-THUC`) và `sitemap.xml`. Quy trình đầy đủ: skill `viet-bai-kiem-chung-bepcoky`.
