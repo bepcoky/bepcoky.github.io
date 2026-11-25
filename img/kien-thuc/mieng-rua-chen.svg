@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Be Vietnam Pro, Arial, sans-serif">
+<rect width="800" height="460" fill="#fff8ec"/>
+<text x="400" y="44" text-anchor="middle" font-size="26" font-weight="700" fill="#c62a1e">Khô càng nhanh, vi khuẩn càng khó ở</text>
+<g font-size="19" fill="#2a1a14">
+<text x="40" y="104">🥇 Bàn chải có cán</text><rect x="330" y="84" width="420" height="28" rx="14" fill="#2f7a3e"/>
+<text x="40" y="160">🥈 Miếng silicone</text><rect x="330" y="140" width="360" height="28" rx="14" fill="#4f9a55"/>
+<text x="40" y="216">🥉 Mút vàng xanh</text><rect x="330" y="196" width="240" height="28" rx="14" fill="#f2b705"/>
+<text x="40" y="272">Xơ mướp</text><rect x="330" y="252" width="210" height="28" rx="14" fill="#e0a032"/>
+<text x="40" y="328">Mút gỗ (cellulose)</text><rect x="330" y="308" width="120" height="28" rx="14" fill="#c62a1e"/>
+</g>
+<text x="400" y="392" text-anchor="middle" font-size="18" fill="#6d5a50">Vẫn dùng mút: vắt kiệt · để chỗ thoáng · 2 miếng luân phiên · thay mỗi tuần</text>
+<text x="400" y="428" text-anchor="middle" font-size="16" fill="#6d5a50">Hình tóm tắt theo các nghiên cứu nêu trong bài – độ dài thanh chỉ để so sánh, không phải số đo</text>
+</svg>

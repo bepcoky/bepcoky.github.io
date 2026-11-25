@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bếp Cô Kỹ</title>
-<meta name="description" content="Bếp Cô Kỹ – căn bếp nhỏ ở Hải Phòng của Trần Thị Kỹ: thịt chưng mắm tép, pate, hành phi, tinh dầu phở và chuyện nhà, chuyện bếp, chuyện nội ngoại.">
+<meta name="description" content="Bếp Cô Kỹ – căn bếp nhỏ ở Hải Phòng của Trần Thị Kỹ: thịt chưng mắm tép, pate, hành phi, tinh dầu phở và chuyện nhà, chuyện bếp, chuyện nội ngoại – và kiến thức bếp kể theo giọng bếp nhà.">
 <link rel="canonical" href="https://bepcoky.com/">
 <meta name="theme-color" content="#c62a1e">
 <link rel="manifest" href="manifest.webmanifest">
@@ -314,6 +314,28 @@ footer a{color:#ffd0c4}
 footer small{color:#bba99c}
 .draft{font-size:13px;color:var(--mute);margin-top:10px}
 .shop .draft,.garden .draft{color:rgba(255,255,255,.75)}
+/* lịch hôm nay + bộ đếm */
+.today{max-width:1240px;margin:16px auto 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.t-item{background:var(--card);border-radius:16px;padding:10px 14px;box-shadow:inset 0 0 0 1px var(--line);display:flex;flex-direction:column;gap:1px;line-height:1.3}
+.t-item.moon{flex-direction:row;align-items:center;gap:10px}
+.t-item.moon svg{flex:none;width:40px;height:40px}
+.t-item.moon>div{display:flex;flex-direction:column;gap:1px}
+.t-k{font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute)}
+.t-item b{font:700 19px/1.2 Oswald,"Be Vietnam Pro",sans-serif}
+.t-item small{font-size:13px;color:var(--mute)}
+.t-item b small{font:500 13px "Be Vietnam Pro",sans-serif}
+@media(max-width:1000px){.today{grid-template-columns:repeat(2,minmax(0,1fr))}.t-item.stats{grid-column:1/-1}}
+.greet2{margin:8px 0 0;max-width:52ch;font-family:"Dancing Script",cursive;font-size:23px;line-height:1.3;color:var(--red)}
+.again{border:0;background:none;color:var(--mute);font:500 14px "Be Vietnam Pro",sans-serif;cursor:pointer;text-decoration:underline;padding:6px 0;min-height:32px}
+/* kiến thức bếp */
+.know .kcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin:20px 0 22px}
+.kc{background:var(--card);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;box-shadow:inset 0 0 0 1px var(--line)}
+.kc img{aspect-ratio:16/10;object-fit:cover;width:100%;background:var(--paper)}
+.kc .b{padding:12px 16px 16px}
+.kc .tg{font-size:13px;color:var(--red);font-weight:700}
+.kc h3{font-size:19px;margin:4px 0 6px}
+.kc p{margin:0;font-size:14.5px;color:var(--mute);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.filters button.soon{opacity:.55;cursor:default}
 </style>
 </head>
 <body>
@@ -321,7 +343,7 @@ footer small{color:#bba99c}
   <nav class="nav" aria-label="Chính">
     <a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="3" width="8" height="30" rx="4" fill="#2f7a3e"/><path d="M8 22a14 14 0 0 0 28 0z" fill="#f08a24"/><path d="M22 4 L30 30" stroke="#2a1a14" stroke-width="2.4" stroke-linecap="round"/><path d="M27 4 L33 28" stroke="#2a1a14" stroke-width="2.4" stroke-linecap="round"/></svg><span>Bếp Cô Kỹ<small>Trần Thị Kỹ · Hải Phòng</small></span></a>
     <div class="menu">
-      <a href="#ve-em">Về em</a><a href="#gian-hang">Gian hàng</a><a href="#nhat-ky">Nhật ký</a><a href="#cung-co-ky">Cùng Cô Kỹ</a><a href="#noi-ngoai">Nội ngoại</a><a href="#vuon">Nhà &amp; vườn</a><a href="#song-khoe">Sống khỏe</a><a href="#di-day-di-do">Đi đây đó</a><a href="#moi-tra-sua">Trà sữa</a>
+      <a href="#ve-em">Về em</a><a href="#gian-hang">Gian hàng</a><a href="#nhat-ky">Nhật ký</a><a href="#kien-thuc">Kiến thức</a><a href="#cung-co-ky">Cùng Cô Kỹ</a><a href="#noi-ngoai">Nội ngoại</a><a href="#vuon">Nhà &amp; vườn</a><a href="#song-khoe">Sống khỏe</a><a href="#di-day-di-do">Đi đây đó</a><a href="#moi-tra-sua">Trà sữa</a>
     </div>
     <a class="qbtn" href="#huong-dan" aria-label="Hướng dẫn sử dụng trang" title="Hướng dẫn">?</a>
     <a class="btn" href="#dat-hang">Đặt món</a>
@@ -333,14 +355,24 @@ footer small{color:#bba99c}
     <div>
       <h1>Bếp Cô Kỹ</h1>
       <p class="greet" id="greet">Chào các bác, các mom! Mời vào bếp nhà em chơi ạ.</p>
+      <p class="greet2" id="greet2"></p>
+      <button class="again" type="button" id="again">Em chào câu khác nhé</button>
     </div>
     <div class="cta"><a class="btn" href="#dat-hang">Đặt Cô Kỹ làm</a><a class="btn ghost" href="#nhat-ky">Đọc chuyện bếp</a></div>
+  </div>
+  <div class="today" id="today" aria-label="Hôm nay">
+    <div class="t-item"><span class="t-k">Dương lịch</span><b id="tDuong">–</b><small id="tThu"></small></div>
+    <div class="t-item"><span class="t-k">Âm lịch</span><b id="tAm">–</b><small id="tCanChi"></small></div>
+    <div class="t-item moon"><svg id="tMoonIc" viewBox="-13 -13 26 26" width="38" height="38" aria-hidden="true"></svg><div><span class="t-k">Tuần trăng</span><b id="tTrang">–</b><small id="tTrangKe"></small></div></div>
+    <div class="t-item"><span class="t-k">Sắp tới</span><b id="tSap">–</b><small id="tSap2"></small></div>
+    <div class="t-item stats" id="stats" aria-label="Lượt ghé bếp"><span class="t-k">Lượt ghé bếp</span><b><span id="sToday">–</span> <small>hôm nay</small></b><small id="sMore">Cộng dồn <span id="sTotal">–</span> · Đang xem <span id="sOnline">–</span></small></div>
   </div>
   <div class="scene">
     <svg id="kitchen" viewBox="0 0 1000 560" role="img" aria-labelledby="ktitle">
       <title id="ktitle">Căn bếp của Cô Kỹ – bấm vào từng đồ vật để ghé góc đó</title>
       <defs>
         <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop id="sky1" offset="0" stop-color="#9fd8ff"/><stop id="sky2" offset="1" stop-color="#e8f6ff"/></linearGradient>
+        <clipPath id="winclip"><rect x="68" y="60" width="226" height="186"/></clipPath>
         <pattern id="tiles" width="40" height="30" patternUnits="userSpaceOnUse"><rect width="40" height="30" fill="var(--tile)"/><path d="M0 .5H40M.5 0V30" stroke="var(--line)" stroke-width="2"/></pattern>
         <linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#8b949b"/><stop offset=".35" stop-color="#eef2f4"/><stop offset=".7" stop-color="#a9b2b8"/><stop offset="1" stop-color="#6e777e"/></linearGradient>
         <linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#7a3a12"/><stop offset=".4" stop-color="#b8662a"/><stop offset="1" stop-color="#6a3010"/></linearGradient>
@@ -355,8 +387,11 @@ footer small{color:#bba99c}
       <g>
         <rect x="56" y="48" width="250" height="210" rx="10" fill="var(--wood2)"/>
         <rect x="68" y="60" width="226" height="186" fill="url(#sky)"/>
-        <circle id="sun" cx="240" cy="110" r="24" fill="#ffd34d"/>
+        <g clip-path="url(#winclip)">
         <g id="stars" opacity="0"><circle cx="100" cy="90" r="2" fill="#fff"/><circle cx="150" cy="120" r="1.6" fill="#fff"/><circle cx="200" cy="80" r="2.2" fill="#fff"/><circle cx="120" cy="160" r="1.4" fill="#fff"/><circle cx="270" cy="170" r="1.8" fill="#fff"/></g>
+        <circle id="sun" cx="240" cy="110" r="22" fill="#ffd34d"/>
+        <g id="moonG" opacity="0"><circle id="moonDark" r="15" fill="#2b3566" opacity=".55"/><path id="moonLit" fill="#f6f0cf"/></g>
+        </g>
         <path d="M68 200 Q120 170 170 196 T294 186 V246 H68z" fill="#7fbf6a" opacity=".9"/>
         <path d="M181 60 V246 M68 153 H294" stroke="var(--wood2)" stroke-width="8"/>
         <path d="M56 48 h60 q-20 90 -10 210 h-50z" fill="#f2b705" opacity=".85"/>
@@ -480,8 +515,10 @@ footer small{color:#bba99c}
     </div>
     <div>
       <h2>Em là Kỹ – “con sen” của ông chủ, “thợ làm” của Bếp Cô Kỹ</h2>
-      <p class="lead">Con gái út của Bố Mẹ, vợ của ông chủ, mẹ của một bạn trai đang lớn. Ngày của em bắt đầu và kết thúc ở dưới bếp: ninh, nấu, chưng, phi… rồi lên <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Facebook</a> kể chuyện cho các bác, các mom cười tí cho vận động cơ mồm.</p>
+      <p class="lead">Con gái út của Bố Mẹ, vợ của ông chủ, mẹ của ba bạn nhỏ – có cả “cậu cả” lẫn “Công Chúa nhỏ”. Ngày của em bắt đầu và kết thúc ở dưới bếp: ninh, nấu, chưng, phi… rồi lên <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Facebook</a> kể chuyện cho các bác, các mom cười tí cho vận động cơ mồm.</p>
       <p>Từ sáng đến đêm cứ cho em được ở trong nhà, dưới bếp, “múa may quay cuồng với mấy món đồ hàng” là em thỏa trí tang bồng với niềm đam mê nhỏ bé của em rồi. Món em làm, nhà em ăn trước – ngon, sạch, không chất bảo quản thì em mới dám mời mọi người.</p>
+      <p class="hand">“Nhà em ăn như nào em làm cho mọi người y như thế luôn.”</p>
+      <p>Với em, lấy được tiền của các bác không đơn giản đâu: cứ phải cầu kì, cứ phải cẩn thận, cứ phải là ngon nhất mới làm – thì đêm em ngủ mới ngon giấc được. Khách cần gấp thì em buông bát đũa đi giao luôn, bất kể ở đâu.</p>
       <p class="hand">“Sống thật vui, thật tử tế – như Bố Mẹ đã sống và dạy chúng con.”</p>
       <ul class="facts"><li>Hải Phòng</li><li>Vợ · Mẹ · Con gái út · Nàng dâu</li><li>Mê nấu, mê trồng cây</li><li>Thích đi đây đó</li><li>Bán món nhà làm qua Zalo</li></ul>
     </div>
@@ -491,7 +528,7 @@ footer small{color:#bba99c}
     <ol>
       <li><b>Con gái út của Bố</b><span>Bố nghiêm khắc, kỷ luật, nề nếp – nên giờ cái bếp nhà em lúc nào cũng phải sạch sẽ, gọn gàng.</span></li>
       <li><b>10 năm trước</b><span>Em làm xôi khúc. Nấu cho nhà ăn trước, ngon thì mới mời người khác.</span></li>
-      <li><b>Bếp Cô Kỹ</b><span>Thịt chưng mắm tép thành bét seo lơ, rồi có thêm pate, hành phi, tinh dầu phở.</span></li>
+      <li><b>Bếp Cô Kỹ</b><span>Thịt chưng mắm tép thành bét seo lơ, rồi có thêm tôm luộc bóc nõn, xôi vò, chả nem theo mùa, pate, hành phi, tinh dầu phở.</span></li>
       <li><b>Bây giờ</b><span>Trang này: nơi em kể chuyện bếp, bán món nhà làm và làm cùng chị em đủ thứ việc hay.</span></li>
     </ol>
   </div>
@@ -560,6 +597,16 @@ footer small{color:#bba99c}
     <div class="filters years" id="years" role="group" aria-label="Lọc theo năm"></div>
     <div class="posts" id="posts"></div>
     <div style="text-align:center;margin-top:22px"><button class="btn ghost" type="button" id="more">Xem thêm bài</button></div>
+  </div>
+</section>
+
+<section class="band know" id="kien-thuc">
+  <div class="wrap">
+    <h2>Kiến thức bếp</h2>
+    <p class="lead">Những điều em đọc, em hỏi, em thử – rồi kể lại bằng giọng bếp nhà. Dụng cụ, an toàn thực phẩm, nguyên liệu; sắp tới em tìm hiểu thêm rượu, bia, nước mắm, gia vị các bác nhé.</p>
+    <div class="filters" id="ktMuc" role="group" aria-label="Lọc chuyên mục kiến thức"></div>
+    <div class="kcards" id="ktList"></div>
+    <a class="btn" href="kien-thuc/">Xem tất cả bài kiến thức</a>
   </div>
 </section>
 
@@ -771,6 +818,8 @@ footer small{color:#bba99c}
   <div class="wrap">
     <h2>Những điều em tin</h2>
     <div class="quotes">
+      <div class="q"><p>Nhà em ăn như nào em làm cho mọi người y như thế luôn.</p><small>– khẩu hiệu làm hàng</small></div>
+      <div class="q"><p>Một trái tim biết ơn là một trái tim hạnh phúc.</p><small>– 26/06/2026</small></div>
       <div class="q"><p>Ăn với cơm thôi cũng phải đẹp.</p><small>– chuyện đĩa trứng rán lá</small></div>
       <div class="q"><p>Cuộc đời bao khúc bể dâu, tặng nhau chữ Tín bắc cầu Phúc duyên.</p><small>– cách em làm hàng</small></div>
       <div class="q"><p>Mua về tự nấu thì cả nhà đều được thưởng thức.</p><small>– lý do em mê vào bếp</small></div>
@@ -859,7 +908,7 @@ footer small{color:#bba99c}
     <div><strong style="font:700 24px Oswald">Bếp Cô Kỹ</strong><p>Món nhà làm từ căn bếp nhỏ ở Hải Phòng. Uy tín – Chất lượng – 100% không chất bảo quản.</p></div>
     <div><strong>Đặt món</strong><p>Zalo: <a href="https://zalo.me/0342668311" target="_blank" rel="noopener">0342.668.311</a><br>Facebook: <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Trần Thị Kỹ</a></p></div>
     <div><strong>Nhận thực đơn mỗi tuần</strong><p>Kết bạn Zalo Bếp Cô Kỹ, nhắn “thực đơn” – em gửi món mới mỗi cuối tuần.</p></div>
-    <div><small><b>Quyền riêng tư:</b> trang không dùng cookie, không có bộ đếm theo dõi, không lưu thông tin bạn nhập; phiếu đặt món chỉ tạo tin nhắn trên máy bạn.<br><a href="#huong-dan">Hướng dẫn</a> · <a href="#cai-dat">Cài lên điện thoại</a> · <a href="#mien-tru">Miễn trừ trách nhiệm</a><br>© <span id="yr">2026</span> Trần Thị Kỹ · bepcoky.com<br><a href="#moi-tra-sua">Mời Cô Kỹ ly trà sữa</a><br>Chị em xem trang của ông chủ tại <a href="https://nguyenducdungvn.github.io" target="_blank" rel="noopener">nguyenducdungvn.github.io</a></small></div>
+    <div><small><b>Quyền riêng tư:</b> trang không dùng cookie quảng cáo, không lưu thông tin bạn nhập; phiếu đặt món chỉ tạo tin nhắn trên máy bạn. Bộ đếm lượt ghé chỉ dùng một mã ngẫu nhiên do trình duyệt tạo, không lưu IP, tên hay email.<br><a href="#kien-thuc">Kiến thức bếp</a> · <a href="#huong-dan">Hướng dẫn</a> · <a href="#cai-dat">Cài lên điện thoại</a> · <a href="#mien-tru">Miễn trừ trách nhiệm</a><br>© <span id="yr">2026</span> Trần Thị Kỹ · bepcoky.com<br><a href="#moi-tra-sua">Mời Cô Kỹ ly trà sữa</a><br>Chị em xem trang của ông chủ tại <a href="https://nguyenducdungvn.github.io" target="_blank" rel="noopener">nguyenducdungvn.github.io</a></small></div>
   </div>
 </footer>
 
@@ -871,22 +920,59 @@ footer small{color:#bba99c}
 
 <script src="bai-viet.js"></script>
 <script src="gioi-thieu.js"></script>
+<script src="kien-thuc.js"></script>
+<script src="lich.js"></script>
+<script src="loi-chao.js"></script>
+<script src="cau-hinh.js"></script>
 <script>
 {
 const $=s=>document.querySelector(s);
-/* ===== giờ trong ngày ===== */
-const h=new Date().getHours();
-const T=h>=5&&h<10?['#9fd8ff','#fff1c9','#ffd34d','Chào buổi sáng các bác, các mom! Em vừa bắc nồi nước dùng lên bếp rồi đây, vào chơi với em nhé.']
- :h>=10&&h<15?['#6cc3ff','#d9f1ff','#ffe066','Trưa rồi các mom ơi! Ăn với cơm thôi cũng phải đẹp – xem hôm nay bếp em có gì nào.']
- :h>=15&&h<19?['#ff9e6b','#ffe0b8','#ff7a3d','Chiều rồi, chị em đi làm về chưa? Bữa tối để em lo một phần cho nhé ạ.']
- :['#14204a','#3a4a7a','#f4f1d6','Khuya rồi mà em vẫn còn ở dưới bếp các bác ạ. Ninh ninh nấu nấu xong mẻ này em mới đi ngủ.'];
-$('#sky1').setAttribute('stop-color',T[0]);$('#sky2').setAttribute('stop-color',T[1]);$('#sun').setAttribute('fill',T[2]);$('#greet').textContent=T[3];
-if(h<5||h>=19){$('#stars').setAttribute('opacity','1');$('#sun').setAttribute('r','18')}
+/* ===== cửa sổ theo giờ: trời, mặt trời, mặt trăng đúng tuần trăng ===== */
+const SKY=[[0,'#0b1433','#1d2a55'],[4.6,'#0b1433','#1d2a55'],[5.5,'#3b4a8a','#f3a87a'],[6.5,'#8fc8ff','#ffe2b8'],[9,'#6cc3ff','#d9f1ff'],[15.5,'#6cc3ff','#d9f1ff'],[17,'#ffb26b','#ffe0b8'],[18.2,'#c4566b','#f59e6b'],[19,'#2a2f66','#5a4a7a'],[20,'#14204a','#3a4a7a'],[24,'#0b1433','#1d2a55']];
+const hx=c=>[1,3,5].map(i=>parseInt(c.slice(i,i+2),16)),mix=(a,b,t)=>'#'+hx(a).map((v,i)=>Math.round(v+(hx(b)[i]-v)*t).toString(16).padStart(2,'0')).join('');
+const arc=t=>[78+t*206,236-Math.sin(Math.PI*t)*150];
+const litPath=(r,k,waxing)=>{const rx=Math.abs(1-2*k)*r,sw=k<.5?0:1;const d=`M0 ${-r} A${r} ${r} 0 0 1 0 ${r} A${rx.toFixed(2)} ${r} 0 0 ${sw} 0 ${-r}z`;return {d,flip:!waxing}};
+function veCuaSo(){
+ const now=new Date(),h=now.getHours()+now.getMinutes()/60;
+ let i=0;while(SKY[i+1][0]<=h)i++;const a=SKY[i],b=SKY[i+1],t=(h-a[0])/(b[0]-a[0]);
+ $('#sky1').setAttribute('stop-color',mix(a[1],b[1],t));$('#sky2').setAttribute('stop-color',mix(a[2],b[2],t));
+ const sun=$('#sun'),ts=(h-5.6)/12.8;
+ if(ts>=0&&ts<=1){const [x,y]=arc(ts);sun.setAttribute('cx',x);sun.setAttribute('cy',y);sun.setAttribute('fill',mix('#ff8a3d','#ffd34d',Math.min(1,Math.sin(Math.PI*ts)*1.6)));sun.setAttribute('opacity','1')}else sun.setAttribute('opacity','0');
+ const night=h<5.2||h>=19.2,dusk=(h>=18.4&&h<19.2)||(h>=5.2&&h<6);
+ $('#stars').setAttribute('opacity',night?'1':dusk?'.4':'0');
+ const M=window.LICH.trang(now),rise=(6+M.age*24/29.53)%24,tm=((h-rise+24)%24)/12.4,mg=$('#moonG');
+ if(tm<=1&&M.illum>.03){const [x,y]=arc(tm),L=litPath(15,M.illum,M.tang);$('#moonLit').setAttribute('d',L.d);$('#moonLit').setAttribute('transform',L.flip?'scale(-1 1)':'');
+  mg.setAttribute('transform',`translate(${x} ${y-6})`);mg.setAttribute('opacity',ts>=0&&ts<=1?'.55':'1')}else mg.setAttribute('opacity','0');
+ return M;
+}
+/* ===== lịch hôm nay ===== */
+const THU=['Chủ Nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
+const dd=d=>`${d.getDate()}/${d.getMonth()+1}`;
+function veLich(){
+ const now=new Date(),N=window.LICH.ngay(now),L=N.L,M=window.LICH.trang(now);
+ $('#tDuong').textContent=`${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;$('#tThu').textContent=THU[now.getDay()];
+ $('#tAm').textContent=(L.d===15?'Rằm':L.d<=10?'Mùng '+L.d:'Ngày '+L.d)+' tháng '+(L.m===1?'Giêng':L.m===12?'Chạp':L.m)+(L.leap?' nhuận':'');
+ $('#tCanChi').textContent=`Ngày ${N.ngayCC} · năm ${N.namCC}`;
+ $('#tTrang').textContent=M.ten;$('#tTrangKe').textContent=`${Math.round(M.illum*100)}% sáng · tròn ${dd(M.tronKe)} · non ${dd(M.nonKe)}`;
+ const ic=litPath(11,M.illum,M.tang);$('#tMoonIc').innerHTML=`<circle r="11" fill="#2b3566" opacity=".35"/><path d="${ic.d}" fill="#f2c94c" ${ic.flip?'transform="scale(-1 1)"':''}/><circle r="11" fill="none" stroke="var(--line)"/>`;
+ const ram=window.LICH.timAm(now,15,L.d<=15?L.m:(L.m%12)+1),m1=window.LICH.timAm(now,1,L.d===1?L.m:(L.m%12)+1),tet=window.LICH.timAm(now,1,1);
+ const gan=[ram&&ram.con>0?['Rằm',ram]:null,m1&&m1.con>0?['Mùng 1',m1]:null].filter(Boolean).sort((a,b)=>a[1].con-b[1].con)[0];
+ $('#tSap').textContent=gan?`${gan[0]} còn ${gan[1].con} ngày`:'Hôm nay là ngày đẹp';
+ $('#tSap2').textContent=tet?(tet.con===0?'Hôm nay Mùng Một Tết!':`Tết Nguyên đán còn ${tet.con} ngày (${dd(tet.ngay)})`):'';
+ return L;
+}
+veCuaSo();const AL=veLich();setInterval(()=>{veCuaSo();veLich()},60000);
+/* ===== lời chào mới mỗi lần vào ===== */
+const chao=()=>{const c=window.chonLoiChao(new Date(),AL);$('#greet').textContent=c.chao;$('#greet2').textContent=c.them};
+chao();$('#again').addEventListener('click',chao);
 document.querySelectorAll('.hot').forEach(g=>{const go=()=>document.querySelector(g.dataset.go).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});g.addEventListener('click',go);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
 
 /* ===== sản phẩm + tin nhắn Zalo ===== */
 const P=[
  {id:'tc',n:'Thịt chưng mắm tép',u:'hũ 500g',d:'Bét seo lơ. Ăn liền, không chất bảo quản, để tủ lạnh dùng dần.',img:'thit-chung-2.jpg'},
+ {id:'tb',n:'Tôm luộc bóc nõn',u:'kg',d:'Luộc vừa tới, rút chỉ sạch, bóc sẵn – nhà mình chỉ việc chế biến món mình thích.',img:'tom-boc-non.jpg'},
+ {id:'xv',n:'Xôi vò',u:'suất',d:'Tơi rời, khô dẻo, vàng màu chanh – lên mâm cúng đẹp mắt. Nhận theo dịp, đặt sớm giúp em.',img:'xoi-vo.jpg'},
+ {id:'cn',n:'Chả nem rán sơ',u:'chiếc',d:'Rán sơ sẵn, về rán lại lửa hai cho giòn. Làm theo mùa lễ, rằm – hết là hết ạ.',img:'cha-nem.jpg'},
  {id:'pt',n:'Pate nhà làm',u:'hộp',d:'Mỗi mẻ ninh nấu gần chục cân – hết là hết, mẻ sau em báo.',img:'pate-2.jpg'},
  {id:'hp',n:'Hành phi',u:'túi',d:'Thực tế màu đẹp hơn ảnh. Ai ăn báo em gom đơn làm mẻ mới.',img:'hanh-phi-2.jpg'},
  {id:'dp',n:'Tinh dầu phở Bò – Gà',u:'chai',d:'Cho chị em bận rộn tự nấu bát phở cuối tuần mà không phải lùng mua gia vị lắt nhắt.',img:'tinh-dau-pho.jpg'}];
@@ -1070,6 +1156,24 @@ const tickT=()=>{const now=new Date(),t=TET.find(d=>d>now);if(!t){cnt.textConten
  cnt.innerHTML=`<div><b>${d}</b><span>ngày</span></div><div><b>${hh}</b><span>giờ</span></div><div><b>${mm}</b><span>phút</span></div>`};
 tickT();setInterval(tickT,30000);
 $('#yr').textContent=new Date().getFullYear();
+
+/* ===== kiến thức bếp ===== */
+{const KT=window.KIEN_THUC||[],MU=window.KIEN_THUC_MUC||[],box=$('#ktList'),fb=$('#ktMuc');let cur='all';
+ const ten=k=>(MU.find(m=>m.k===k)||{}).t||'';
+ const ve=()=>{const ds=KT.filter(x=>cur==='all'||x.muc===cur).slice(0,6);
+  box.innerHTML=ds.map(x=>`<a class="kc" href="kien-thuc/${x.slug}.html">${x.anh?`<img src="img/kien-thuc/${x.anh}" alt="" loading="lazy">`:''}<div class="b"><span class="tg">${ten(x.muc)}</span><h3>${x.tieu_de}</h3><p>${x.tom_tat}</p></div></a>`).join('')};
+ fb.innerHTML=`<button type="button" data-k="all" aria-pressed="true">Tất cả (${KT.length})</button>`+MU.map(m=>{const n=KT.filter(x=>x.muc===m.k).length;return n?`<button type="button" data-k="${m.k}" aria-pressed="false">${m.ic} ${m.t} (${n})</button>`:`<button type="button" class="soon" disabled title="Em đang tìm hiểu, sắp có bài">${m.ic} ${m.t} · sắp có</button>`}).join('');
+ fb.addEventListener('click',e=>{const b=e.target.closest('button[data-k]');if(!b)return;cur=b.dataset.k;fb.querySelectorAll('button[data-k]').forEach(x=>x.setAttribute('aria-pressed',x===b));ve()});ve();}
+
+/* ===== bộ đếm lượt ghé (bep-dem) ===== */
+{const URL0=((window.BEP_CONFIG||{}).counterUrl||'').replace(/\/$/,'');
+ const fmt=n=>(+n||0).toLocaleString('vi-VN');
+ if(!URL0||!window.fetch){$('#sToday').textContent='…';$('#sMore').textContent='Bộ đếm đang được bật, các bác ghé lại sau nhé';}
+ else{let vid;try{vid=localStorage.getItem('bep_vid');if(!vid){vid=Date.now().toString(36)+Math.random().toString(36).slice(2,12);localStorage.setItem('bep_vid',vid)}}catch(e){vid=Date.now().toString(36)+Math.random().toString(36).slice(2,12)}
+  const call=p=>fetch(URL0+p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({site:'home',vid})}).then(r=>{if(!r.ok)throw 0;return r.json()});
+  const paint=x=>{if(x.today!=null)$('#sToday').textContent=fmt(x.today);if(x.total!=null)$('#sTotal').textContent=fmt(x.total);if(x.online!=null)$('#sOnline').textContent=fmt(Math.max(1,x.online))};
+  call('/hit').then(paint).catch(()=>{$('#stats').hidden=true});
+  setInterval(()=>{if(document.visibilityState==='visible')call('/ping').then(paint).catch(()=>{})},120000);}}
 }
 </script>
 </body>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Be Vietnam Pro, Arial, sans-serif">
+<rect width="800" height="500" fill="#fff8ec"/>
+<text x="400" y="44" text-anchor="middle" font-size="26" font-weight="700" fill="#c62a1e">Vòng đời sán lá gan nhỏ</text>
+<defs><marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6d5a50"/></marker></defs>
+<g stroke="#6d5a50" stroke-width="4" fill="none" marker-end="url(#m)">
+<path d="M330 120 Q230 120 190 190"/><path d="M160 300 Q170 380 280 410"/><path d="M520 410 Q630 380 640 300"/><path d="M610 190 Q570 120 470 120"/></g>
+<g font-size="17" text-anchor="middle" fill="#2a1a14">
+<circle cx="400" cy="120" r="62" fill="#ffe0d8" stroke="#c62a1e" stroke-width="3"/><text x="400" y="112" font-size="34">🧑</text><text x="400" y="148" font-weight="700">Người ăn</text><text x="400" y="168">cá sống, cá tái</text>
+<circle cx="160" cy="245" r="62" fill="#efe6d8" stroke="#8a6a4a" stroke-width="3"/><text x="160" y="238" font-size="34">💩</text><text x="160" y="272" font-weight="700">Trứng sán</text><text x="160" y="292">theo phân xuống ao</text>
+<circle cx="400" cy="410" r="62" fill="#e3f1ff" stroke="#3a7bbf" stroke-width="3"/><text x="400" y="402" font-size="34">🐌</text><text x="400" y="436" font-weight="700">Ốc nước ngọt</text><text x="400" y="456">ăn trứng</text>
+<circle cx="640" cy="245" r="62" fill="#e4f4e0" stroke="#2f7a3e" stroke-width="3"/><text x="640" y="238" font-size="34">🐟</text><text x="640" y="272" font-weight="700">Cá họ chép</text><text x="640" y="292">ấu trùng làm kén</text>
+</g>
+<rect x="250" y="210" width="300" height="86" rx="14" fill="#c62a1e"/>
+<text x="400" y="246" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">Chanh, ớt, rượu: KHÔNG diệt</text>
+<text x="400" y="276" text-anchor="middle" font-size="19" font-weight="700" fill="#ffe066">Chỉ nấu chín mới chắc</text>
+</svg>

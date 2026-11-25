@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Be Vietnam Pro, Arial, sans-serif">
+<rect width="800" height="460" fill="#fff8ec"/>
+<ellipse cx="400" cy="250" rx="230" ry="60" fill="#d9c4a0"/>
+<path d="M170 250 Q180 400 400 410 Q620 400 630 250z" fill="#b9773f"/>
+<ellipse cx="400" cy="250" rx="220" ry="52" fill="#cfe8f7"/>
+<g fill="#fffdf4" stroke="#e3d6bd" stroke-width="1.5">
+<ellipse cx="320" cy="250" rx="11" ry="5" transform="rotate(-20 320 250)"/><ellipse cx="360" cy="262" rx="11" ry="5" transform="rotate(15 360 262)"/><ellipse cx="400" cy="244" rx="11" ry="5"/><ellipse cx="440" cy="258" rx="11" ry="5" transform="rotate(-30 440 258)"/><ellipse cx="480" cy="248" rx="11" ry="5" transform="rotate(25 480 248)"/><ellipse cx="380" cy="270" rx="11" ry="5" transform="rotate(40 380 270)"/><ellipse cx="420" cy="232" rx="11" ry="5" transform="rotate(-10 420 232)"/><ellipse cx="460" cy="272" rx="11" ry="5" transform="rotate(10 460 272)"/><ellipse cx="340" cy="236" rx="11" ry="5" transform="rotate(30 340 236)"/></g>
+<text x="400" y="70" text-anchor="middle" font-size="30" font-weight="700" fill="#c62a1e">Vo nhẹ 1–2 lần là đủ</text>
+<text x="400" y="110" text-anchor="middle" font-size="20" fill="#6d5a50">Gạo không phải áo – đừng bóp, đừng chà, đừng “giặt”</text>
+<text x="400" y="160" text-anchor="middle" font-size="40">💧 🍚 💧</text>
+</svg>
