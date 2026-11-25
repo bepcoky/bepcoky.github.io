@@ -285,6 +285,7 @@ dialog .when{margin:0 0 6px}
 p.vd{display:block;border-radius:12px;padding:10px 12px;font-weight:500}
 .flag{margin:6px 0;font-size:15px;padding-left:12px;border-left:3px solid #f2b705}
 .flag b{display:block}
+.appcard{display:flex;flex-direction:column;gap:10px;align-items:flex-start}.appcard img{width:64px;height:64px;border-radius:14px}.appcard p{margin:0}
 .cks{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:12px}.ck{display:flex;flex-direction:column;gap:6px;padding:14px 16px;border-radius:14px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink);text-decoration:none}.ck b{font-family:Oswald,sans-serif;font-size:18px;line-height:1.2;color:var(--red)}.ck span{font-size:14.5px;color:var(--mute)}.ck:hover{background:var(--paper)}
 .vfs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:12px}
 .vf{background:var(--paper);border-radius:18px;padding:16px}.vf h3{font-size:19px;margin:6px 0}.vf p{margin:6px 0;font-size:15px}
@@ -621,11 +622,11 @@ footer small{color:#bba99c}
       <h3>Kiểm chứng thông tin cùng Cô Kỹ</h3>
       <p>Trên mạng đầy quảng cáo “trắng bật tông sau 7 ngày”, “giảm 5 ký không cần ăn kiêng”, mẹo bếp “thần thánh”… Em không tin ngay, cũng không chê ngay: em cùng chị em xem nó <b>có khả thi không, có cơ sở khoa học không</b>, rồi mới quyết định mua hay làm theo.</p>
       <div class="pgrid">
-        <div class="mini">
-          <strong>Dán nội dung quảng cáo vào đây, em soi giúp</strong>
-          <textarea id="adText" rows="6" aria-label="Nội dung quảng cáo cần kiểm tra" placeholder="VD: Kem trắng da thảo dược, trắng bật tông chỉ sau 7 ngày, an toàn 100%, bác sĩ khuyên dùng…"></textarea>
-          <button class="btn" type="button" id="adCheck">Soi quảng cáo</button>
-          <div id="adOut" aria-live="polite"></div>
+        <div class="mini appcard">
+          <img src="soi/icons/icon-192.png" alt="" width="64" height="64">
+          <strong>Ứng dụng Soi cùng Cô Kỹ</strong>
+          <p>Chụp ảnh quảng cáo, nhãn sản phẩm hay bài “món này chữa bệnh kia” – ứng dụng đọc chữ, tính lại con số trên hộp, so với mức an toàn và chỉ ra chỗ cần cẩn thận. Chạy ngay trên điện thoại, <b>ảnh không gửi đi đâu</b>, cài về máy dùng được cả khi không có mạng.</p>
+          <a class="btn" href="soi/">📷 Mở và tải ứng dụng</a>
         </div>
         <div>
           <strong>Ba bước em hay làm</strong>
@@ -642,7 +643,7 @@ footer small{color:#bba99c}
       <h3 style="margin-top:26px">Hồ sơ kiểm chứng</h3>
       <div class="filters" id="vfFilter" role="group" aria-label="Lọc hồ sơ"></div>
       <div class="vfs" id="vfs"></div>
-      <p class="disc">Em tổng hợp từ khuyến cáo y tế, an toàn thực phẩm phổ biến để chị em tham khảo, không thay cho tư vấn của bác sĩ. Thấy tin nào cần soi, gửi em ở phiếu dưới, câu hay em làm hồ sơ cho cả nhà cùng đọc.</p>
+      <p class="disc">Em tổng hợp từ khuyến cáo y tế, an toàn thực phẩm phổ biến để chị em tham khảo, không thay cho tư vấn của bác sĩ. Muốn tự soi thì dùng <a href="soi/">ứng dụng Soi cùng Cô Kỹ</a>; thấy tin nào cần em soi kỹ, gửi em ở phiếu dưới, câu hay em làm hồ sơ cho cả nhà cùng đọc.</p>
       <form class="mini" data-kind="Tin cần kiểm chứng" style="margin-top:12px">
         <label>Tin / quảng cáo bạn muốn em soi (dán chữ hoặc link)<textarea name="Nội dung" rows="3"></textarea></label>
         <button class="btn" type="submit">Tạo tin nhắn gửi Zalo</button>
@@ -1000,7 +1001,7 @@ const FLAGS=[[/100\s?%|tuyệt đối|cam kết hiệu quả/i,'Hứa hẹn tuy�
  [/chỉ hôm nay|số lượng có hạn|giảm giá sốc|nhanh tay|sắp hết|duy nhất hôm nay/i,'Giục mua gấp','Giục là để mình không kịp suy nghĩ, tra cứu.'],
  [/xách tay|nội địa (nhật|hàn|trung|mỹ)|không cần đơn/i,'Nguồn gốc khó kiểm tra','Hàng xách tay thường không có số công bố, khó truy nguồn khi có chuyện.'],
  [/chữa (bệnh|khỏi|trị)|điều trị|trị (bệnh|tiểu đường|ung thư|xương khớp|gan)/i,'Nói như thuốc chữa bệnh','Chỉ thuốc đã được cấp phép mới được nói công dụng điều trị.']];
-$('#adCheck').addEventListener('click',()=>{const t=$('#adText').value.trim();const out=$('#adOut');if(!t){out.innerHTML='<p class="note">Dán nội dung quảng cáo vào ô trên trước đã các mom ơi.</p>';return}
+$('#adCheck')&&$('#adCheck').addEventListener('click',()=>{const t=$('#adText').value.trim();const out=$('#adOut');if(!t){out.innerHTML='<p class="note">Dán nội dung quảng cáo vào ô trên trước đã các mom ơi.</p>';return}
  const hit=FLAGS.filter(f=>f[0].test(t));const lvl=hit.length>=3?['bad','Nhiều dấu hiệu thổi phồng – đừng vội mua, đừng vội làm theo.']:hit.length?['warn','Có dấu hiệu cần thận trọng – tra thêm rồi hãy quyết.']:['ok','Chưa thấy cờ đỏ rõ ràng – vẫn nên tra số công bố và hỏi người có chuyên môn.'];
  out.innerHTML=`<p class="vd ${lvl[0]}"><b>${hit.length} cờ đỏ.</b> ${lvl[1]}</p>`+hit.map(f=>`<p class="flag"><b>${f[1]}</b> ${f[2]}</p>`).join('')});
 const VL={hai:['Có hại','bad'],sai:['Chưa đúng','warn'],phong:['Phóng đại','warn'],chua:['Chưa có cơ sở','warn'],co:['Có cơ sở','ok']};
