@@ -33,7 +33,7 @@ function allowedOrigin(origin) {
   try {
     const h = new URL(origin).hostname;
     return h === 'bepcoky.com' || h.endsWith('.bepcoky.com') ||
-           h === 'tranthiky.github.io' ||
+           h === 'bepcoky.github.io' || h === 'tranthiky.github.io' ||
            h === 'localhost' || h === '127.0.0.1';
   } catch (e) { return false; }
 }
@@ -197,7 +197,7 @@ export default {
       }
 
       if (url.pathname === '/') {
-        return new Response('Bộ đếm HLV Sức Khỏe đang chạy. Thử /stats?site=home', {
+        return new Response('Bộ đếm Bếp Cô Kỹ đang chạy. Thử /stats?site=home', {
           headers: { 'Content-Type': 'text/plain; charset=utf-8', ...cors(origin) }
         });
       }
