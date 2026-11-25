@@ -42,4 +42,9 @@ Nguồn từng bài ở `kiem-chung/_nguon/<slug>.md` (phần đầu `tieu_de`, 
 - Chuyên mục: sửa danh sách `MUC` trong `_cong-cu/dung_kien_thuc.py` (đã có sẵn Rượu – bia, Nước mắm, Gia vị ở trạng thái “sắp có”).
 - **Link Shopee:** chỉ sửa `lien-ket.js` (để `url:''` là nút tự ẩn). Không cần dựng lại trang.
 - Lời chào trang chủ: thêm câu trong `loi-chao.js`. Lịch âm – tuần trăng: `lich.js`.
-- Bộ đếm: làm theo `_dem/HUONG-DAN.md`, rồi điền địa chỉ vào `cau-hinh.js`.
+- Bộ đếm: Worker `bep-dem` (https://bep-dem.nddzungx.workers.dev, D1 `bep-dem`) đã chạy từ 26/11/2026; địa chỉ ở `cau-hinh.js`. Hướng dẫn dựng lại: `_dem/HUONG-DAN.md`.
+
+## Bài hát về em, nhánh đồ vật, lịch đầu trang (26/11/2026)
+- Bài hát: thêm/sửa trong `bai-hat.js` (mã video YouTube + tên + nhóm). Video chỉ tải khi người xem bấm.
+- Bấm đồ vật trong căn bếp → các nhánh tỏa ra: sửa danh sách `NHANH` trong `menu-do-vat.js` (nhánh đầu là “Vào góc…”, nhánh `#bai-hat:<mã>` mở và phát bài hát).
+- Lịch dương/âm, tuần trăng, lượt ghé: dòng chữ bên phải tiêu đề (`#today` trong `index.html`).
