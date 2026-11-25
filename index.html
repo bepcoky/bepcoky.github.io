@@ -3,68 +3,1067 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bếp Cô Kỹ – Người vợ, người mẹ đảm đang, sống khoẻ và đẹp từ chính căn bếp nhà mình</title>
-<meta name="description" content="Bếp Cô Kỹ: công thức nấu ăn gia đình, mẹo bếp, du lịch ăn gì, sống khoẻ và đẹp tự nhiên từ căn bếp nhà mình.">
+<title>Bếp Cô Kỹ</title>
+<meta name="description" content="Bếp Cô Kỹ – căn bếp nhỏ ở Hải Phòng của Trần Thị Kỹ: thịt chưng mắm tép, pate, hành phi, tinh dầu phở và chuyện nhà, chuyện bếp, chuyện nội ngoại.">
+<link rel="canonical" href="https://bepcoky.com/">
+<meta name="theme-color" content="#c62a1e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bếp Cô Kỹ">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:url" content="https://bepcoky.com/">
+<meta property="og:title" content="Bếp Cô Kỹ – Ăn với cơm thôi cũng phải đẹp">
+<meta property="og:description" content="Thịt chưng mắm tép không chất bảo quản, pate, hành phi, tinh dầu phở. Đặt qua Zalo 0342.668.311.">
+<meta property="og:image" content="https://bepcoky.com/img/og/trang-chu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Oswald:wght@500;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+/* VOICE  : thủ thỉ, hài hước, ấm – giọng "em" kể chuyện bếp cho các mom nghe
+   IDEA   : chính căn bếp nhà Cô Kỹ – mỗi đồ vật là một cánh cửa (giống "căn phòng" trên trang anh Dũng)
+   PICTURE: căn bếp vẽ tay, cửa sổ đổi trời theo giờ, nồi phở bốc khói; hũ thịt chưng 3D xoay được
+   COLOUR : đỏ ớt nhãn hũ + vàng nghệ huy hiệu + xanh lá trầu; nền trắng ấm, đêm là nâu nước tương
+   TYPE   : Oswald (giống chữ trên nhãn) + Be Vietnam Pro; Dancing Script cho thơ & chữ ký
+   LAYOUT : bếp tràn màn đầu → về em → gian hàng → nhật ký → nội ngoại → vườn → sống khỏe → đi → Tết */
+:root{color-scheme:light dark;
+--bg:light-dark(#fffdf8,#17110e);--ink:light-dark(#2a1a14,#f4eadf);--mute:light-dark(#6d5a50,#bba99c);
+--paper:light-dark(#fff3e1,#22180f);--card:light-dark(#ffffff,#2a1f18);--line:light-dark(#efdcc4,#3d2e24);
+--red:light-dark(#c62a1e,#ff6b52);--redbg:light-dark(#c62a1e,#8f1d14);--leaf:light-dark(#2f7a3e,#7cc67e);--leafbg:light-dark(#2f6e3b,#1d3a22);
+--gold:#f2b705;--wall:light-dark(#fbf0df,#2b1f19);--tile:light-dark(#ffffff,#3a2a22);--wood:light-dark(#b9773f,#6e4424);--wood2:light-dark(#9a5f2f,#563319)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:var(--red)}
+h1,h2,h3{font-family:Oswald,"Be Vietnam Pro",sans-serif;font-weight:700;line-height:1.08;text-wrap:balance;margin:0 0 .4em}
+h2{font-size:clamp(32px,4.4vw,48px)}h3{font-size:22px}
+.band{padding:clamp(36px,5vw,72px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.lead{font-size:18px;color:var(--mute);max-width:62ch}
+.hand{font-family:"Dancing Script",cursive;font-size:26px;line-height:1.35}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;border:0;background:var(--red);color:#fff;font:700 16px "Be Vietnam Pro",system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.btn:focus-visible,button:focus-visible,a:focus-visible,.hot:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:8px max(5vw,16px)}
+.logo{white-space:nowrap;flex:none;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 22px/1 Oswald,sans-serif}
+.logo small{display:block;font:500 12px "Be Vietnam Pro",system-ui,sans-serif;color:var(--mute)}
+.menu{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.menu a{flex:none;padding:10px 9px;border-radius:10px;color:var(--ink);text-decoration:none;font-size:14.5px}
+.menu a:hover{background:var(--paper)}
+@media(max-width:1180px){.menu{display:none}.nav .qbtn{margin-left:auto}}
+.qbtn{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;text-decoration:none;font:700 20px "Be Vietnam Pro",system-ui,sans-serif;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+/* hero */
+.hero{background:var(--wall);overflow:hidden;padding:clamp(24px,3vw,40px) max(5vw,16px) 0}
+.hero-top{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:end}
+.hero h1{font-size:clamp(46px,7vw,84px);color:var(--red);margin:0}
+.hero .greet{font-size:19px;margin:6px 0 0;max-width:46ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.scene{max-width:1240px;margin:18px auto 0;position:relative}
+.scene svg{width:100%;height:auto;display:block;max-height:64vh;overflow:visible}
+.hot{cursor:pointer}
+.hot .tag{opacity:0;transition:opacity .2s}
+.hot:hover .tag,.hot:focus .tag{opacity:1}
+.hot:hover .lift,.hot:focus .lift{transform:translateY(-4px)}
+.lift{transition:transform .25s;transform-box:fill-box}
+.ring{fill:none;stroke:var(--gold);stroke-width:3;opacity:.0}
+.hot:hover .ring,.hot:focus .ring{opacity:1}
+.steam path{fill:none;stroke:light-dark(#ffffff,#d9cfc6);stroke-width:7;stroke-linecap:round;opacity:.0;animation:steam 3.2s ease-in infinite}
+.steam path:nth-child(2){animation-delay:1s}.steam path:nth-child(3){animation-delay:2s}
+@keyframes steam{0%{opacity:0;transform:translateY(10px)}30%{opacity:.85}100%{opacity:0;transform:translateY(-46px)}}
+@media(prefers-reduced-motion:reduce){.steam path{animation:none;opacity:.6}html{scroll-behavior:auto}}
+.chips{display:none;gap:8px;overflow-x:auto;padding:12px 0 16px;scroll-snap-type:x mandatory}
+.chips a{flex:none;scroll-snap-align:start;padding:10px 14px;border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-size:15px;box-shadow:inset 0 0 0 1px var(--line)}
+.hint{text-align:center;color:var(--mute);font-size:14px;padding:10px 0 18px;margin:0}
+@media(max-width:700px){.hero-top{grid-template-columns:1fr}.hero .cta{justify-content:flex-start}.chips{display:flex}.hint{display:none}}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:center}
+.about .photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.about .photos img{border-radius:18px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.about .photos img:first-child{grid-column:span 2;aspect-ratio:16/10}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.facts li{padding:8px 14px;border-radius:999px;background:var(--paper);font-size:15px}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+/* shop */
+.shop{background:var(--redbg);color:#fff}
+.shop .lead{color:#ffe9e2}
+.shop-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.stage{height:420px;perspective:1100px;display:grid;place-items:center;cursor:grab;touch-action:pan-y;user-select:none;position:relative}
+.stage:active{cursor:grabbing}
+.stage::before{content:"";position:absolute;width:min(360px,86%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 45% 40%,#fff6e3,#f6d9a8 70%,#e9b86a)}
+.gloss{position:absolute;left:50%;top:50%;width:220px;height:260px;margin:-118px 0 0 -110px;pointer-events:none;border-radius:6px;background:linear-gradient(90deg,rgba(40,15,0,.45),rgba(0,0,0,0) 28%,rgba(255,255,255,.38) 40%,rgba(255,255,255,0) 52%,rgba(0,0,0,0) 72%,rgba(40,15,0,.5))}
+.jar{position:relative;width:220px;height:260px;transform-style:preserve-3d}
+.jar .f,.jar .l{position:absolute;left:50%;top:0;backface-visibility:hidden}
+.jar .shadow{position:absolute;left:50%;bottom:-40px;width:260px;height:40px;margin-left:-130px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent);transform:rotateX(90deg) translateZ(-20px)}
+.stage-cap{position:absolute;bottom:6px;left:0;right:0;text-align:center;font-size:14px;color:#ffd9cf}
+.badge{display:inline-block;background:var(--gold);color:#3a2300;font:700 14px "Be Vietnam Pro",system-ui,sans-serif;padding:6px 12px;border-radius:999px}
+.prods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px}
+.prod{background:#fff;color:#2a1a14;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.prod img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.prod .b{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.prod h3{font-size:20px;margin:0}
+.prod p{margin:0;font-size:14.5px;color:#6d5a50}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:44px;height:44px;border-radius:12px;border:0;background:#fff0ea;color:#c62a1e;font:700 22px/1 "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer}
+.qty output{min-width:34px;text-align:center;font:700 18px "Be Vietnam Pro",system-ui,sans-serif}
+.unit{font-size:13px;color:#c62a1e;font-weight:700;margin-top:auto}
+.order{margin-top:18px;background:#fff;color:#2a1a14;border-radius:18px;padding:16px}
+.order textarea{width:100%;min-height:118px;border:1px solid #efdcc4;border-radius:12px;padding:10px;font:16px/1.5 "Be Vietnam Pro",system-ui,sans-serif;resize:vertical;background:#fffaf3;color:#2a1a14}
+.order .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+.order .note{font-size:13px;color:#6d5a50}
+@media(max-width:900px){.shop-grid{grid-template-columns:1fr}.stage{height:360px}.prods{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:420px){.prods{grid-template-columns:1fr}}
+
+/* before after */
+.ba{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.cmp{position:relative;aspect-ratio:3/4;max-width:460px;border-radius:22px;overflow:hidden;--p:50%;justify-self:center;width:100%}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp .top{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--p);width:4px;margin-left:-2px;background:#fff;pointer-events:none}
+.cmp .bar::after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.cmp .lab{position:absolute;bottom:12px;padding:6px 12px;border-radius:999px;background:rgba(0,0,0,.6);color:#fff;font-size:14px}
+@media(max-width:800px){.ba{grid-template-columns:1fr}}
+/* diary */
+.diary{background:var(--paper)}
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:22px}
+.post{background:var(--card);border-radius:18px;overflow:hidden;border:0;padding:0;text-align:left;color:var(--ink);font:inherit;cursor:pointer;display:flex;flex-direction:column}
+.post img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.post .b{padding:14px 16px 16px}
+.post h3{font-size:20px;margin:0 0 6px}
+.post p{margin:0;font-size:15px;color:var(--mute);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.post .more{display:inline-block;margin-top:8px;color:var(--red);font-weight:700;font-size:14px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--card);color:var(--ink);font:500 15px "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer;box-shadow:inset 0 0 0 1px var(--line)}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+dialog{border:0;border-radius:22px;padding:0;max-width:min(720px,94vw);width:100%;background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(20,10,5,.6)}
+dialog .gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+dialog .gal img{flex:0 0 100%;scroll-snap-align:start;max-height:56vh;object-fit:contain;background:#000}
+dialog .b{padding:18px 22px 22px}
+dialog .txt{white-space:pre-line}
+dialog .x{position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:24px;cursor:pointer}
+/* family */
+.family{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.letter{background:var(--paper);border-radius:22px;padding:clamp(20px,3vw,36px)}
+.poem{font-family:"Dancing Script",cursive;font-size:25px;line-height:1.5;margin:14px 0 0;color:var(--red)}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+.strip img{border-radius:14px;aspect-ratio:1;object-fit:cover;width:100%}
+@media(max-width:800px){.family{grid-template-columns:1fr}}
+/* garden */
+.garden{background:var(--leafbg);color:#fff}
+.garden .lead{color:#d9f0da}
+.gwrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:start}
+.chat{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.chat p{margin:0;padding:10px 14px;border-radius:16px;max-width:88%;font-size:15.5px}
+.chat .me{background:#fff;color:#2a1a14;align-self:flex-end;border-bottom-right-radius:4px}
+.chat .kid{background:#cfe9d1;color:#14301a;align-self:flex-start;border-bottom-left-radius:4px}
+.chat .n{background:transparent;color:#d9f0da;font-style:italic;align-self:center;text-align:center}
+.gpics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gpics img{border-radius:16px;width:100%;object-fit:cover}
+.gpics img:first-child{grid-column:span 2;aspect-ratio:4/3}
+.gpics img:not(:first-child){aspect-ratio:9/16;object-fit:cover;object-position:top}
+@media(max-width:800px){.gwrap{grid-template-columns:1fr}}
+/* health */
+.health{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(24px,4vw,56px);align-items:start}
+.health img{border-radius:20px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+.hc{background:var(--paper);border-radius:16px;padding:16px}
+.hc h3{font-size:19px}
+.hc p{margin:0;font-size:15px}
+.disc{font-size:13.5px;color:var(--mute);margin-top:14px}
+@media(max-width:800px){.health{grid-template-columns:1fr}.health img{aspect-ratio:16/10}}
+/* travel */
+.travel{background:var(--paper)}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 4px 26px}
+.pol{flex:0 0 min(300px,78vw);scroll-snap-align:start;background:#fff;color:#2a1a14;padding:12px 12px 16px;border-radius:6px;box-shadow:0 8px 24px rgba(60,30,10,.18);transform:rotate(var(--r,0deg));transition:transform .3s}
+.pol:hover{transform:rotate(0) translateY(-6px)}
+.pol img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.pol figcaption{font-family:"Dancing Script",cursive;font-size:22px;line-height:1.3;margin-top:10px}
+.railnav{display:flex;gap:8px;justify-content:flex-end}
+.railnav button{width:46px;height:46px;border-radius:50%;border:0;background:var(--card);color:var(--ink);font-size:20px;cursor:pointer;box-shadow:inset 0 0 0 1px var(--line)}
+/* quotes + tet */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px}
+.q{border-radius:20px;padding:22px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.q p{margin:0;font-size:20px;line-height:1.4;font-weight:500}
+.q small{display:block;margin-top:10px;color:var(--mute)}
+.tet{background:var(--redbg);color:#fff;border-radius:28px;padding:clamp(22px,4vw,44px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;margin-top:28px}
+.count{display:flex;gap:10px}
+.count div{background:rgba(255,255,255,.12);border-radius:16px;padding:12px 14px;text-align:center;min-width:76px}
+.count b{display:block;font:700 clamp(30px,5vw,46px)/1 Oswald;color:var(--gold)}
+.count span{font-size:13px}
+@media(max-width:760px){.tet{grid-template-columns:1fr}}
+
+/* thêm: hành trình, cùng cô kỹ, trà sữa */
+.journey{margin-top:clamp(28px,4vw,48px)}
+.journey ol{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:j}
+.journey li{background:var(--paper);border-radius:18px;padding:16px;position:relative}
+.journey b{display:block;font:700 19px Oswald,sans-serif;color:var(--red);margin-bottom:4px}
+.journey span{font-size:15px}
+@media(max-width:900px){.journey ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.journey ol{grid-template-columns:1fr}}
+.when{display:block;font-size:13px;color:var(--mute);margin:0 0 4px}
+.noimg{aspect-ratio:4/3;display:grid;place-items:center;padding:20px;background:var(--leafbg);color:#fff;font:700 24px/1.2 Oswald,sans-serif;text-align:center}
+.years{margin-top:8px}.years button{min-height:38px;font-size:14px}
+.cung{background:var(--bg)}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:4px 2px 10px;margin-top:18px;scrollbar-width:thin}
+.tabs button{flex:none;min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--paper);color:var(--ink);font:500 15px "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--red);color:#fff}
+.panel{background:var(--card);border-radius:24px;padding:clamp(18px,3vw,32px);box-shadow:inset 0 0 0 1px var(--line);margin-top:8px}
+.panel h3{font-size:26px}
+.pgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(20px,3vw,40px);align-items:start}
+@media(max-width:800px){.pgrid{grid-template-columns:1fr}}
+.ticks{padding-left:1.1em}.ticks li{margin:6px 0}
+.mini{display:flex;flex-direction:column;gap:10px;background:var(--paper);border-radius:18px;padding:18px}
+.mini label{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:500}
+.mini input,.mini select,.mini textarea,.tname input{min-height:46px;border:1px solid var(--line);border-radius:12px;padding:8px 12px;font:16px "Be Vietnam Pro",system-ui,sans-serif;background:var(--card);color:var(--ink)}
+.out{font-size:14px}.out pre{white-space:pre-wrap;background:var(--card);border-radius:10px;padding:10px;margin:6px 0;font:14px/1.5 "Be Vietnam Pro",system-ui,sans-serif}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}.note{font-size:14px;color:var(--mute)}
+.flash{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.fc{position:relative;min-height:100px;border:0;border-radius:16px;background:var(--paper);color:var(--ink);font:700 18px "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer;padding:12px;perspective:600px}
+.fc span{display:block;transition:opacity .25s}
+.fc .bk{position:absolute;inset:0;display:grid;place-items:center;padding:10px;opacity:0;color:#fff;background:var(--leafbg);border-radius:16px;font-weight:500}
+.fc.on .bk{opacity:1}
+.tiles,.gear{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:14px}
+.tiles figure,.gear figure{margin:0;background:var(--paper);border-radius:18px;overflow:hidden}
+.tiles img,.gear img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.tiles figcaption,.gear figcaption{padding:12px 14px;font-size:15px}
+.tiles b,.gear b{display:block;font-size:17px;margin-bottom:2px}
+.check{display:flex;flex-direction:column;gap:10px;background:var(--paper);border-radius:18px;padding:18px}
+.check label{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;cursor:pointer}
+.check input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--leaf)}
+.verdict{margin:4px 0 0;font-weight:700;color:var(--leaf)}
+.deals{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:14px}
+.deal{background:var(--paper);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.deal h3{font-size:20px;margin:0}.deal p{margin:0;font-size:15px}
+.meter{height:12px;border-radius:99px;background:var(--line);overflow:hidden}.meter i{display:block;height:100%;background:var(--leaf);border-radius:99px}
+.deal .btn{align-self:flex-start;margin-top:6px}
+.pick{min-height:180px;border-radius:22px;background:var(--paper);display:grid;place-content:center;text-align:center;padding:20px}
+.pick b{display:block;font:700 clamp(28px,4vw,40px)/1.1 Oswald,sans-serif;color:var(--red)}
+.pick span{display:block;margin-top:8px}
+.pick.pop{animation:pop .4s}@keyframes pop{0%{transform:scale(.92)}60%{transform:scale(1.04)}100%{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.pick.pop{animation:none}}
+.tea{background:var(--paper)}
+.teagrid{display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:clamp(24px,4vw,56px);align-items:center}
+.cup svg{width:100%;max-width:260px;display:block;margin:auto}
+.cup path#teaFill{transition:d .4s}
+.opts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.opts button{min-height:64px;min-width:110px;border-radius:16px;border:0;background:var(--card);color:var(--ink);font:15px/1.3 "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer;box-shadow:inset 0 0 0 2px var(--line)}
+.opts button[aria-checked=true]{box-shadow:inset 0 0 0 3px var(--red)}
+.tname{display:flex;flex-direction:column;gap:4px;max-width:360px;font-size:14px;font-weight:500}
+.bank{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;margin-top:16px;background:var(--card);border-radius:18px;padding:16px;align-items:center}
+.qr{aspect-ratio:1;border-radius:12px;border:2px dashed var(--line);display:grid;place-content:center;text-align:center;font-size:14px;color:var(--mute)}
+.bank code{font-size:15px;background:var(--paper);padding:4px 8px;border-radius:8px;display:inline-block;margin-top:4px}
+@media(max-width:700px){.teagrid{grid-template-columns:1fr}.cup svg{max-width:160px}.bank{grid-template-columns:1fr}.qr{max-width:160px}}
+dialog .when{margin:0 0 6px}
+
+.ofields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
+.ofields label{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:500}
+.ofields input{min-height:46px;border:1px solid #efdcc4;border-radius:12px;padding:8px 12px;font:16px "Be Vietnam Pro",system-ui,sans-serif;background:#fffaf3;color:#2a1a14}
+.ofields .wide{grid-column:span 2}
+@media(max-width:600px){.ofields{grid-template-columns:1fr}.ofields .wide{grid-column:auto}}
+.order a{color:#c62a1e}
+.fc{display:flex;flex-direction:column;background:var(--paper);border-radius:16px;overflow:hidden;min-height:0;padding:0}
+.fc .flip{position:relative;flex:1;min-height:92px;border:0;background:transparent;color:var(--ink);font:700 17px/1.3 "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer;padding:14px 10px}
+.fc .flip .bk{position:absolute;inset:0;display:grid;place-items:center;padding:10px;opacity:0;color:#fff;background:var(--leafbg);font-weight:500;transition:opacity .2s}
+.fc .flip.on .bk{opacity:1}
+.fc .say{min-height:40px;border:0;border-top:1px solid var(--line);background:transparent;color:var(--red);font:700 14px "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer}
+#enTopics{margin-bottom:12px}
+.qa{min-height:40px;padding:0 12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:15px "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer;margin:4px 2px}
+.qa.ok{background:#2f7a3e;color:#fff}.qa.no{background:#c62a1e;color:#fff}
+.steps{padding-left:1.2em}.steps li{margin:8px 0}
+.vd{display:inline-block;font-weight:700;font-size:14px;padding:4px 10px;border-radius:999px;margin:6px 0}
+.vd.bad{background:#c62a1e;color:#fff}.vd.warn{background:#f2b705;color:#3a2300}.vd.ok{background:#2f7a3e;color:#fff}
+p.vd{display:block;border-radius:12px;padding:10px 12px;font-weight:500}
+.flag{margin:6px 0;font-size:15px;padding-left:12px;border-left:3px solid #f2b705}
+.flag b{display:block}
+.vfs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:12px}
+.vf{background:var(--paper);border-radius:18px;padding:16px}.vf h3{font-size:19px;margin:6px 0}.vf p{margin:6px 0;font-size:15px}
+.gear .has{cursor:pointer}.gear .more{display:block;margin-top:6px;color:var(--red);font-weight:700;font-size:14px}
+.aff{background:#fff6d6;color:#3a2300;border-radius:14px;padding:12px 14px;font-size:14.5px;margin:10px 0}
+.aff.small{font-size:13px;margin:0 0 8px;width:100%}
+.reviews{display:flex;flex-direction:column;gap:14px;margin-top:12px}
+.rv{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;background:var(--paper);border-radius:18px;overflow:hidden}
+.rv img{width:100%;height:100%;object-fit:cover;min-height:160px}.rv>div{padding:14px 16px 16px 0}.rv h3{font-size:21px;margin:2px 0 6px}.rv p{margin:0}
+@media(max-width:600px){.rv{grid-template-columns:1fr}.rv img{aspect-ratio:16/9;min-height:0}.rv>div{padding:0 14px 14px}}
+.btn.off{opacity:.6;cursor:default}
+#dlgL:empty{display:none}
+
+.help{background:var(--paper)}
+.hgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,48px)}
+@media(max-width:800px){.hgrid{grid-template-columns:1fr}}
+.help h3{font-size:22px;margin-top:18px}
+.help details{background:var(--card);border-radius:14px;padding:12px 14px;margin:8px 0}
+.help summary{cursor:pointer;font-weight:700;min-height:28px}
+.help details p{margin:8px 0 0}
+.legal{margin-top:28px;background:var(--card);border-radius:20px;padding:clamp(16px,3vw,28px);font-size:15px}
+.legal li{margin:6px 0}
+footer{background:#1d120d;color:#f4eadf;padding:40px max(5vw,16px)}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+footer a{color:#ffd0c4}
+footer small{color:#bba99c}
+.draft{font-size:13px;color:var(--mute);margin-top:10px}
+.shop .draft,.garden .draft{color:rgba(255,255,255,.75)}
+</style>
 </head>
 <body>
-<header><div class="wrap"><a class="logo" href="/">Bếp Cô Kỹ</a><nav aria-label="Menu chính"><a href="/vao-bep/">Vào bếp</a><a href="/di-dau-an-gi/">Đi đâu, ăn gì</a><a href="/khoe-moi-ngay/">Khoẻ mỗi ngày</a><a href="/dep-tu-nhien/">Đẹp tự nhiên</a><a href="/do-co-ky-dung/">Đồ Cô Kỹ dùng</a><a href="/ve-co-ky/">Về Cô Kỹ</a></nav></div></header>
-<main>
-<div class="hero"><div class="wrap">
-  <h1>Bếp Cô Kỹ</h1>
-  <p class="khau">Người vợ, người mẹ đảm đang, sống khoẻ và đẹp từ chính căn bếp nhà mình</p>
-  <p>Cô Kỹ ghi lại công thức, mẹo nấu và những điều học được từ căn bếp, từ những chuyến đi, từ việc chăm sóc bản thân và gia đình. Để giữ cho mình, để lại cho con cháu và chia sẻ với ai cần.</p>
-  <a class="nut" href="/vao-bep/">Vào bếp với Cô Kỹ</a><a class="nut vien" href="/ve-co-ky/">Về Cô Kỹ</a>
-</div></div>
+<header>
+  <nav class="nav" aria-label="Chính">
+    <a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="3" width="8" height="30" rx="4" fill="#2f7a3e"/><path d="M8 22a14 14 0 0 0 28 0z" fill="#f08a24"/><path d="M22 4 L30 30" stroke="#2a1a14" stroke-width="2.4" stroke-linecap="round"/><path d="M27 4 L33 28" stroke="#2a1a14" stroke-width="2.4" stroke-linecap="round"/></svg><span>Bếp Cô Kỹ<small>Trần Thị Kỹ · Hải Phòng</small></span></a>
+    <div class="menu">
+      <a href="#ve-em">Về em</a><a href="#gian-hang">Gian hàng</a><a href="#nhat-ky">Nhật ký</a><a href="#cung-co-ky">Cùng Cô Kỹ</a><a href="#noi-ngoai">Nội ngoại</a><a href="#vuon">Nhà &amp; vườn</a><a href="#song-khoe">Sống khỏe</a><a href="#di-day-di-do">Đi đây đó</a><a href="#moi-tra-sua">Trà sữa</a>
+    </div>
+    <a class="qbtn" href="#huong-dan" aria-label="Hướng dẫn sử dụng trang" title="Hướng dẫn">?</a>
+    <a class="btn" href="#dat-hang">Đặt món</a>
+  </nav>
+</header>
 
-<section><div class="wrap">
-  <h2>Ba điều Cô Kỹ giữ</h2>
-  <div class="luoi">
-    <div class="the tep"><h3>Thử thật</h3><p>Món nào cũng nấu thử, sản phẩm nào cũng dùng rồi mới viết.</p></div>
-    <div class="the la"><h3>Nấu thật</h3><p>Công thức từ chính căn bếp nhà mình, nấu cho cả nhà ăn.</p></div>
-    <div class="the nau"><h3>Chia sẻ thật</h3><p>Kể đúng điều mình trải qua, kể cả khi món chưa thành công.</p></div>
+<section class="hero" id="top">
+  <div class="hero-top">
+    <div>
+      <h1>Bếp Cô Kỹ</h1>
+      <p class="greet" id="greet">Chào các bác, các mom! Mời vào bếp nhà em chơi ạ.</p>
+    </div>
+    <div class="cta"><a class="btn" href="#dat-hang">Đặt Cô Kỹ làm</a><a class="btn ghost" href="#nhat-ky">Đọc chuyện bếp</a></div>
   </div>
-</div></section>
-
-<section class="nen"><div class="wrap">
-  <h2>Món chủ lực</h2>
-  <div class="chu-luc">
-    <h3>Thịt trưng mắm tép</h3>
-    <p>Món tủ làm nên thương hiệu Bếp Cô Kỹ. Công thức và câu chuyện của món đang được viết.</p>
-    <a href="/vao-bep/cong-thuc/thit-trung-mam-tep.html">Đọc về món này</a>
+  <div class="scene">
+    <svg id="kitchen" viewBox="0 0 1000 560" role="img" aria-labelledby="ktitle">
+      <title id="ktitle">Căn bếp của Cô Kỹ – bấm vào từng đồ vật để ghé góc đó</title>
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop id="sky1" offset="0" stop-color="#9fd8ff"/><stop id="sky2" offset="1" stop-color="#e8f6ff"/></linearGradient>
+        <pattern id="tiles" width="40" height="30" patternUnits="userSpaceOnUse"><rect width="40" height="30" fill="var(--tile)"/><path d="M0 .5H40M.5 0V30" stroke="var(--line)" stroke-width="2"/></pattern>
+        <linearGradient id="steel" x1="0" x2="1"><stop offset="0" stop-color="#8b949b"/><stop offset=".35" stop-color="#eef2f4"/><stop offset=".7" stop-color="#a9b2b8"/><stop offset="1" stop-color="#6e777e"/></linearGradient>
+        <linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#7a3a12"/><stop offset=".4" stop-color="#b8662a"/><stop offset="1" stop-color="#6a3010"/></linearGradient>
+        <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient>
+        <g id="jar"><rect x="-22" y="-62" width="44" height="12" rx="3" fill="url(#steel)"/><rect x="-24" y="-50" width="48" height="58" rx="8" fill="url(#glass)"/><rect x="-24" y="-38" width="48" height="34" fill="#fff6e6"/><path d="M-24 -18 Q0 -26 24 -16 V-4 H-24z" fill="#c62a1e"/><rect x="-19" y="-35" width="4" height="12" rx="2" fill="#2f7a3e"/><text x="-11" y="-26" font-family="Oswald" font-weight="700" font-size="8" fill="#c62a1e">THỊT CHƯNG</text><rect x="-20" y="-46" width="5" height="40" rx="2.5" fill="#fff" opacity=".28"/></g>
+        <path id="leaf" d="M0 0 C-10 -6 -14 -20 -6 -26 C-2 -29 0 -25 0 -22 C0 -25 2 -29 6 -26 C14 -20 10 -6 0 0z"/>
+      </defs>
+      <!-- tường + gạch -->
+      <rect x="-1000" width="3000" height="560" fill="var(--wall)"/>
+      <rect x="-1000" y="300" width="3000" height="110" fill="url(#tiles)"/>
+      <!-- cửa sổ -->
+      <g>
+        <rect x="56" y="48" width="250" height="210" rx="10" fill="var(--wood2)"/>
+        <rect x="68" y="60" width="226" height="186" fill="url(#sky)"/>
+        <circle id="sun" cx="240" cy="110" r="24" fill="#ffd34d"/>
+        <g id="stars" opacity="0"><circle cx="100" cy="90" r="2" fill="#fff"/><circle cx="150" cy="120" r="1.6" fill="#fff"/><circle cx="200" cy="80" r="2.2" fill="#fff"/><circle cx="120" cy="160" r="1.4" fill="#fff"/><circle cx="270" cy="170" r="1.8" fill="#fff"/></g>
+        <path d="M68 200 Q120 170 170 196 T294 186 V246 H68z" fill="#7fbf6a" opacity=".9"/>
+        <path d="M181 60 V246 M68 153 H294" stroke="var(--wood2)" stroke-width="8"/>
+        <path d="M56 48 h60 q-20 90 -10 210 h-50z" fill="#f2b705" opacity=".85"/>
+        <path d="M306 48 h-60 q20 90 10 210 h50z" fill="#f2b705" opacity=".85"/>
+        <rect x="44" y="256" width="274" height="14" rx="4" fill="var(--wood)"/>
+      </g>
+      <!-- chậu trầu không: Nhà & vườn -->
+      <g class="hot" data-go="#vuon" tabindex="0" role="link" aria-label="Chậu trầu không – Nhà và vườn">
+        <ellipse class="ring" cx="250" cy="200" rx="66" ry="80"/>
+        <g class="lift">
+          <path d="M226 256 h52 l-8 -42 h-36z" fill="#c8642f"/><rect x="222" y="206" width="60" height="12" rx="4" fill="#a94f22"/>
+          <path d="M252 206 C240 170 268 150 250 120 M252 206 C270 180 290 170 300 140" stroke="#2f6e3b" stroke-width="3" fill="none"/>
+          <use href="#leaf" transform="translate(250 122) rotate(-10) scale(1.2)" fill="#3b9a4b"/>
+          <use href="#leaf" transform="translate(300 142) rotate(30) scale(1.1)" fill="#2f7a3e"/>
+          <use href="#leaf" transform="translate(240 170) rotate(-60)" fill="#46a856"/>
+          <use href="#leaf" transform="translate(274 178) rotate(50)" fill="#3b9a4b"/>
+          <use href="#leaf" transform="translate(258 150) rotate(15) scale(.9)" fill="#2f7a3e"/>
+        </g>
+        <g class="tag"><rect x="190" y="12" width="122" height="32" rx="16" fill="#2a1a14"/><text x="251" y="33" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Nhà &amp; vườn</text></g>
+      </g>
+      <!-- khung ảnh: Nội ngoại -->
+      <g class="hot" data-go="#noi-ngoai" tabindex="0" role="link" aria-label="Khung ảnh gia đình – Nội ngoại">
+        <rect class="ring" x="356" y="40" width="148" height="168" rx="8"/>
+        <g class="lift">
+          <rect x="366" y="50" width="128" height="148" rx="6" fill="var(--wood2)"/>
+          <rect x="378" y="62" width="104" height="124" fill="#f6e7cf"/>
+          <circle cx="430" cy="106" r="22" fill="#c9a27e"/><path d="M392 186 q38 -60 76 0z" fill="#7a8fb0"/>
+          <path d="M430 160 c-6 -8 -18 -2 -12 8 l12 10 l12 -10 c6 -10 -6 -16 -12 -8z" fill="#c62a1e"/>
+        </g>
+        <g class="tag"><rect x="370" y="210" width="120" height="32" rx="16" fill="#2a1a14"/><text x="430" y="231" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Nội ngoại</text></g>
+      </g>
+      <!-- nón lá: Đi đây đó -->
+      <g class="hot" data-go="#di-day-di-do" tabindex="0" role="link" aria-label="Nón lá – Đi đây đó">
+        <circle class="ring" cx="580" cy="120" r="70"/>
+        <g class="lift">
+          <circle cx="580" cy="62" r="5" fill="var(--wood2)"/>
+          <path d="M580 66 L520 170 Q580 186 640 170z" fill="#e9cf8e"/>
+          <path d="M580 66 L548 172 M580 66 L612 172 M580 66 L580 178" stroke="#c9a85e" stroke-width="2"/>
+          <path d="M530 160 q50 40 100 0" stroke="#3fbfae" stroke-width="5" fill="none"/>
+        </g>
+        <g class="tag"><rect x="520" y="194" width="120" height="32" rx="16" fill="#2a1a14"/><text x="580" y="215" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Đi đây đó</text></g>
+      </g>
+      <!-- kệ + hũ: Gian hàng -->
+      <rect x="680" y="190" width="290" height="14" rx="4" fill="var(--wood)"/>
+      <path d="M700 204 l10 30 M950 204 l-10 30" stroke="var(--wood2)" stroke-width="6"/>
+      <g class="hot" data-go="#gian-hang" tabindex="0" role="link" aria-label="Kệ hũ thịt chưng – Gian hàng Bếp Cô Kỹ">
+        <rect class="ring" x="684" y="96" width="282" height="100" rx="12"/>
+        <g class="lift">
+          <use href="#jar" transform="translate(730 182)"/><use href="#jar" transform="translate(790 182)"/><use href="#jar" transform="translate(850 182)"/>
+          <g transform="translate(912 182)"><rect x="-9" y="-78" width="18" height="16" rx="3" fill="#c9c9c9"/><path d="M-9 -62 h18 l8 14 v46 h-34 v-46z" fill="#f2b705" opacity=".92"/><rect x="-14" y="-40" width="28" height="18" fill="#fff"/><text x="0" y="-27" text-anchor="middle" font-size="8" font-family="Oswald" fill="#2a1a14">PHỞ</text></g>
+        </g>
+        <g class="tag"><rect x="745" y="56" width="160" height="32" rx="16" fill="#c62a1e"/><text x="825" y="77" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Gian hàng – đặt món</text></g>
+      </g>
+      <!-- mặt bếp + tủ -->
+      <rect x="-1000" y="408" width="3000" height="20" fill="var(--wood)"/>
+      <rect x="-1000" y="428" width="3000" height="132" fill="var(--wood2)"/>
+      <g fill="var(--wood)" opacity=".55"><rect x="20" y="444" width="220" height="100" rx="8"/><rect x="260" y="444" width="220" height="100" rx="8"/><rect x="520" y="444" width="220" height="100" rx="8"/><rect x="760" y="444" width="220" height="100" rx="8"/></g>
+      <!-- mâm cơm: Về em -->
+      <g class="hot" data-go="#ve-em" tabindex="0" role="link" aria-label="Mâm cơm – Về em">
+        <ellipse class="ring" cx="170" cy="380" rx="140" ry="44"/>
+        <g class="lift">
+          <ellipse cx="170" cy="404" rx="130" ry="16" fill="#b33d2a"/>
+          <path d="M90 398 q30 -50 60 0z" fill="#fff"/><path d="M96 398 q24 -16 48 0" fill="#f5f0e6"/>
+          <path d="M160 398 q30 -40 60 0z" fill="#3b7fd0"/><ellipse cx="190" cy="372" rx="26" ry="6" fill="#e2b04a"/>
+          <path d="M226 398 q26 -34 52 0z" fill="#fff"/><circle cx="244" cy="380" r="5" fill="#2f7a3e"/><circle cx="258" cy="384" r="5" fill="#f08a24"/>
+          <path d="M70 360 L140 394 M74 354 L144 390" stroke="#7a4a20" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <g class="tag"><rect x="110" y="300" width="120" height="32" rx="16" fill="#2a1a14"/><text x="170" y="321" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Về em</text></g>
+      </g>
+      <!-- ly trà sữa: Mời trà sữa -->
+      <g class="hot" data-go="#moi-tra-sua" tabindex="0" role="link" aria-label="Ly trà sữa – Mời Cô Kỹ ly trà sữa">
+        <ellipse class="ring" cx="338" cy="370" rx="34" ry="48"/>
+        <g class="lift"><path d="M346 318 l-8 32" stroke="#c62a1e" stroke-width="5" stroke-linecap="round"/><path d="M318 346 h40 l-5 58 h-30z" fill="#f6e3c8" stroke="#2a1a14" stroke-width="2"/><path d="M320 362 h36 l-3.6 40 h-28.8z" fill="#c9915a"/><circle cx="330" cy="396" r="3.5" fill="#2a1a14"/><circle cx="339" cy="398" r="3.5" fill="#2a1a14"/><circle cx="347" cy="395" r="3.5" fill="#2a1a14"/></g>
+        <g class="tag"><rect x="270" y="270" width="136" height="32" rx="16" fill="#2a1a14"/><text x="338" y="291" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Mời trà sữa</text></g>
+      </g>
+      <!-- sách nấu ăn: Cùng Cô Kỹ -->
+      <g class="hot" data-go="#cung-co-ky" tabindex="0" role="link" aria-label="Chồng sách – Cùng Cô Kỹ học nấu ăn, ngoại ngữ, làm đẹp">
+        <rect class="ring" x="626" y="350" width="88" height="62" rx="8"/>
+        <g class="lift"><rect x="636" y="388" width="70" height="16" rx="2" fill="#2f7a3e"/><rect x="640" y="374" width="64" height="14" rx="2" fill="#f2b705"/><rect x="634" y="360" width="68" height="14" rx="2" fill="#c62a1e"/><path d="M642 367 h40" stroke="#fff" stroke-width="2"/></g>
+        <g class="tag"><rect x="600" y="306" width="140" height="32" rx="16" fill="#2a1a14"/><text x="670" y="327" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Cùng Cô Kỹ</text></g>
+      </g>
+      <!-- bếp + nồi phở: Nhật ký bếp -->
+      <g class="hot" data-go="#nhat-ky" tabindex="0" role="link" aria-label="Nồi nước dùng – Nhật ký bếp">
+        <rect class="ring" x="384" y="250" width="232" height="164" rx="14"/>
+        <rect x="396" y="396" width="208" height="14" rx="4" fill="#2b2b2b"/>
+        <circle cx="500" cy="403" r="40" fill="url(#glow)" opacity=".7"/>
+        <g class="lift">
+          <g class="steam"><path d="M470 300 q-12 -20 0 -40 t0 -40"/><path d="M500 296 q12 -20 0 -40 t0 -40"/><path d="M530 300 q-12 -20 0 -40 t0 -40"/></g>
+          <rect x="430" y="316" width="140" height="80" rx="10" fill="url(#steel)"/>
+          <rect x="420" y="308" width="160" height="14" rx="7" fill="#c9d0d4"/>
+          <rect x="406" y="330" width="26" height="10" rx="5" fill="#555"/><rect x="568" y="330" width="26" height="10" rx="5" fill="#555"/>
+          <ellipse cx="500" cy="309" rx="70" ry="6" fill="#e7a52a"/>
+        </g>
+        <g class="tag"><rect x="440" y="214" width="120" height="32" rx="16" fill="#2a1a14"/><text x="500" y="235" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Nhật ký bếp</text></g>
+      </g>
+      <!-- ấm trà + hộp thuốc: Sống khỏe -->
+      <g class="hot" data-go="#song-khoe" tabindex="0" role="link" aria-label="Ấm trà và hộp thuốc – Sống khỏe">
+        <ellipse class="ring" cx="800" cy="360" rx="110" ry="60"/>
+        <g class="lift">
+          <path d="M740 404 q-6 -60 40 -64 q46 4 40 64z" fill="#2f7a3e"/><ellipse cx="780" cy="340" rx="16" ry="6" fill="#246230"/><circle cx="780" cy="332" r="6" fill="#246230"/>
+          <path d="M818 372 q26 -14 30 -34" stroke="#2f7a3e" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path d="M744 360 q-22 4 -18 26" stroke="#2f7a3e" stroke-width="6" fill="none"/>
+          <rect x="850" y="370" width="60" height="34" rx="6" fill="#fff" stroke="var(--line)" stroke-width="2"/><path d="M880 378 v18 M871 387 h18" stroke="#c62a1e" stroke-width="5"/>
+        </g>
+        <g class="tag"><rect x="740" y="270" width="120" height="32" rx="16" fill="#2a1a14"/><text x="800" y="291" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Sống khỏe</text></g>
+      </g>
+    </svg>
+    <p class="hint">Rê chuột hoặc bấm vào từng đồ vật trong bếp để ghé góc đó · <a href="#huong-dan">Lần đầu ghé thăm?</a></p>
+    <div class="chips" aria-label="Các góc trong bếp">
+      <a href="#gian-hang">Gian hàng</a><a href="#nhat-ky">Nhật ký bếp</a><a href="#cung-co-ky">Cùng Cô Kỹ</a><a href="#ve-em">Về em</a><a href="#noi-ngoai">Nội ngoại</a><a href="#vuon">Nhà &amp; vườn</a><a href="#song-khoe">Sống khỏe</a><a href="#di-day-di-do">Đi đây đó</a><a href="#moi-tra-sua">Mời trà sữa</a><a href="#huong-dan">Hướng dẫn</a>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section><div class="wrap">
-  <h2>Từ căn bếp, đi ra mọi điều</h2>
-  <div class="luoi">
-    <div class="the tep"><h3>Vào bếp</h3><p>Công thức, mẹo nấu, thực đơn tuần.</p><a href="/vao-bep/">Vào bếp</a></div>
-    <div class="the la"><h3>Đi đâu, ăn gì</h3><p>Du lịch, quán ngon, đặc sản mỗi vùng.</p><a href="/di-dau-an-gi/">Xem chuyên mục</a></div>
-    <div class="the la"><h3>Khoẻ mỗi ngày</h3><p>Ăn uống, sinh hoạt, chăm sóc gia đình.</p><a href="/khoe-moi-ngay/">Xem chuyên mục</a></div>
-    <div class="the tep"><h3>Đẹp tự nhiên</h3><p>Chăm da, tóc, sản phẩm đã dùng và kiến thức thu lượm.</p><a href="/dep-tu-nhien/">Xem chuyên mục</a></div>
-    <div class="the nau"><h3>Đồ Cô Kỹ dùng</h3><p>Những món đồ Cô Kỹ dùng thật và thấy ổn.</p><a href="/do-co-ky-dung/">Xem danh sách</a></div>
+<section class="band" id="ve-em">
+  <div class="wrap about">
+    <div class="photos">
+      <img src="img/ve-que-2.jpg" alt="Cô Kỹ đội nón lá ở vườn quê" loading="lazy">
+      <img src="img/ve-que-1.jpg" alt="Cô Kỹ cười tươi dưới tán cây" loading="lazy">
+      <img src="img/vuon-nha.jpg" alt="Cô Kỹ trong góc vườn nhà" loading="lazy">
+    </div>
+    <div>
+      <h2>Em là Kỹ – “con sen” của ông chủ, “thợ làm” của Bếp Cô Kỹ</h2>
+      <p class="lead">Con gái út của Bố Mẹ, vợ của ông chủ, mẹ của một bạn trai đang lớn. Ngày của em bắt đầu và kết thúc ở dưới bếp: ninh, nấu, chưng, phi… rồi lên Facebook kể chuyện cho các bác, các mom cười tí cho vận động cơ mồm.</p>
+      <p>Từ sáng đến đêm cứ cho em được ở trong nhà, dưới bếp, “múa may quay cuồng với mấy món đồ hàng” là em thỏa trí tang bồng với niềm đam mê nhỏ bé của em rồi. Món em làm, nhà em ăn trước – ngon, sạch, không chất bảo quản thì em mới dám mời mọi người.</p>
+      <p class="hand">“Sống thật vui, thật tử tế – như Bố Mẹ đã sống và dạy chúng con.”</p>
+      <ul class="facts"><li>Hải Phòng</li><li>Vợ · Mẹ · Con gái út · Nàng dâu</li><li>Mê nấu, mê trồng cây</li><li>Thích đi đây đó</li><li>Bán món nhà làm qua Zalo</li></ul>
+    </div>
   </div>
-</div></section>
+  <div class="wrap journey">
+    <h3>Cô Kỹ trong 30 giây</h3>
+    <ol>
+      <li><b>Con gái út của Bố</b><span>Bố nghiêm khắc, kỷ luật, nề nếp – nên giờ cái bếp nhà em lúc nào cũng phải sạch sẽ, gọn gàng.</span></li>
+      <li><b>10 năm trước</b><span>Em làm xôi khúc. Nấu cho nhà ăn trước, ngon thì mới mời người khác.</span></li>
+      <li><b>Bếp Cô Kỹ</b><span>Thịt chưng mắm tép thành bét seo lơ, rồi có thêm pate, hành phi, tinh dầu phở.</span></li>
+      <li><b>Bây giờ</b><span>Trang này: nơi em kể chuyện bếp, bán món nhà làm và làm cùng chị em đủ thứ việc hay.</span></li>
+    </ol>
+  </div>
+</section>
 
-<section class="nen"><div class="wrap">
-  <h2>Bài viết mới</h2>
-  <ul class="bai">
-  <li><a href="/vao-bep/cong-thuc/thit-trung-mam-tep.html">Thịt trưng mắm tép</a><span>Công thức · đang viết</span></li>
-</ul>
-  <p><a href="/tat-ca-bai-viet.html">Xem tất cả bài viết từ trước đến nay</a></p>
-</div></section>
+<section class="band shop" id="gian-hang">
+  <div class="wrap">
+    <div class="shop-grid">
+      <div>
+        <div class="stage" id="stage" aria-label="Hũ thịt chưng mắm tép 3D, kéo để xoay">
+          <div class="jar" id="jar3d"></div><div class="gloss"></div>
+          <div class="stage-cap">Kéo để xoay hũ · 500g · 100% không chất bảo quản</div>
+        </div>
+      </div>
+      <div>
+        <span class="badge">Bét seo lơ của Bếp Cô Kỹ</span>
+        <h2 style="margin-top:12px">Thịt chưng mắm tép – mở nắp là ăn</h2>
+        <p class="lead">Hôm nay ăn cơm với mắm cũng được, nhưng ngày kia nhất định phải có miếng thịt lợn! Hũ thịt chưng mắm tép em chưng từng mẻ, đóng hũ 500g, để sẵn trong tủ – bữa nào bận chỉ cần nồi cơm nóng.</p>
+        <p>Các chị em cứ đi làm kiếm xèng, mấy việc vặt này cứ để em lo nhé ạ!</p>
+      </div>
+    </div>
+    <h3 style="margin-top:34px;font-size:26px" id="dat-hang">Đặt Cô Kỹ làm</h3>
+    <p style="max-width:70ch;margin:0 0 4px">Em làm một mình, theo từng mẻ nhỏ cho tươi và kỹ. Chị em chọn món, để lại tên và số điện thoại – em sẽ gọi lại xác nhận ngày làm, giá và cách giao, rồi mới vào bếp.</p>
+    <div class="prods" id="prods"></div>
+    <form class="order" id="orderForm">
+      <strong>Thông tin người đặt</strong>
+      <div class="ofields">
+        <label>Tên của bạn<input name="Tên" autocomplete="name" required></label>
+        <label>Số điện thoại để em gọi lại<input name="Điện thoại" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <label>Khu vực nhận hàng<input name="Khu vực" placeholder="VD: Lê Chân, Hải Phòng"></label>
+        <label>Muốn nhận khoảng ngày<input name="Ngày muốn nhận" type="date"></label>
+        <label class="wide">Ghi chú (mặn nhạt, cay, để biếu…)<input name="Ghi chú"></label>
+      </div>
+      <textarea id="msg" aria-label="Đơn đặt món" readonly></textarea>
+      <div class="row">
+        <button class="btn" id="copy" type="submit">Gửi đơn qua Zalo</button>
+        <span class="note" id="copied">Bấm gửi: đơn được sao chép, bạn mở Zalo 0342.668.311 và dán vào. Em sẽ gọi lại xác nhận.</span>
+      </div>
+    </form>
+    <p class="draft">Bản nháp: giá từng món và số Zalo cần chị Kỹ xác nhận. Khi có thể, nên nối phiếu này với Google Form để đơn tự về một bảng tính.</p>
+  </div>
+</section>
 
-<section><div class="wrap">
-  <h2>Nhận bài mới qua email</h2>
-  <p>Có bài mới, Cô Kỹ sẽ báo cho bạn. <a href="/dang-ky/">Xem cách đăng ký</a>.</p>
-  <h2>Về Cô Kỹ</h2>
-  <p>Cô Kỹ là người vợ, người mẹ thích nấu ăn, thích chăm lo cho gia đình và nhà cửa, thích tập thể dục, thích đi đây đi đó. <a href="/ve-co-ky/">Đọc câu chuyện của Cô Kỹ</a>.</p>
-</div></section>
-</main>
-<footer><div class="wrap">© Bếp Cô Kỹ · <a href="/tat-ca-bai-viet.html">Tất cả bài viết</a> · <a href="/dang-ky/">Đăng ký nhận bài</a> · <a href="https://www.facebook.com/tran.ky.794">Facebook</a> · <a href="https://zalo.me/0342668311">Zalo</a> · <a href="https://github.com/tranthiky">GitHub</a><br>Nội dung là kinh nghiệm cá nhân của Cô Kỹ, không thay thế lời khuyên của bác sĩ.</div></footer>
-<script src="/tuong-tac.js" defer></script>
+<section class="band">
+  <div class="wrap ba">
+    <div class="cmp" id="cmp">
+      <img src="img/thit-chung-10-nam-sau.jpg" alt="10 năm sau: hũ thịt chưng Bếp Cô Kỹ">
+      <img class="top" src="img/xoi-10-nam-truoc.jpg" alt="10 năm trước: nồi xôi">
+      <div class="bar"></div>
+      <span class="lab" style="left:12px">10 năm trước</span><span class="lab" style="right:12px">10 năm sau</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Kéo để so sánh 10 năm trước và 10 năm sau">
+    </div>
+    <div>
+      <h2>10 năm trước em làm xôi, 10 năm sau em làm thịt chưng</h2>
+      <p class="lead">Kéo thanh trượt để xem. Cái tay vẫn là cái tay ấy, cái bếp vẫn là cái bếp ấy – chỉ có món là “lên đời” thôi các bác ạ 😜</p>
+      <p>Mỗi món của Bếp Cô Kỹ đều bắt đầu như vậy: nấu cho chồng con ăn trước, cả nhà khen thì em mới dám làm thêm mẻ to mời mọi người. Mua thực phẩm về tự chế biến thì cả nhà đều được thưởng thức, lại “mix topping” đúng khẩu vị nhà mình.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band diary" id="nhat-ky">
+  <div class="wrap">
+    <h2>Nhật ký bếp</h2>
+    <p class="lead" id="diaryLead">Chuyện thật, ảnh thật, từ Facebook của em. Bấm vào để đọc hết.</p>
+    <div class="filters" id="filters" role="group" aria-label="Lọc theo chủ đề"></div>
+    <div class="filters years" id="years" role="group" aria-label="Lọc theo năm"></div>
+    <div class="posts" id="posts"></div>
+    <div style="text-align:center;margin-top:22px"><button class="btn ghost" type="button" id="more">Xem thêm bài</button></div>
+  </div>
+</section>
+
+<section class="band cung" id="cung-co-ky">
+  <div class="wrap">
+    <h2>Cùng Cô Kỹ</h2>
+    <p class="lead">Không chỉ bán món. Chị em vào đây học nấu, học tiếng Anh, làm đẹp, soi quảng cáo thật giả, rủ nhau mua chung – em làm được gì thì em làm cùng mọi người.</p>
+    <div class="tabs" role="tablist" aria-label="Các góc cùng Cô Kỹ">
+      <button role="tab" id="t-nau-an" aria-controls="cung-nau-an" aria-selected="true">Học nấu ăn</button>
+      <button role="tab" id="t-ngoai-ngu" aria-controls="cung-ngoai-ngu" aria-selected="false">Học tiếng Anh</button>
+      <button role="tab" id="t-lam-dep" aria-controls="cung-lam-dep" aria-selected="false">Làm đẹp</button>
+      <button role="tab" id="t-thong-tin" aria-controls="cung-thong-tin" aria-selected="false">Kiểm chứng thông tin</button>
+      <button role="tab" id="t-mua-chung" aria-controls="cung-mua-chung" aria-selected="false">Mua chung</button>
+      <button role="tab" id="t-do-dung" aria-controls="cung-do-dung" aria-selected="false">Đồ em dùng</button>
+      <button role="tab" id="t-gioi-thieu" aria-controls="cung-gioi-thieu" aria-selected="false">Em giới thiệu</button>
+      <button role="tab" id="t-an-gi" aria-controls="cung-an-gi" aria-selected="false">Hôm nay ăn gì?</button>
+      <button role="tab" id="t-hoi" aria-controls="cung-hoi" aria-selected="false">Hỏi Cô Kỹ</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-nau-an" aria-labelledby="t-nau-an">
+      <div class="pgrid">
+        <div>
+          <h3>Học nấu ăn cùng Cô Kỹ</h3>
+          <p>Em không phải đầu bếp nhà hàng, em là đầu bếp của chồng con. Nên em dạy đúng những món nhà em ăn thật: dễ mua, dễ nấu, ăn với cơm thôi cũng phải đẹp.</p>
+          <ul class="ticks"><li><b>Công thức miễn phí</b> – trong Nhật ký bếp, đọc là làm được.</li><li><b>Lớp nhỏ qua video Zalo</b> – vài chị em một buổi, em nấu, các mom nấu theo, hỏi gì em trả lời ngay.</li><li><b>Cả nhà cùng vào bếp</b> – buổi cuối tuần cho mẹ và con, vừa nấu vừa chơi.</li></ul>
+          <p class="draft">Lịch lớp và học phí: chị Kỹ cập nhật.</p>
+        </div>
+        <form class="mini" data-kind="Đăng ký học nấu ăn">
+          <strong>Đăng ký học thử</strong>
+          <label>Muốn học món gì<select name="Món"><option>Cơm nhà hằng ngày</option><option>Phở cuối tuần với tinh dầu phở</option><option>Món cỗ, món Tết</option><option>Đồ ăn vặt cho con (pizza nồi chiên…)</option><option>Món chưng, món kho để dành</option></select></label>
+          <label>Học kiểu nào<select name="Hình thức"><option>Gọi video Zalo</option><option>Video quay sẵn</option><option>Đến bếp nhà em</option></select></label>
+          <label>Tên của bạn<input name="Tên" autocomplete="name"></label>
+          <button class="btn" type="submit">Tạo tin nhắn gửi Zalo</button>
+          <output class="out"></output>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-ngoai-ngu" aria-labelledby="t-ngoai-ngu" hidden>
+      <h3>Học tiếng Anh cùng Cô Kỹ</h3>
+      <p>Đi chơi nước ngoài mới thấy: biết vài câu tiếng Anh là đỡ khổ hẳn! Em học lại từ đầu, mỗi ngày vài câu, vừa nấu vừa nhẩm. Chị em học cùng em: chọn chủ đề, bấm thẻ để lật nghĩa, bấm “Nghe” để nghe đọc.</p>
+      <div class="filters" id="enTopics" role="group" aria-label="Chủ đề"></div>
+      <div class="flash" id="flash"></div>
+      <div class="row"><button class="btn ghost" type="button" id="enQuiz">Đố vui 1 câu</button><span class="note" id="enOut" aria-live="polite">Bấm “Đố vui” để em đố các mom một câu.</span></div>
+      <p class="draft">Giọng đọc dùng sẵn trong điện thoại/máy tính của bạn. Sắp có: mỗi tuần một chủ đề mới, video em tập nói.</p>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-lam-dep" aria-labelledby="t-lam-dep" hidden>
+      <h3>Làm đẹp cùng Cô Kỹ</h3>
+      <p>Đẹp kiểu chị em nội trợ: ngủ đủ, ăn lành, cười nhiều, ra đường thì gọn gàng tươm tất. Em không bán mỹ phẩm, em chỉ kể những gì em làm cho mình.</p>
+      <div class="tiles">
+        <figure><img src="img/thuong-hai-ngay.jpg" alt="Cô Kỹ mặc đồ đi chơi phố" loading="lazy"><figcaption><b>Mặc gì đi chơi xa</b>Đồ thoải mái, dễ phối, chụp ảnh lên vẫn xinh.</figcaption></figure>
+        <figure><img src="img/di-choi-vom-cay.jpg" alt="Cô Kỹ đi chơi công viên" loading="lazy"><figcaption><b>Đẹp tuổi trung niên</b>Bốc hỏa, mồ hôi đêm – chăm da, chăm tóc thế nào cho nhẹ nhàng.</figcaption></figure>
+        <figure><img src="img/ve-que-1.jpg" alt="Cô Kỹ cười tươi" loading="lazy"><figcaption><b>Đẹp từ trong bếp</b>Ăn uống điều độ, cười nhiều – thứ mỹ phẩm rẻ nhất em biết.</figcaption></figure>
+      </div>
+      <p class="disc">Chuyện cá nhân em chia sẻ, mỗi người cơ địa một khác; có vấn đề về da, các mom đi khám bác sĩ da liễu nhé.</p>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-thong-tin" aria-labelledby="t-thong-tin" hidden>
+      <h3>Kiểm chứng thông tin cùng Cô Kỹ</h3>
+      <p>Trên mạng đầy quảng cáo “trắng bật tông sau 7 ngày”, “giảm 5 ký không cần ăn kiêng”, mẹo bếp “thần thánh”… Em không tin ngay, cũng không chê ngay: em cùng chị em xem nó <b>có khả thi không, có cơ sở khoa học không</b>, rồi mới quyết định mua hay làm theo.</p>
+      <div class="pgrid">
+        <div class="mini">
+          <strong>Dán nội dung quảng cáo vào đây, em soi giúp</strong>
+          <textarea id="adText" rows="6" aria-label="Nội dung quảng cáo cần kiểm tra" placeholder="VD: Kem trắng da thảo dược, trắng bật tông chỉ sau 7 ngày, an toàn 100%, bác sĩ khuyên dùng…"></textarea>
+          <button class="btn" type="button" id="adCheck">Soi quảng cáo</button>
+          <div id="adOut" aria-live="polite"></div>
+        </div>
+        <div>
+          <strong>Ba bước em hay làm</strong>
+          <ol class="steps">
+            <li><b>Đọc chậm, tìm “cờ đỏ”</b> – hứa hẹn tuyệt đối, kết quả quá nhanh, giục mua gấp, “bác sĩ khuyên” mà không có tên tuổi.</li>
+            <li><b>Tra giấy tờ</b> – mỹ phẩm phải có số công bố (tra trên cổng của Cục Quản lý Dược); thực phẩm chức năng tra ở Cục An toàn thực phẩm, và quảng cáo phải ghi “Thực phẩm này không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh”.</li>
+            <li><b>Hỏi người có chuyên môn</b> – bác sĩ, dược sĩ, chuyên gia dinh dưỡng; đọc khuyến cáo của Bộ Y tế, WHO thay vì clip bán hàng.</li>
+          </ol>
+        </div>
+      </div>
+      <h3 style="margin-top:26px">Hồ sơ kiểm chứng</h3>
+      <div class="filters" id="vfFilter" role="group" aria-label="Lọc hồ sơ"></div>
+      <div class="vfs" id="vfs"></div>
+      <p class="disc">Em tổng hợp từ khuyến cáo y tế, an toàn thực phẩm phổ biến để chị em tham khảo, không thay cho tư vấn của bác sĩ. Thấy tin nào cần soi, gửi em ở phiếu dưới, câu hay em làm hồ sơ cho cả nhà cùng đọc.</p>
+      <form class="mini" data-kind="Tin cần kiểm chứng" style="margin-top:12px">
+        <label>Tin / quảng cáo bạn muốn em soi (dán chữ hoặc link)<textarea name="Nội dung" rows="3"></textarea></label>
+        <button class="btn" type="submit">Tạo tin nhắn gửi Zalo</button>
+        <output class="out"></output>
+      </form>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-mua-chung" aria-labelledby="t-mua-chung" hidden>
+      <h3>Mua chung cùng Cô Kỹ</h3>
+      <p>Mua lẻ thì đắt, mua nhiều thì một mình dùng không hết. Em đứng ra gom, chị em góp, đủ số là chốt – giá tốt hơn, hàng em tự xem tận nơi.</p>
+      <div class="deals" id="deals"></div>
+      <p class="draft">Ba kèo trên là ví dụ minh họa, chị Kỹ sẽ mở kèo thật.</p>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-do-dung" aria-labelledby="t-do-dung" hidden>
+      <h3>Đồ Cô Kỹ dùng</h3>
+      <p>Mấy món đồ “chiến” ngày nào cũng qua tay em. Món nào có bài viết, bấm vào để đọc và xem link.</p>
+      <div class="gear" id="gear"></div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-gioi-thieu" aria-labelledby="t-gioi-thieu" hidden>
+      <h3>Đồ Cô Kỹ muốn giới thiệu</h3>
+      <div class="aff"><b>Em nói trước cho rõ:</b> đây là những món em dùng thấy hay nên giới thiệu. Link trong bài là link tiếp thị liên kết Shopee – chị em mua qua link thì em nhận một khoản hoa hồng nhỏ từ Shopee, giá chị em trả không đổi. Em không nhận tiền để khen; thấy không hợp em sẽ nói thẳng. Hàng do người bán trên Shopee giao và bảo hành, chị em xem kỹ đánh giá trước khi mua nhé.</div>
+      <div class="reviews" id="reviews"></div>
+      <p class="draft">Các bài hiện có là bài mẫu – chị Kỹ viết lại theo trải nghiệm thật và gắn link Shopee của mình.</p>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-an-gi" aria-labelledby="t-an-gi" hidden>
+      <div class="pgrid">
+        <div>
+          <h3>Hôm nay ăn gì?</h3>
+          <p>Câu hỏi khó nhất của chị em nội trợ! Bấm nút, để nồi cơm nhà em quyết giúp – toàn món nhà em hay nấu.</p>
+          <button class="btn" type="button" id="spin">Quay món</button>
+        </div>
+        <div class="pick" id="pick" aria-live="polite"><span class="hand">Bấm “Quay món” đi các mom…</span></div>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="cung-hoi" aria-labelledby="t-hoi" hidden>
+      <div class="pgrid">
+        <div>
+          <h3>Hỏi Cô Kỹ</h3>
+          <p>Hỏi món, hỏi cách nấu, hỏi chuyện trồng cây, chuyện nhà – em biết gì trả lời nấy, không biết em hỏi giúp. Câu hay em sẽ đưa lên Nhật ký cho cả nhà cùng đọc (giấu tên người hỏi).</p>
+        </div>
+        <form class="mini" data-kind="Hỏi Cô Kỹ">
+          <label>Câu hỏi của bạn<textarea name="Câu hỏi" rows="4"></textarea></label>
+          <button class="btn" type="submit">Tạo tin nhắn gửi Zalo</button>
+          <output class="out"></output>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="band" id="noi-ngoai">
+  <div class="wrap family">
+    <div>
+      <h2>Hai bên nội ngoại – nơi em lớn lên và nơi em thuộc về</h2>
+      <p class="lead">Bảy năm năm tháng từ ngày Bố đi xa, tháng nào em cũng về một, hai lần. Tháng nào lỡ không về được thì y rằng em lại mơ thấy Bố.</p>
+      <div class="strip">
+        <img src="img/ve-que-3.jpg" alt="Về quê thăm Bố Mẹ" loading="lazy">
+        <img src="img/ve-que-1.jpg" alt="Vườn quê" loading="lazy">
+        <img src="img/ve-que-2.jpg" alt="Cô Kỹ về quê, cầm nón lá giữa vườn" loading="lazy">
+      </div>
+    </div>
+    <div class="letter">
+      <p>Lần này Bố về trong giấc mơ của con, Bố quét dọn sân vườn với dáng vẻ thật khỏe mạnh và nhanh nhẹn. Vẫn dáng người ấy, tác phong ấy, tính cẩn thận sạch sẽ, nghiêm khắc kỷ luật, nề nếp ấy đã tôi luyện con gái út của Bố từ một cô bé nhút nhát, tự ti năm nào trở thành người mạnh mẽ, kiên cường không chịu khuất phục trước mọi bão giông của cuộc đời hôm nay.</p>
+      <p><strong>Bố Mẹ yên tâm nhé! Con sẽ sống thật vui, thật tử tế như những gì Bố Mẹ đã sống và dạy bảo chúng con.</strong></p>
+      <p class="poem">Tháng mười một gió se lòng,<br>Nhớ cha vất vả, tấm lòng bao la.<br>Dù cho cha đã đi xa,<br>Trong con bóng dáng vẫn là núi cao.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band garden" id="vuon">
+  <div class="wrap gwrap">
+    <div>
+      <h2>Nhà &amp; vườn: cây trầu không, lũ chuột và trái tim mềm</h2>
+      <p class="lead">Ông chủ đặt bẫy, dính một em chuột. Con trai quét sân thấy thế liền gọi video cho mẹ…</p>
+      <div class="chat">
+        <p class="kid">Nhưng nó vẫn còn sống mẹ ạ. Nó bị kẹp một bên chân thôi nên vẫn giãy giụa.</p>
+        <p class="me">Ôi thế con tháo kẹp mang ra cuối vườn thả nó ra đi nhé. Tí bố xuống con đừng nói gì với Bố nhé! 🫢</p>
+        <p class="kid">Vâng, nó chạy rồi nhưng chắc đau quá không chạy được nhanh thôi ạ.</p>
+        <p class="n">Nghe khúc này em thấy nhói lòng, cổ họng nghẹn lại, nước mắt lã chã rơi…</p>
+        <p class="me">Mấy hôm sau lũ chuột đào gần bật gốc cây trầu không em quý nhất. Ông chủ bảo mùa đông rồi, mang ít giẻ ra cho nó nằm ấm. Em đi lần mò quần áo cũ thật – rồi mới chững lại hỏi: anh nói thật hay nói đểu đấy? 🤣</p>
+      </div>
+      <p class="draft">Sắp có: lịch chăm cây theo mùa, góc bếp gọn gàng, mẹo dọn nhà của em.</p>
+    </div>
+    <div class="gpics">
+      <img src="img/vuon-nha.jpg" alt="Góc vườn nhà Cô Kỹ" loading="lazy">
+      <img src="img/sap-tet.jpg" alt="Cô Kỹ giữa vườn cây quê" loading="lazy">
+      <img src="img/ve-que-3.jpg" alt="Cô Kỹ trước ngôi nhà quê" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="band" id="song-khoe">
+  <div class="wrap health">
+    <img src="img/song-chung-voi-thuoc.jpg" alt="Vỉ thuốc trên tay trong chuyến đi" loading="lazy">
+    <div>
+      <h2>Sống khỏe kiểu em: nhìn ngoài “ương ương” thế thôi chứ trong xanh lắm</h2>
+      <p class="lead">Bác sĩ bảo: nhìn người năng lượng tươi rói thế này mà sao lắm bệnh thế? Em kể thật những gì em trải qua, để chị em nào giống em thì có bạn đồng hành.</p>
+      <div class="cards">
+        <div class="hc"><h3>Hơn chục năm “sống chung với lũ” viêm xoang trán</h3><p>Sáng bước xuống giường là hắt hơi 5–7 cái một lượt. Em sợ bệnh nên chớm gì là đi khám ngay – và em sẽ ghi lại những gì đã thử.</p></div>
+        <div class="hc"><h3>Mất mùi sau Covid</h3><p>Tháng 6 em bị Covid gần 20 ngày, sau đó mất mùi hẳn. Chị em nào từng bị và đã khám ở đâu, kể em nghe với ạ.</p></div>
+        <div class="hc"><h3>Bốc hỏa, tính khí như Trương Phi</h3><p>Đêm bật điều hòa mà vẫn ướt sũng mồ hôi. Có lẽ nào lần này em già thật? Góc này dành cho chị em tuổi “trung niên rực rỡ”.</p></div>
+      </div>
+      <p class="disc">Đây là chuyện cá nhân em chia sẻ, không thay cho lời khuyên của bác sĩ. Có triệu chứng, các mom đi khám sớm nhé.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band travel" id="di-day-di-do">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap">
+      <div><h2>Đi đây đó – đi để thương nhà hơn</h2><p class="lead" style="margin:0">Có tháng được ông chủ “cắp” đi công tác cùng, có tháng cả nhà rủ nhau đi chơi. Không được ngắm hoa dã quỳ thì ta đi ngắm đồ ăn vậy 😜</p></div>
+      <div class="railnav"><button type="button" id="prev" aria-label="Ảnh trước">‹</button><button type="button" id="next" aria-label="Ảnh sau">›</button></div>
+    </div>
+    <div class="rail" id="rail" tabindex="0" aria-label="Ảnh chuyến đi"></div>
+  </div>
+</section>
+
+<section class="band" id="triet-ly">
+  <div class="wrap">
+    <h2>Những điều em tin</h2>
+    <div class="quotes">
+      <div class="q"><p>Ăn với cơm thôi cũng phải đẹp.</p><small>– chuyện đĩa trứng rán lá</small></div>
+      <div class="q"><p>Cuộc đời bao khúc bể dâu, tặng nhau chữ Tín bắc cầu Phúc duyên.</p><small>– cách em làm hàng</small></div>
+      <div class="q"><p>Mua về tự nấu thì cả nhà đều được thưởng thức.</p><small>– lý do em mê vào bếp</small></div>
+      <div class="q"><p>Chăm bạn ấy thật tốt để bạn ấy lớn khỏe mạnh, còn lấy vợ cho mẹ có con dâu, bế cháu 😂</p><small>– làm mẹ</small></div>
+    </div>
+    <div class="tet">
+      <div>
+        <h2 style="margin:0 0 6px">Còn bao lâu nữa là giao thừa các bác nhỉ?</h2>
+        <p style="margin:0 0 14px;color:#ffe9e2">Ăn để lấy sức giảm cân đón Tết nào các chị em ơi 😂 Hũ thịt chưng làm quà Tết, đặt sớm để em lên lịch chưng nhé.</p>
+        <a class="btn" style="background:var(--gold);color:#3a2300" href="#dat-hang">Đặt quà Tết sớm</a>
+      </div>
+      <div class="count" id="count" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tea" id="moi-tra-sua">
+  <div class="wrap teagrid">
+    <div class="cup" aria-hidden="true">
+      <svg viewBox="0 0 200 260"><path d="M120 10 L104 90" stroke="#c62a1e" stroke-width="10" stroke-linecap="round"/><path d="M40 70 h120 l-14 170 q-2 12 -14 12 h-64 q-12 0 -14 -12z" fill="#f6e3c8" stroke="#2a1a14" stroke-width="4"/><path id="teaFill" d="M46 110 h108 l-11 128 q-1 8 -10 8 h-66 q-9 0 -10 -8z" fill="#c9915a"/><g id="boba" fill="#2a1a14"><circle cx="70" cy="226" r="8"/><circle cx="92" cy="232" r="8"/><circle cx="114" cy="228" r="8"/><circle cx="132" cy="220" r="7"/><circle cx="82" cy="212" r="7"/><circle cx="104" cy="214" r="7"/></g><rect x="34" y="58" width="132" height="16" rx="8" fill="#fff" stroke="#2a1a14" stroke-width="4"/></svg>
+    </div>
+    <div>
+      <h2>Mời Cô Kỹ ly trà sữa</h2>
+      <p class="lead">Đọc chuyện bếp thấy vui, học được món hay, mời em ly trà sữa cho em có sức ninh nồi nước dùng tiếp nhé! Em ghi tên từng người mời vào sổ, mẻ sau em kể.</p>
+      <div class="opts" role="radiogroup" aria-label="Chọn ly">
+        <button type="button" role="radio" aria-checked="false" data-v="25000" data-t="Ly nhỏ, ít đường">Ly nhỏ<br><b>25.000đ</b></button>
+        <button type="button" role="radio" aria-checked="true" data-v="35000" data-t="Ly vừa, full trân châu">Ly vừa<br><b>35.000đ</b></button>
+        <button type="button" role="radio" aria-checked="false" data-v="50000" data-t="Ly to, thêm pudding">Ly to<br><b>50.000đ</b></button>
+      </div>
+      <label class="tname">Tên người mời<input id="teaName" placeholder="VD: Hương Hải Phòng"></label>
+      <div class="bank">
+        <div class="qr">Mã QR chuyển khoản<br><small>chờ chị Kỹ gửi</small></div>
+        <div><p style="margin:0">Ngân hàng: <b>(chờ cập nhật)</b><br>Số tài khoản: <b>(chờ cập nhật)</b><br>Chủ tài khoản: <b>TRAN THI KY</b></p><p style="margin:8px 0 0">Nội dung chuyển khoản:<br><code id="teaMsg"></code></p><button class="btn" type="button" id="teaCopy" style="margin-top:10px">Sao chép nội dung</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band help" id="huong-dan">
+  <div class="wrap">
+    <h2>Lần đầu ghé Bếp Cô Kỹ?</h2>
+    <div class="hgrid">
+      <div>
+        <h3>Trang này là gì</h3>
+        <p>Đây là trang của em, Trần Thị Kỹ, một người nội trợ ở Hải Phòng. Em kể chuyện bếp, chuyện nhà, nhận làm vài món nhà làm theo mẻ nhỏ, và cùng chị em học nấu ăn, học tiếng Anh, soi quảng cáo trên mạng. Mọi bài viết là trải nghiệm thật của em, không phải lời khuyên của chuyên gia.</p>
+        <h3>Dùng trang thế nào</h3>
+        <ul class="ticks">
+          <li><b>Căn bếp đầu trang:</b> bấm vào từng đồ vật (hũ thịt chưng, nồi phở, chậu trầu không…) để đến góc đó. Trên điện thoại, dùng hàng nút tròn ngay dưới căn bếp.</li>
+          <li><b>Đặt Cô Kỹ làm:</b> bấm + ở món muốn đặt, điền tên và số điện thoại, bấm “Gửi đơn qua Zalo”. Đơn được sao chép, bạn mở Zalo và dán vào; em gọi lại xác nhận rồi mới làm. Trang không thu tiền.</li>
+          <li><b>Nhật ký bếp:</b> lọc theo chủ đề hoặc theo năm, bấm vào bài để đọc hết.</li>
+          <li><b>Cùng Cô Kỹ:</b> chọn từng ô (Học tiếng Anh, Kiểm chứng thông tin…). Ở Học tiếng Anh, bấm “Nghe” để máy đọc – cần bật âm lượng.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 id="cai-dat">Cài lên điện thoại</h3>
+        <p>Để mở trang bằng một chạm như ứng dụng:</p>
+        <ol class="steps">
+          <li>Nếu đang mở trong Zalo hoặc Facebook: bấm dấu <b>⋯</b> → <b>Mở bằng trình duyệt</b>.</li>
+          <li><b>Android (Chrome):</b> bấm dấu <b>⋮</b> góc trên → <b>Thêm vào màn hình chính</b> (hoặc <b>Cài đặt ứng dụng</b>).</li>
+          <li><b>iPhone (Safari):</b> bấm nút <b>Chia sẻ</b> (ô vuông có mũi tên lên) → <b>Thêm vào MH chính</b>.</li>
+        </ol>
+        <h3>Câu hỏi thường gặp</h3>
+        <details><summary>Đặt món rồi bao giờ có hàng?</summary><p>Em làm một mình theo mẻ nhỏ. Em sẽ gọi lại báo ngày làm, giá và cách giao. Mùa Tết nên đặt sớm.</p></details>
+        <details><summary>Trang có lưu thông tin của tôi không?</summary><p>Không. Phiếu đặt món chỉ tạo đoạn tin nhắn ngay trên máy bạn; thông tin chỉ đến em khi bạn tự gửi qua Zalo.</p></details>
+        <details><summary>Muốn góp ý, hỏi bài thì liên hệ đâu?</summary><p>Zalo Bếp Cô Kỹ: 0342.668.311, hoặc Facebook Trần Thị Kỹ.</p></details>
+      </div>
+    </div>
+    <div class="legal" id="mien-tru">
+      <h3>Miễn trừ trách nhiệm</h3>
+      <p>Nội dung trên Bếp Cô Kỹ là kinh nghiệm nấu ăn và sinh hoạt gia đình, không thay cho tư vấn của bác sĩ hay chuyên gia dinh dưỡng.</p>
+      <ul>
+        <li><b>Dị ứng:</b> món ăn có thể chứa hoặc lẫn tôm, cua, cá, trứng, sữa, đậu phộng, các loại hạt, đậu nành, lúa mì, vừng (mè). Bạn tự kiểm tra theo tình trạng của mình và người ăn cùng.</li>
+        <li><b>An toàn thực phẩm:</b> nấu chín kỹ thịt, cá, trứng; bảo quản lạnh đúng cách; thức ăn để ngoài lâu thì bỏ. Cẩn thận hơn với trẻ nhỏ, phụ nữ mang thai, người cao tuổi, người suy giảm miễn dịch.</li>
+        <li><b>Người có bệnh</b> (tiểu đường, huyết áp, gout, thận, tim mạch…) hỏi bác sĩ trước khi đổi chế độ ăn.</li>
+        <li><b>Sức khỏe, làm đẹp, kiểm chứng thông tin:</b> em tổng hợp và kể theo trải nghiệm cá nhân, có thể chưa đầy đủ; quyết định quan trọng hãy hỏi người có chuyên môn.</li>
+        <li><b>Liên kết tiếp thị:</b> một số link trong mục “Em giới thiệu” là link tiếp thị Shopee; em có thể nhận hoa hồng, giá bạn trả không đổi.</li>
+        <li><b>Món nhà làm:</b> giá, khối lượng, cách giao và đổi trả em báo khi gọi xác nhận đơn.</li>
+        <li>Ảnh món ăn có thể khác món bạn nấu hoặc nhận.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="font:700 24px Oswald">Bếp Cô Kỹ</strong><p>Món nhà làm từ căn bếp nhỏ ở Hải Phòng. Uy tín – Chất lượng – 100% không chất bảo quản.</p></div>
+    <div><strong>Đặt món</strong><p>Zalo: <a href="https://zalo.me/0342668311" target="_blank" rel="noopener">0342.668.311</a><br>Facebook: Trần Thị Kỹ</p></div>
+    <div><strong>Nhận thực đơn mỗi tuần</strong><p>Kết bạn Zalo Bếp Cô Kỹ, nhắn “thực đơn” – em gửi món mới mỗi cuối tuần.</p></div>
+    <div><small><b>Quyền riêng tư:</b> trang không dùng cookie, không có bộ đếm theo dõi, không lưu thông tin bạn nhập; phiếu đặt món chỉ tạo tin nhắn trên máy bạn.<br><a href="#huong-dan">Hướng dẫn</a> · <a href="#cai-dat">Cài lên điện thoại</a> · <a href="#mien-tru">Miễn trừ trách nhiệm</a><br>© <span id="yr">2026</span> Trần Thị Kỹ · bepcoky.com<br><a href="#moi-tra-sua">Mời Cô Kỹ ly trà sữa</a><br>Chị em xem trang của ông chủ tại <a href="https://nguyenducdungvn.github.io" target="_blank" rel="noopener">nguyenducdungvn.github.io</a></small></div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlgT">
+  <button class="x" type="button" id="dlgX" aria-label="Đóng">×</button>
+  <div class="gal" id="dlgG"></div>
+  <div class="b"><p class="when" id="dlgD"></p><h3 id="dlgT"></h3><div class="txt" id="dlgB"></div><div id="dlgL" class="row"></div></div>
+</dialog>
+
+<script src="bai-viet.js"></script>
+<script src="gioi-thieu.js"></script>
+<script>
+{
+const $=s=>document.querySelector(s);
+/* ===== giờ trong ngày ===== */
+const h=new Date().getHours();
+const T=h>=5&&h<10?['#9fd8ff','#fff1c9','#ffd34d','Chào buổi sáng các bác, các mom! Em vừa bắc nồi nước dùng lên bếp rồi đây, vào chơi với em nhé.']
+ :h>=10&&h<15?['#6cc3ff','#d9f1ff','#ffe066','Trưa rồi các mom ơi! Ăn với cơm thôi cũng phải đẹp – xem hôm nay bếp em có gì nào.']
+ :h>=15&&h<19?['#ff9e6b','#ffe0b8','#ff7a3d','Chiều rồi, chị em đi làm về chưa? Bữa tối để em lo một phần cho nhé ạ.']
+ :['#14204a','#3a4a7a','#f4f1d6','Khuya rồi mà em vẫn còn ở dưới bếp các bác ạ. Ninh ninh nấu nấu xong mẻ này em mới đi ngủ.'];
+$('#sky1').setAttribute('stop-color',T[0]);$('#sky2').setAttribute('stop-color',T[1]);$('#sun').setAttribute('fill',T[2]);$('#greet').textContent=T[3];
+if(h<5||h>=19){$('#stars').setAttribute('opacity','1');$('#sun').setAttribute('r','18')}
+document.querySelectorAll('.hot').forEach(g=>{const go=()=>document.querySelector(g.dataset.go).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});g.addEventListener('click',go);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+
+/* ===== sản phẩm + tin nhắn Zalo ===== */
+const P=[
+ {id:'tc',n:'Thịt chưng mắm tép',u:'hũ 500g',d:'Bét seo lơ. Ăn liền, không chất bảo quản, để tủ lạnh dùng dần.',img:'thit-chung-2.jpg'},
+ {id:'pt',n:'Pate nhà làm',u:'hộp',d:'Mỗi mẻ ninh nấu gần chục cân – hết là hết, mẻ sau em báo.',img:'pate-2.jpg'},
+ {id:'hp',n:'Hành phi',u:'túi',d:'Thực tế màu đẹp hơn ảnh. Ai ăn báo em gom đơn làm mẻ mới.',img:'hanh-phi-2.jpg'},
+ {id:'dp',n:'Tinh dầu phở Bò – Gà',u:'chai',d:'Cho chị em bận rộn tự nấu bát phở cuối tuần mà không phải lùng mua gia vị lắt nhắt.',img:'tinh-dau-pho.jpg'}];
+const q={};P.forEach(p=>q[p.id]=0);
+$('#prods').innerHTML=P.map(p=>`<article class="prod"><img src="img/${p.img}" alt="${p.n}" loading="lazy"><div class="b"><h3>${p.n}</h3><p>${p.d}</p><div class="unit">${p.u} · giá báo qua Zalo</div><div class="qty"><button type="button" data-id="${p.id}" data-d="-1" aria-label="Bớt ${p.n}">−</button><output id="q-${p.id}">0</output><button type="button" data-id="${p.id}" data-d="1" aria-label="Thêm ${p.n}">+</button></div></div></article>`).join('');
+const msg=$('#msg'),of=$('#orderForm');
+const write=()=>{const l=P.filter(p=>q[p.id]>0).map(p=>`- ${p.n}: ${q[p.id]} ${p.u}`);const info=[...new FormData(of)].filter(([,v])=>String(v).trim()).map(([k,v])=>`${k}: ${v}`);
+ msg.value=`Chào Bếp Cô Kỹ, em muốn đặt Cô Kỹ làm:\n${l.length?l.join('\n'):'- (chưa chọn món – bấm + ở món phía trên)'}\n${info.join('\n')}\nNhờ Cô Kỹ gọi lại xác nhận giúp em ạ.`};
+$('#prods').addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b)return;const id=b.dataset.id;q[id]=Math.max(0,q[id]+ +b.dataset.d);$('#q-'+id).textContent=q[id];write()});
+of.addEventListener('input',write);write();
+of.addEventListener('submit',async e=>{e.preventDefault();if(!P.some(p=>q[p.id]>0)){$('#copied').textContent='Bạn chọn ít nhất một món (bấm +) giúp em nhé.';return}
+ write();let ok=false;try{await navigator.clipboard.writeText(msg.value);ok=true}catch(err){msg.select()}
+ $('#copied').innerHTML=(ok?'Đã sao chép đơn! ':'Bạn sao chép đơn ở ô trên giúp em nhé. ')+'<a href="https://zalo.me/0342668311" target="_blank" rel="noopener">Mở Zalo 0342.668.311</a>, dán vào và gửi – em gọi lại xác nhận.'});
+
+/* ===== hũ 3D ===== */
+const jar=$('#jar3d');
+const mkLabel=()=>{const c=document.createElement('canvas');c.width=1400;c.height=520;const x=c.getContext('2d');
+ const g=x.createLinearGradient(0,0,0,520);g.addColorStop(0,'#7a3410');g.addColorStop(1,'#a8541f');x.fillStyle=g;x.fillRect(0,0,1400,520);
+ for(let i=0;i<2200;i++){x.fillStyle=`rgba(${150+Math.random()*80|0},${70+Math.random()*50|0},20,.55)`;x.fillRect(Math.random()*1400,Math.random()*520,3+Math.random()*5,2+Math.random()*4)}
+ x.fillStyle='#fffaf0';x.fillRect(0,60,1400,400);
+ x.fillStyle='#c62a1e';x.beginPath();x.moveTo(0,330);x.bezierCurveTo(300,250,500,420,900,320);x.bezierCurveTo(1100,270,1250,300,1400,330);x.lineTo(1400,460);x.lineTo(0,460);x.fill();
+ x.fillStyle='#2f7a3e';x.beginPath();x.roundRect(170,92,26,120,13);x.fill();
+ x.fillStyle='#f08a24';x.beginPath();x.arc(214,160,48,0,Math.PI);x.fill();
+ x.strokeStyle='#2a1a14';x.lineWidth=7;x.lineCap='round';x.beginPath();x.moveTo(214,88);x.lineTo(246,200);x.moveTo(234,88);x.lineTo(262,196);x.stroke();
+ x.fillStyle='#2a1a14';x.font='700 54px Oswald';x.fillText('BẾP',272,142);x.font='700 40px Oswald';x.fillText('CÔ KỸ',272,192);
+ x.fillStyle='#c62a1e';x.font='700 78px Oswald';x.fillText('THỊT CHƯNG MẮM TÉP',430,172);
+ x.fillStyle='#2f7a3e';x.font='700 34px "Be Vietnam Pro"';x.fillText('100% không chất bảo quản',560,232);
+ x.fillStyle='#c62a1e';x.font='700 30px "Be Vietnam Pro"';x.fillText('Uy tín – Chất lượng',620,276);
+ x.fillStyle='#f2b705';x.beginPath();x.arc(1080,240,62,0,7);x.fill();x.fillStyle='#7a2a10';x.font='700 22px "Be Vietnam Pro"';x.textAlign='center';x.fillText('SẢN PHẨM',1080,234);x.fillText('ĂN LIỀN',1080,262);
+ x.fillStyle='#fff';x.font='600 28px "Be Vietnam Pro"';x.fillText('Zalo 0342.668.311  ·  FB: Trần Thị Kỹ  ·  500g',700,420);
+ x.fillStyle='#d9a066';x.beginPath();x.ellipse(150,380,0,0,0,0,7);x.fill();
+ return c.toDataURL('image/jpeg',.88)};
+const build=()=>{const N=28,R=110,H=260,w=2*Math.PI*R/N+1,src=mkLabel();let s='';
+ for(let i=0;i<N;i++){s+=`<div class="f" style="width:${w}px;height:${H}px;margin-left:${-w/2}px;transform:rotateY(${i*360/N}deg) translateZ(${R}px);background:url(${src}) ${-i*(2*Math.PI*R/N)}px 0/${2*Math.PI*R}px ${H}px;box-shadow:inset 0 0 0 999px rgba(255,255,255,${Math.max(0,Math.cos(i/N*2*Math.PI))*0.0})"></div>`}
+ for(let i=0;i<N;i++){s+=`<div class="l" style="width:${w}px;height:34px;margin-left:${-w/2}px;top:-34px;transform:rotateY(${i*360/N}deg) translateZ(${R+3}px);background:linear-gradient(#f4f6f7,#9aa3a9 55%,#d7dcdf)"></div>`}
+ s+=`<div class="l" style="width:${2*R+6}px;height:${2*R+6}px;margin-left:${-(R+3)}px;top:${-34-(R+3)}px;border-radius:50%;transform:rotateX(90deg);background:radial-gradient(circle at 40% 40%,#ffffff,#b8c0c5 60%,#8d969c)"></div>`;
+ s+=`<div class="shadow"></div>`;jar.innerHTML=s};
+let ry=-205,rx=-8,vel=(window.__noSpin?0:.25),drag=null;
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const tick=()=>{if(!drag&&!reduce)ry+=vel;jar.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg)`;requestAnimationFrame(tick)};
+const st=$('#stage');
+st.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,ry,rx};st.setPointerCapture(e.pointerId)});
+st.addEventListener('pointermove',e=>{if(!drag)return;ry=drag.ry+(e.clientX-drag.x)*.5;rx=Math.max(-30,Math.min(10,drag.rx-(e.clientY-drag.y)*.2))});
+st.addEventListener('pointerup',()=>drag=null);st.addEventListener('pointercancel',()=>drag=null);
+(document.fonts?document.fonts.ready:Promise.resolve()).then(()=>{build();tick()});
+
+/* ===== 10 năm trước / sau ===== */
+const cmp=$('#cmp');cmp.querySelector('input').addEventListener('input',e=>cmp.style.setProperty('--p',e.target.value+'%'));
+
+/* ===== nhật ký (đọc từ bai-viet.js) ===== */
+const MUC={bep:'Chuyện bếp',ban:'Bếp bán',nha:'Chuyện nhà',noingoai:'Nội ngoại',vuon:'Nhà & vườn',khoe:'Sống khỏe',di:'Đi đây đó'};
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const raw=Array.isArray(window.BAI_VIET)?window.BAI_VIET:[];
+const D=raw.map((p,i)=>({c:p.muc||'nha',t:p.tieuDe||'',img:p.anh||[],x:p.noiDung||'',d:/^\d{4}-\d{2}-\d{2}$/.test(p.ngay||'')?p.ngay:'',src:p.nguon||'',i}))
+ .sort((a,b)=>a.d&&b.d?b.d.localeCompare(a.d):a.d?-1:b.d?1:a.i-b.i);
+const fmt=d=>d?d.split('-').reverse().join('/'):'';
+const when=p=>[p.src?'Đăng trên '+p.src:'',fmt(p.d)].filter(Boolean).join(' · ');
+const years=[...new Set(D.filter(p=>p.d).map(p=>p.d.slice(0,4)))].sort().reverse();
+if(years.length)$('#diaryLead').textContent=`${D.length} bài viết, từ năm ${years[years.length-1]} đến nay – chuyện thật, ảnh thật từ Facebook của em. Bấm vào để đọc hết.`;
+const cats=['all',...Object.keys(MUC).filter(k=>D.some(p=>p.c===k))];
+let fc='all',fy='all',shown=8;
+$('#filters').innerHTML=cats.map(k=>`<button type="button" data-f="${k}" aria-pressed="${k==='all'}">${k==='all'?'Tất cả':MUC[k]}</button>`).join('');
+$('#years').innerHTML=years.length?['all',...years].map(y=>`<button type="button" data-y="${y}" aria-pressed="${y==='all'}">${y==='all'?'Mọi năm':y}</button>`).join(''):'';
+const posts=$('#posts');
+const list=()=>D.filter(p=>(fc==='all'||p.c===fc)&&(fy==='all'||p.d.startsWith(fy)));
+const render=()=>{const L=list();posts.innerHTML=L.slice(0,shown).map(p=>`<button class="post" type="button" data-i="${D.indexOf(p)}">${p.img[0]?`<img src="img/${esc(p.img[0])}" alt="" loading="lazy">`:`<div class="noimg">${esc(p.t)}</div>`}<div class="b"><span class="when">${esc(MUC[p.c]||'')}${when(p)?' · '+esc(when(p)):''}</span><h3>${esc(p.t)}</h3><p>${esc(p.x.split('\n')[0])}</p><span class="more">Đọc tiếp</span></div></button>`).join('')||'<p>Chưa có bài trong mục này.</p>';
+ $('#more').hidden=L.length<=shown};
+render();
+$('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;fc=b.dataset.f;shown=8;$('#filters').querySelectorAll('button').forEach(o=>o.setAttribute('aria-pressed',o===b));render()});
+$('#years').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;fy=b.dataset.y;shown=8;$('#years').querySelectorAll('button').forEach(o=>o.setAttribute('aria-pressed',o===b));render()});
+$('#more').addEventListener('click',()=>{shown+=8;render()});
+const dlg=$('#dlg');
+posts.addEventListener('click',e=>{const b=e.target.closest('.post');if(!b)return;const p=D[b.dataset.i];$('#dlgT').textContent=p.t;$('#dlgD').textContent=when(p);$('#dlgB').textContent=p.x;$('#dlgL').innerHTML='';$('#dlgG').innerHTML=p.img.map(s=>`<img src="img/${esc(s)}" alt="${esc(p.t)}">`).join('');try{dlg.showModal()}catch(err){dlg.setAttribute('open','')}});
+$('#dlgX').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+/* ===== Cùng Cô Kỹ: tab ===== */
+const tabs=[...document.querySelectorAll('[role=tab]')];
+const openTab=(id,scroll)=>{tabs.forEach(t=>{const on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on});if(scroll)$('#cung-co-ky').scrollIntoView()};
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>{openTab(t.getAttribute('aria-controls'));try{history.replaceState(null,'','#'+t.getAttribute('aria-controls'))}catch(e){}});
+ t.addEventListener('keydown',e=>{const k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;const n=tabs[(i+k+tabs.length)%tabs.length];n.focus();n.click()})});
+const fromHash=()=>{const h=location.hash.slice(1);if(h.startsWith('cung-')&&document.getElementById(h)&&h!=='cung-co-ky')openTab(h,true)};
+fromHash();addEventListener('hashchange',fromHash);
+
+/* ===== Học tiếng Anh ===== */
+const EN={
+ 'Trong bếp':[['pot','cái nồi'],['frying pan','cái chảo'],['chopsticks','đôi đũa'],['ladle','cái muôi'],['cutting board','cái thớt'],['rice cooker','nồi cơm điện'],['air fryer','nồi chiên không dầu'],['broth','nước dùng'],['fried shallots','hành phi'],['fish sauce','nước mắm'],['to simmer','ninh, hầm nhỏ lửa'],['to steam','hấp']],
+ 'Đi chợ':[['How much is this?','Cái này bao nhiêu tiền?'],['Can you give me a discount?','Bớt cho em chút được không?'],['One kilo, please.','Cho em một cân nhé.'],['Is it fresh?','Có tươi không?'],['That’s too expensive.','Đắt quá.'],['I’ll take it.','Em lấy cái này.'],['Can I pay by card?','Em trả bằng thẻ được không?'],['Can I have a bag?','Cho em xin cái túi.']],
+ 'Đi du lịch':[['Where is the toilet?','Nhà vệ sinh ở đâu ạ?'],['Can you take a photo of us?','Chụp giúp chúng tôi tấm ảnh được không?'],['I have a reservation.','Tôi đã đặt chỗ trước.'],['Could I see the menu?','Cho tôi xem thực đơn.'],['Not spicy, please.','Đừng cho cay nhé.'],['Can I have the bill?','Cho tôi xin hóa đơn.'],['How do I get to the station?','Đi đến nhà ga thế nào ạ?'],['I’m lost.','Tôi bị lạc đường.']],
+ 'Nói với con':[['Time to eat!','Ăn cơm thôi!'],['Wash your hands.','Đi rửa tay đi con.'],['How was school today?','Hôm nay đi học thế nào?'],['Did you finish your homework?','Con làm xong bài tập chưa?'],['Be careful!','Cẩn thận nhé!'],['Go to bed early.','Đi ngủ sớm đi con.'],['I’m proud of you.','Mẹ tự hào về con.'],['I love you.','Mẹ yêu con.']]};
+let topic='Trong bếp';
+const say=t=>{try{const u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}};
+$('#enTopics').innerHTML=Object.keys(EN).map(k=>`<button type="button" data-t="${k}" aria-pressed="${k===topic}">${k}</button>`).join('');
+const drawFlash=()=>{$('#flash').innerHTML=EN[topic].map((w,i)=>`<div class="fc"><button type="button" class="flip" data-i="${i}"><span class="fr">${w[0]}</span><span class="bk">${w[1]}</span></button><button type="button" class="say" data-i="${i}" aria-label="Nghe đọc: ${w[0]}">Nghe</button></div>`).join('')};
+drawFlash();
+$('#enTopics').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;topic=b.dataset.t;$('#enTopics').querySelectorAll('button').forEach(o=>o.setAttribute('aria-pressed',o===b));drawFlash();$('#enOut').textContent='Bấm “Đố vui” để em đố các mom một câu.'});
+$('#flash').addEventListener('click',e=>{const f=e.target.closest('.flip'),s=e.target.closest('.say');if(f)f.classList.toggle('on');if(s)say(EN[topic][s.dataset.i][0])});
+$('#enQuiz').addEventListener('click',()=>{const L=EN[topic],a=Math.random()*L.length|0;const opts=[a];while(opts.length<3){const r=Math.random()*L.length|0;if(!opts.includes(r))opts.push(r)}opts.sort(()=>Math.random()-.5);
+ $('#enOut').innerHTML=`“${esc(L[a][1])}” nói thế nào? `+opts.map(o=>`<button type="button" class="qa" data-ok="${o===a}">${esc(L[o][0])}</button>`).join(' ')});
+$('#enOut').addEventListener('click',e=>{const b=e.target.closest('.qa');if(!b)return;say(b.textContent);b.classList.add(b.dataset.ok==='true'?'ok':'no');if(b.dataset.ok==='true')b.insertAdjacentText('afterend',' Đúng rồi, giỏi quá!')});
+
+/* ===== Kiểm chứng thông tin ===== */
+const FLAGS=[[/100\s?%|tuyệt đối|cam kết hiệu quả/i,'Hứa hẹn tuyệt đối','Khoa học hiếm khi nói “100%”. Hứa chắc chắn thường là lời quảng cáo.'],
+ [/khỏi hẳn|dứt điểm|vĩnh viễn|tận gốc|trị dứt/i,'Hứa chữa dứt điểm','Mỹ phẩm, thực phẩm chức năng không phải thuốc, không được quảng cáo chữa khỏi bệnh.'],
+ [/(chỉ|sau)\s*(sau\s*)?\d+\s*(ngày|tuần|giờ|phút)|cấp tốc|siêu tốc|bật tông|thần tốc/i,'Kết quả quá nhanh','Da thay mới cần vài tuần; giảm cân an toàn cần thời gian. Nhanh bất thường là đáng ngờ.'],
+ [/thải độc|detox|độc tố|kiềm hóa/i,'“Thải độc”, “kiềm hóa”','Gan, thận tự làm việc thải độc. Hai từ này hay được dùng để bán hàng hơn là có bằng chứng.'],
+ [/không cần ăn kiêng|không cần tập|ăn thả ga/i,'Giảm cân không cần ăn uống, vận động','Giảm cân bền vững cần ăn uống và vận động hợp lý.'],
+ [/giảm\s*\d+\s*(kg|ký|cân)/i,'Cam kết số ký cụ thể','Mỗi người một cơ địa, cam kết con số là dấu hiệu thổi phồng.'],
+ [/bác sĩ khuyên|chuyên gia khuyên|được bác sĩ|bộ y tế (chứng nhận|khuyên)|chứng nhận của bộ/i,'Mượn danh bác sĩ, cơ quan','Có tên tuổi, nơi công tác, văn bản cụ thể không? Không có thì đừng tin.'],
+ [/thần kỳ|thần dược|thần thánh|bí quyết|gia truyền|bí truyền/i,'Từ ngữ “thần kỳ”, “gia truyền”','Nghe hấp dẫn nhưng không chứng minh được gì.'],
+ [/không (có )?tác dụng phụ|lành tính|thiên nhiên nên an toàn|thảo dược nên an toàn|100% thiên nhiên/i,'“Thiên nhiên nên an toàn”','Thảo dược vẫn có thể gây kích ứng, dị ứng hay tương tác với thuốc đang dùng.'],
+ [/chỉ hôm nay|số lượng có hạn|giảm giá sốc|nhanh tay|sắp hết|duy nhất hôm nay/i,'Giục mua gấp','Giục là để mình không kịp suy nghĩ, tra cứu.'],
+ [/xách tay|nội địa (nhật|hàn|trung|mỹ)|không cần đơn/i,'Nguồn gốc khó kiểm tra','Hàng xách tay thường không có số công bố, khó truy nguồn khi có chuyện.'],
+ [/chữa (bệnh|khỏi|trị)|điều trị|trị (bệnh|tiểu đường|ung thư|xương khớp|gan)/i,'Nói như thuốc chữa bệnh','Chỉ thuốc đã được cấp phép mới được nói công dụng điều trị.']];
+$('#adCheck').addEventListener('click',()=>{const t=$('#adText').value.trim();const out=$('#adOut');if(!t){out.innerHTML='<p class="note">Dán nội dung quảng cáo vào ô trên trước đã các mom ơi.</p>';return}
+ const hit=FLAGS.filter(f=>f[0].test(t));const lvl=hit.length>=3?['bad','Nhiều dấu hiệu thổi phồng – đừng vội mua, đừng vội làm theo.']:hit.length?['warn','Có dấu hiệu cần thận trọng – tra thêm rồi hãy quyết.']:['ok','Chưa thấy cờ đỏ rõ ràng – vẫn nên tra số công bố và hỏi người có chuyên môn.'];
+ out.innerHTML=`<p class="vd ${lvl[0]}"><b>${hit.length} cờ đỏ.</b> ${lvl[1]}</p>`+hit.map(f=>`<p class="flag"><b>${f[1]}</b> ${f[2]}</p>`).join('')});
+const VL={hai:['Có hại','bad'],sai:['Chưa đúng','warn'],phong:['Phóng đại','warn'],chua:['Chưa có cơ sở','warn'],co:['Có cơ sở','ok']};
+const VF=[
+ {k:'dep',c:'Đắp chanh + baking soda để trắng da, mờ thâm',v:'hai',w:'Nước chanh trên da gặp nắng có thể gây viêm, sạm da (phản ứng quang độc); baking soda có tính kiềm, làm khô rát và phá lớp bảo vệ tự nhiên của da.',d:'Chống nắng hằng ngày; nám, thâm lâu ngày nên đi khám da liễu.'},
+ {k:'dep',c:'Kem trộn “trắng bật tông sau 7 ngày”',v:'hai',w:'Trắng quá nhanh thường do chất tẩy mạnh. Nhiều mẫu kem trộn trôi nổi từng bị phát hiện chứa corticoid hoặc thủy ngân – dùng lâu gây mỏng da, giãn mạch, nhiễm độc.',d:'Chỉ dùng mỹ phẩm có số công bố, rõ nguồn gốc, nhãn tiếng Việt.'},
+ {k:'khac',c:'Viên giảm cân “giảm 5–10 ký/tháng, không cần ăn kiêng”',v:'hai',w:'Giảm cân bền vững cần ăn uống, vận động hợp lý. Một số sản phẩm giảm cân cấp tốc từng bị phát hiện trộn chất cấm như sibutramine, gây hại tim mạch.',d:'Muốn giảm cân, hỏi bác sĩ dinh dưỡng; tránh sản phẩm cam kết số ký.'},
+ {k:'khac',c:'Uống nước chanh ấm buổi sáng để thải độc, đốt mỡ',v:'phong',w:'Gan và thận mới là cơ quan thải độc. Nước chanh ấm giúp bổ sung nước và chút vitamin C, nhưng không đốt mỡ; người đau dạ dày uống lúc đói dễ cồn cào.',d:'Uống đủ nước, ăn nhiều rau quả, vận động đều.'},
+ {k:'bep',c:'Rửa thịt gà sống dưới vòi nước cho sạch',v:'sai',w:'Nước bắn làm vi khuẩn như Salmonella, Campylobacter văng ra bồn, thớt, tay. Rửa không diệt được vi khuẩn – nấu chín kỹ mới diệt.',d:'Nấu chín kỹ; rửa tay, dao, thớt bằng xà phòng sau khi sơ chế thịt sống.'},
+ {k:'bep',c:'Cơm, thức ăn phải để nguội hẳn mới cho vào tủ lạnh',v:'sai',w:'Để lâu ở nhiệt độ phòng, vi khuẩn sinh sôi nhanh. Khuyến cáo chung là cất tủ lạnh trong vòng 2 giờ sau khi nấu.',d:'Chia hộp nhỏ cho nhanh bớt nóng rồi cất sớm.'},
+ {k:'bep',c:'Mì chính (bột ngọt) gây ung thư, hại não',v:'chua',w:'Các cơ quan an toàn thực phẩm quốc tế, như hội đồng chuyên gia của FAO/WHO, đánh giá bột ngọt an toàn ở mức dùng thông thường; một số ít người nhạy cảm có thể thấy khó chịu nhẹ.',d:'Nêm vừa phải, để ý tổng lượng muối trong ngày.'},
+ {k:'bep',c:'Ngâm rau nước muối loãng là sạch hết thuốc trừ sâu',v:'phong',w:'Nước muối loãng không loại bỏ được hết hóa chất. Rửa kỹ dưới vòi nước chảy giúp giảm bớt; chọn nguồn rau tin cậy quan trọng hơn.',d:'Rửa từng lá dưới vòi nước, ngâm nước sạch, mua rau rõ nguồn.'}];
+const VK={all:'Tất cả',dep:'Làm đẹp',bep:'Bếp núc',khac:'Sức khỏe, giảm cân'};let vk='all';
+$('#vfFilter').innerHTML=Object.keys(VK).map(k=>`<button type="button" data-k="${k}" aria-pressed="${k==='all'}">${VK[k]}</button>`).join('');
+const drawVF=()=>{$('#vfs').innerHTML=VF.filter(f=>vk==='all'||f.k===vk).map(f=>`<article class="vf"><span class="vd ${VL[f.v][1]}">${VL[f.v][0]}</span><h3>${f.c}</h3><p><b>Vì sao:</b> ${f.w}</p><p><b>Nên làm:</b> ${f.d}</p></article>`).join('')};
+drawVF();
+$('#vfFilter').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;vk=b.dataset.k;$('#vfFilter').querySelectorAll('button').forEach(o=>o.setAttribute('aria-pressed',o===b));drawVF()});
+
+/* ===== Đồ em dùng & giới thiệu ===== */
+const G=Array.isArray(window.GIOI_THIEU)?window.GIOI_THIEU:[];
+const AFF='Đây là món em dùng thấy hay nên giới thiệu. Link là link tiếp thị liên kết Shopee: mua qua link em nhận hoa hồng nhỏ, giá bạn trả không đổi.';
+const linkBtn=g=>/^https:\/\//.test(g.link||'')?`<a class="btn" href="${esc(g.link)}" target="_blank" rel="noopener sponsored">Xem trên Shopee</a>`:`<span class="btn ghost off" aria-disabled="true">Link Shopee đang cập nhật</span>`;
+$('#gear').innerHTML=G.map((g,i)=>`<figure${g.bai?` class="has" tabindex="0" role="button" data-g="${i}"`:''}><img src="img/${esc(g.anh)}" alt="${esc(g.ten)}" loading="lazy"><figcaption><b>${esc(g.ten)}</b>${esc(g.ngan)}${g.bai?'<span class="more">Đọc bài giới thiệu</span>':''}</figcaption></figure>`).join('');
+$('#reviews').innerHTML=G.map((g,i)=>g.bai?`<article class="rv"><img src="img/${esc(g.anh)}" alt="${esc(g.ten)}" loading="lazy"><div><span class="when">${g.ngay?esc(fmt(g.ngay))+' · ':''}Em giới thiệu</span><h3>${esc(g.ten)}</h3><p>${esc(g.bai.split('\n')[0])}</p><div class="row"><button class="btn ghost" type="button" data-g="${i}">Đọc cả bài</button>${linkBtn(g)}</div></div></article>`:'').join('')||'<p>Chưa có bài giới thiệu.</p>';
+const openG=i=>{const g=G[i];$('#dlgT').textContent=g.ten;$('#dlgD').textContent='Đồ Cô Kỹ giới thiệu';$('#dlgB').textContent=g.bai;$('#dlgG').innerHTML=`<img src="img/${esc(g.anh)}" alt="${esc(g.ten)}">`;$('#dlgL').innerHTML=`<p class="aff small">${AFF}</p>${linkBtn(g)}`;try{dlg.showModal()}catch(err){dlg.setAttribute('open','')}};
+document.addEventListener('click',e=>{const t=e.target.closest('[data-g]');if(t&&(t.closest('#gear')||t.closest('#reviews')))openG(+t.dataset.g)});
+$('#gear').addEventListener('keydown',e=>{const t=e.target.closest('[data-g]');if(t&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openG(+t.dataset.g)}});
+
+/* ===== các phiếu → tin nhắn Zalo ===== */
+const ZALO='0342.668.311';
+document.querySelectorAll('form.mini').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();
+ const lines=[...new FormData(f)].filter(([,v])=>String(v).trim()).map(([k,v])=>`- ${k}: ${v}`);
+ const text=`Chào Bếp Cô Kỹ, em gửi ${f.dataset.kind.toLowerCase()}:\n${lines.join('\n')}`;const out=f.querySelector('.out');
+ let ok=false;try{await navigator.clipboard.writeText(text);ok=true}catch(err){}
+ out.innerHTML=`<pre>${esc(text)}</pre>${ok?'Đã sao chép. ':'Bạn bôi đen và sao chép đoạn trên nhé. '}<a href="https://zalo.me/0342668311" target="_blank" rel="noopener">Mở Zalo ${ZALO}</a> và dán vào.`}));
+
+/* ===== mua chung (ví dụ) ===== */
+const DEAL=[['Gạo quê vụ mới','bao 10kg',20,12],['Hành tím quê để phi','theo cân',15,8],['Hũ nhựa nắp nhôm đựng đồ khô','lốc 50 hũ',10,6]];
+$('#deals').innerHTML=DEAL.map(d=>`<div class="deal"><h3>${d[0]}</h3><p>${d[1]} · cần ${d[2]} người</p><div class="meter"><i style="width:${d[3]/d[2]*100}%"></i></div><p><b>${d[3]}/${d[2]}</b> người đã góp</p><a class="btn" href="https://zalo.me/0342668311" target="_blank" rel="noopener">Góp kèo qua Zalo</a></div>`).join('');
+
+/* ===== hôm nay ăn gì ===== */
+const MON=[['Thịt chưng mắm tép','Nồi cơm nóng là đủ, khỏi nghĩ!'],['Thịt + tôm chưng mắm tép','Ăn lấy sức để giảm cân 😜'],['Trứng rán lá','Ăn với cơm thôi cũng phải đẹp.'],['Phở bò nhà nấu','Có tinh dầu phở, cuối tuần nấu cho chồng con.'],['Phở gà nhà nấu','Nhẹ bụng, thơm nhà.'],['Pizza nồi chiên','Mix topping theo khẩu vị nhà mình.'],['Bánh mì pate','Pate nhà làm, phết dày dày.'],['Trứng luộc','Nhớ canh bếp, kẻo thành trứng nướng 🤣'],['Cơm với mắm','Hôm nay thôi nhé, ngày kia phải có thịt!'],['Cháo trắng tí muối','Mai thôi, ngày kia nhất định phải có miếng thịt lợn.']];
+let last=-1;
+$('#spin').addEventListener('click',()=>{let n;do{n=Math.random()*MON.length|0}while(n===last);last=n;const p=$('#pick');p.classList.remove('pop');void p.offsetWidth;p.classList.add('pop');p.innerHTML=`<b>${MON[n][0]}</b><span>${MON[n][1]}</span>`});
+
+/* ===== mời trà sữa ===== */
+let cupV=35000,cupT='Ly vừa, full trân châu';
+const teaMsg=()=>{const nm=$('#teaName').value.trim()||'Ban doc';const plain=nm.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D');$('#teaMsg').textContent=`Moi Co Ky tra sua ${cupV/1000}k - ${plain}`;$('#teaFill').setAttribute('d',cupV===25000?'M48 140 h104 l-9 98 q-1 8 -10 8 h-66 q-9 0 -10 -8z':cupV===35000?'M46 110 h108 l-11 128 q-1 8 -10 8 h-66 q-9 0 -10 -8z':'M44 84 h112 l-13 154 q-1 8 -10 8 h-66 q-9 0 -10 -8z')};
+document.querySelectorAll('.opts button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.opts button').forEach(o=>o.setAttribute('aria-checked',o===b));cupV=+b.dataset.v;cupT=b.dataset.t;teaMsg()}));
+$('#teaName').addEventListener('input',teaMsg);teaMsg();
+$('#teaCopy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#teaMsg').textContent);$('#teaCopy').textContent='Đã sao chép – cảm ơn bạn!'}catch(e){$('#teaCopy').textContent='Bạn chép nội dung bên trên giúp em nhé'}});
+
+/* ===== đi đây đó ===== */
+const TR=[['thuong-hai-dem.jpg','Thượng Hải về đêm – cuộc đời bao khúc bể dâu'],['thuong-hai-ngay.jpg','Tặng nhau chữ Tín bắc cầu Phúc duyên'],['di-choi-vom-cay.jpg','3 năm sau 🗓⏳👣'],['sap-tet.jpg','Sắp Tết rồi các bác ơi'],['ve-que-2.jpg','Về quê 24/11']];
+const rail=$('#rail');
+rail.innerHTML=TR.map((t,i)=>`<figure class="pol" style="--r:${[-2.5,1.8,-1.2,2.4,-2,1.4,-1.6][i]}deg"><img src="img/${t[0]}" alt="${t[1]}" loading="lazy"><figcaption>${t[1]}</figcaption></figure>`).join('');
+const step=d=>rail.scrollBy({left:d*rail.querySelector('.pol').offsetWidth*1.05,behavior:'smooth'});
+$('#prev').addEventListener('click',()=>step(-1));$('#next').addEventListener('click',()=>step(1));
+rail.addEventListener('keydown',e=>{if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
+
+/* ===== đếm ngược giao thừa ===== */
+const TET=['2027-02-06T00:00:00+07:00','2028-01-26T00:00:00+07:00','2029-02-13T00:00:00+07:00','2030-02-03T00:00:00+07:00'].map(d=>new Date(d));
+const cnt=$('#count');
+const tickT=()=>{const now=new Date(),t=TET.find(d=>d>now);if(!t){cnt.textContent='';return}let s=(t-now)/1000|0;const d=s/86400|0;s%=86400;const hh=s/3600|0,mm=(s%3600)/60|0;
+ cnt.innerHTML=`<div><b>${d}</b><span>ngày</span></div><div><b>${hh}</b><span>giờ</span></div><div><b>${mm}</b><span>phút</span></div>`};
+tickT();setInterval(tickT,30000);
+$('#yr').textContent=new Date().getFullYear();
+}
+</script>
 </body>
 </html>

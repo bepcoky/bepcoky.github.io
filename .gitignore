@@ -1,0 +1,13 @@
+# Kho công khai: chặn trước mọi thứ không được đưa lên
+*.zip
+*.bak
+*.xlsx
+*.csv
+don-hang*
+khach-hang*
+sao-luu/
+anh-rieng/
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
