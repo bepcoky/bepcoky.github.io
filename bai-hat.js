@@ -23,7 +23,7 @@ window.BAI_HAT = [
   { id: 'TPpUdadZICw', t: 'Hạnh phúc là chỉ cần bên nhau', n: 'tinh-ca', g: '' },
   { id: 'hN_LNKfk_iI', t: 'Bài toán của anh', n: 'tinh-ca', g: '' },
   { id: 'uELfTHEiO5c', t: 'Khúc hát nhân duyên', n: 'tinh-ca', g: '' },
-  { id: 'Oe_gYOGkGtA', t: 'Đững cầu', n: 'tinh-ca', g: '' },
+  { id: 'Oe_gYOGkGtA', t: 'Đừng cầu', n: 'tinh-ca', g: '' },
   { id: 'o41IGxGboxQ', t: 'Gió gặp mây', n: 'tinh-ca', g: '' },
   { id: 'p8jLZq9B_s0', t: 'Bước chung một đời', n: 'tinh-ca', g: '' },
   { id: 'r6IUzZCaynQ', t: 'Bầu trời xanh, làn mây trắng. Anh yêu nắng hay yêu em?', n: 'tinh-ca', g: 'Từ câu em viết dưới ảnh ngồi trên ghềnh đá ngày 28/7.' },
