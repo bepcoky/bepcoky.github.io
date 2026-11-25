@@ -6,7 +6,7 @@ anh: pheu-loc-chop-non.jpg
 chu_thich_anh: Bộ phễu lọc chóp nón đủ đồ: phễu lưới, giá ba chân và chày gỗ nhọn
 tom_tat: Không chỉ để lọc nước dùng: có giá ba chân và chày gỗ nhọn, nó còn nghiền rau củ thành súp mịn như nhung.
 ngay: 2026-11-26
-link: pheu-loc
+link: pheu-chop-non,pheu-loc
 tham_khao: Ý tưởng từ bài chia sẻ của anh Dinh Phong Nguyen (facebook.com/aaron.amrak).
 ---
 Chị em nào từng vào bếp nhà hàng chắc thấy cái phễu lưới hình chóp nhọn như cái nón này. Tiếng Anh gọi là *conical strainer*, tiếng Pháp gọi là **chinois**, dân bếp còn gọi đùa là “China cap” – cái nón chóp nhọn kiểu Á Đông.
@@ -29,6 +29,6 @@ Có đủ bộ thì nó thành dụng cụ **nghiền mịn**: bí đỏ, khoai 
 - Làm súp thì đảo chày theo vòng tròn sát thành lưới, ép nhẹ đều tay.
 - Rửa ngay khi còn ướt, dùng bàn chải chải ngược từ ngoài vào trong cho bã ra hết, rồi phơi khô.
 
-Bộ xịn đủ ba món thì hơi đắt, chị em xài tạm loại dưới đây cũng được việc ạ 😜
+Bộ xịn đủ ba món thì hơi đắt ạ. Em để hai nút bên dưới: nút **tìm đúng phễu chóp nón** (chị em gõ thêm “có chày” nếu muốn đủ bộ), và một cái **phễu inox loại thường** – không nhọn như chóp nón nhưng lọc nước dùng hằng ngày vẫn được việc 😜
 
 {{mua}}

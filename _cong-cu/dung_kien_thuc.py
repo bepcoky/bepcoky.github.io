@@ -87,6 +87,7 @@ def khung(tieu_de, mo_ta, url, anh_og, than, ve='../'):
 </main>
 <footer><div class="wrap"><small>© 2026 Trần Thị Kỹ · bepcoky.com · <a href="{ve}#mien-tru">Miễn trừ trách nhiệm</a> · Zalo <a href="https://zalo.me/0342668311" target="_blank" rel="noopener">0342.668.311</a> · <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Facebook Trần Thị Kỹ</a></small></div></footer>
 <script src="{ve}lien-ket.js"></script>
+<script src="{ve}giao-dien.js"></script>
 </body>
 </html>
 '''

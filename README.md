@@ -48,3 +48,7 @@ Nguồn từng bài ở `kiem-chung/_nguon/<slug>.md` (phần đầu `tieu_de`, 
 - Bài hát: thêm/sửa trong `bai-hat.js` (mã video YouTube + tên + nhóm). Video chỉ tải khi người xem bấm.
 - Bấm đồ vật trong căn bếp → các nhánh tỏa ra: sửa danh sách `NHANH` trong `menu-do-vat.js` (nhánh đầu là “Vào góc…”, nhánh `#bai-hat:<mã>` mở và phát bài hát).
 - Lịch dương/âm, tuần trăng, lượt ghé: dòng chữ bên phải tiêu đề (`#today` trong `index.html`).
+
+## Mời trà sữa và ảnh (cập nhật 26/11/2026)
+- `tra-sua.js`: mục Mời trà sữa – khách chọn ly rồi bấm logo app ngân hàng, app tự mở qua link VietQR (dl.vietqr.io). Đổi tài khoản nhận ở biến `TK` đầu tệp.
+- `giao-dien.js`: ảnh hiện dần (nền màu chủ đạo trong lúc tải), bấm ảnh để xem to, mũi tên cho bộ ảnh bài viết, menu dài mờ mép. Thêm/đổi ảnh trong `img/` thì chạy `python3 _cong-cu/mau_anh.py` (thêm `--lam-net` để làm nét nhẹ ảnh mới).

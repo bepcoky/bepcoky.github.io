@@ -55,8 +55,8 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 .nav{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:8px max(5vw,16px)}
 .logo{white-space:nowrap;flex:none;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 22px/1 Oswald,sans-serif}
 .logo small{display:block;font:500 12px "Be Vietnam Pro",system-ui,sans-serif;color:var(--mute)}
-.menu{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
-.menu a{flex:none;padding:10px 9px;border-radius:10px;color:var(--ink);text-decoration:none;font-size:14.5px}
+.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth}.menu.tran{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 46px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 46px),transparent)}.menu.tran.cuoi{-webkit-mask-image:none;mask-image:none}
+.menu a{flex:none;padding:10px 8px;border-radius:10px;color:var(--ink);text-decoration:none;font-size:14.5px}
 .menu a:hover{background:var(--paper)}
 @media(max-width:1180px){.menu{display:none}.nav .qbtn{margin-left:auto}}
 .qbtn{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;text-decoration:none;font:700 20px "Be Vietnam Pro",system-ui,sans-serif;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
@@ -254,15 +254,38 @@ dialog .x{position:absolute;top:10px;right:10px;width:44px;height:44px;border-ra
 .teagrid{display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:clamp(24px,4vw,56px);align-items:center}
 .cup svg{width:100%;max-width:260px;display:block;margin:auto}
 .cup path#teaFill{transition:d .4s}
-.opts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
-.opts button{min-height:64px;min-width:110px;border-radius:16px;border:0;background:var(--card);color:var(--ink);font:15px/1.3 "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer;box-shadow:inset 0 0 0 2px var(--line)}
+.opts{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 18px}
+.opts button{min-height:64px;min-width:110px;border-radius:16px;border:0;background:var(--card);color:var(--ink);font:15px/1.3 "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer;box-shadow:inset 0 0 0 2px var(--line);transition:transform .15s,box-shadow .15s}
+.opts button:hover{transform:translateY(-2px)}
 .opts button[aria-checked=true]{box-shadow:inset 0 0 0 3px var(--red)}
-.tname{display:flex;flex-direction:column;gap:4px;max-width:360px;font-size:14px;font-weight:500}
-.bank{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;margin-top:16px;background:var(--card);border-radius:18px;padding:16px;align-items:center}
+.step{display:flex;align-items:center;gap:10px;margin:6px 0 4px;font-weight:700;font-size:17px}
+.step b{width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:15px;flex:none}
+.tnote{margin:0 0 12px;font-size:14.5px;color:var(--mute)}
+.banks{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:10px}
+.nh{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px 10px;border-radius:16px;background:var(--card);color:var(--ink);text-decoration:none;box-shadow:inset 0 0 0 1px var(--line);border:0;cursor:pointer;font:inherit;transition:transform .15s,box-shadow .15s}
+.nh:hover,.nh:focus-visible{transform:translateY(-2px);box-shadow:inset 0 0 0 2px var(--red),0 6px 16px rgba(80,30,10,.12)}
+.nh:active{transform:scale(.96)}
+.nh-l{width:52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.nh-l img{width:100%;height:100%;object-fit:contain}
+.nh-l b{font:700 15px "Be Vietnam Pro",sans-serif;color:#c62a1e}
+.nh-t{font-size:12.5px;line-height:1.25;text-align:center;font-weight:500}
+.nh i{position:absolute;top:-7px;right:-4px;font:600 10.5px/1 "Be Vietnam Pro",sans-serif;font-style:normal;background:var(--red);color:#fff;padding:4px 6px;border-radius:99px}
+.nh.them{display:none}.banks.mo .nh.them{display:flex}
+.teaok{margin:12px 0 0;padding:12px 14px;border-radius:14px;background:var(--card);box-shadow:inset 0 0 0 2px var(--leaf);font-size:15px}
+.teamore{margin-top:16px}
+.teamore summary{cursor:pointer;font-weight:600;color:var(--red);font-size:15px;padding:6px 0}
+.tea .pc-only{display:none}.tea.pc .pc-only{display:inline}.tea.pc .mb-only{display:none}
+.tea.pc .step-app{display:none}
+.tea.pc .teamore summary{color:var(--ink)}
+.bank{display:grid;grid-template-columns:200px minmax(0,1fr);gap:18px;margin-top:10px;background:var(--card);border-radius:18px;padding:16px;align-items:center}
+.bank .acc{margin:0 0 10px;font-size:17px}.bank .acc b{font-size:22px;letter-spacing:.5px}.bank .acc span{font-size:14px;color:var(--mute)}
+.bank .msg{margin:12px 0 0;font-size:14px;color:var(--mute)}
+.lnk{border:0;background:none;color:var(--red);font:600 14px "Be Vietnam Pro",sans-serif;text-decoration:underline;cursor:pointer;padding:4px}
 .qr.qrimg{margin:0;display:block;text-align:center;border:0;aspect-ratio:auto;background:#fff;padding:8px;border-radius:12px;color:#6d5a50;font-size:13px}.qr.qrimg img{width:100%;height:auto;image-rendering:pixelated}
 .qr{aspect-ratio:1;border-radius:12px;border:2px dashed var(--line);display:grid;place-content:center;text-align:center;font-size:14px;color:var(--mute)}
-.bank code{font-size:15px;background:var(--paper);padding:4px 8px;border-radius:8px;display:inline-block;margin-top:4px}
-@media(max-width:700px){.teagrid{grid-template-columns:1fr}.cup svg{max-width:160px}.bank{grid-template-columns:1fr}.qr{max-width:240px}}
+.bank code{font-size:14px;background:var(--paper);padding:3px 8px;border-radius:8px}
+.tthanks{margin:16px 0 0;font-size:14px;color:var(--mute)}
+@media(max-width:700px){.teagrid{grid-template-columns:1fr}.cup svg{max-width:130px}.bank{grid-template-columns:1fr;justify-items:center;text-align:center}.qr{max-width:220px}.banks{grid-template-columns:repeat(3,minmax(0,1fr))}}
 dialog .when{margin:0 0 6px}
 
 .ofields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
@@ -595,7 +618,7 @@ footer small{color:#bba99c}
         <span class="note" id="copied">Bấm gửi: đơn được sao chép, bạn mở Zalo 0342.668.311 và dán vào. Em sẽ gọi lại xác nhận.</span>
       </div>
     </form>
-    <p class="draft">Bản nháp: giá từng món và số Zalo cần chị Kỹ xác nhận. Khi có thể, nên nối phiếu này với Google Form để đơn tự về một bảng tính.</p>
+    <p class="draft">Giá từng món em báo khi gọi lại xác nhận – theo mẻ, theo mùa ạ.</p>
   </div>
 </section>
 
@@ -659,7 +682,7 @@ footer small{color:#bba99c}
           <h3>Học nấu ăn cùng Cô Kỹ</h3>
           <p>Em không phải đầu bếp nhà hàng, em là đầu bếp của chồng con. Nên em dạy đúng những món nhà em ăn thật: dễ mua, dễ nấu, ăn với cơm thôi cũng phải đẹp.</p>
           <ul class="ticks"><li><b>Công thức miễn phí</b> – trong Nhật ký bếp, đọc là làm được.</li><li><b>Lớp nhỏ qua video Zalo</b> – vài chị em một buổi, em nấu, các mom nấu theo, hỏi gì em trả lời ngay.</li><li><b>Cả nhà cùng vào bếp</b> – buổi cuối tuần cho mẹ và con, vừa nấu vừa chơi.</li></ul>
-          <p class="draft">Lịch lớp và học phí: chị Kỹ cập nhật.</p>
+          <p class="draft">Lịch lớp và học phí em báo riêng qua Zalo ạ.</p>
         </div>
         <form class="mini" data-kind="Đăng ký học nấu ăn">
           <strong>Đăng ký học thử</strong>
@@ -880,17 +903,31 @@ footer small{color:#bba99c}
     </div>
     <div>
       <h2>Mời Cô Kỹ ly trà sữa</h2>
-      <p class="lead">Đọc chuyện bếp thấy vui, học được món hay, mời em ly trà sữa cho em có sức ninh nồi nước dùng tiếp nhé! Em ghi tên từng người mời vào sổ, mẻ sau em kể.</p>
+      <p class="lead">Đọc chuyện bếp thấy vui, học được món hay thì mời em ly trà sữa nhé – hai bước là xong ạ 😘</p>
+      <p class="step"><b>1</b> Chọn ly</p>
       <div class="opts" role="radiogroup" aria-label="Chọn ly">
-        <button type="button" role="radio" aria-checked="false" data-v="25000" data-t="Ly nhỏ, ít đường">Ly nhỏ<br><b>25.000đ</b></button>
-        <button type="button" role="radio" aria-checked="true" data-v="35000" data-t="Ly vừa, full trân châu">Ly vừa<br><b>35.000đ</b></button>
-        <button type="button" role="radio" aria-checked="false" data-v="50000" data-t="Ly to, thêm pudding">Ly to<br><b>50.000đ</b></button>
+        <button type="button" role="radio" aria-checked="false" data-v="25000">Ly nhỏ<br><b>25.000đ</b></button>
+        <button type="button" role="radio" aria-checked="true" data-v="35000">Ly vừa<br><b>35.000đ</b></button>
+        <button type="button" role="radio" aria-checked="false" data-v="50000">Ly to<br><b>50.000đ</b></button>
       </div>
-      <label class="tname">Tên người mời<input id="teaName" placeholder="VD: Hương Hải Phòng"></label>
-      <div class="bank">
-        <figure class="qr qrimg"><img src="img/qr-vib.svg" width="330" height="330" alt="Mã VietQR chuyển khoản VIB 342668311 – TRAN THI KY"><figcaption>Quét bằng app ngân hàng</figcaption></figure>
-        <div><p style="margin:0">Ngân hàng: <b>VIB</b> (Ngân hàng Quốc tế)<br>Số tài khoản: <b id="teaAcc">342668311</b> <button class="btn ghost" type="button" id="accCopy" style="min-height:34px;padding:0 12px;font-size:14px">Chép số</button><br>Chủ tài khoản: <b>TRAN THI KY</b> (Trần Thị Kỹ)</p><p style="margin:8px 0 0">Nội dung chuyển khoản:<br><code id="teaMsg"></code></p><button class="btn" type="button" id="teaCopy" style="margin-top:10px">Sao chép nội dung</button></div>
+      <div class="step-app">
+        <p class="step"><b>2</b> Bấm vào app ngân hàng chị em đang dùng</p>
+        <p class="tnote">App tự mở lên – nhiều app điền sẵn luôn số tài khoản, số tiền <b id="teaTien">35.000đ</b> và lời nhắn, chị em chỉ việc xác nhận.</p>
+        <div class="banks" id="teaBanks" aria-label="Chọn app ngân hàng"></div>
+        <p class="teaok" id="teaOk" role="status" hidden></p>
       </div>
+      <details class="teamore" id="teaMore">
+        <summary><span class="pc-only">Trên máy tính: quét mã bằng app ngân hàng trên điện thoại</span><span class="mb-only">Không thấy app của mình? Quét mã hoặc chép số tài khoản</span></summary>
+        <div class="bank">
+          <figure class="qr qrimg"><img src="img/qr-vib.svg" width="330" height="330" alt="Mã VietQR chuyển khoản VIB 342668311 – TRAN THI KY"><figcaption>Quét bằng app ngân hàng</figcaption></figure>
+          <div>
+            <p class="acc">VIB · <b>342668311</b><br><span>TRAN THI KY (Trần Thị Kỹ)</span></p>
+            <button class="btn" type="button" id="accCopy">Chép số tài khoản</button>
+            <p class="msg">Lời nhắn: <code id="teaMsg">Tra sua Co Ky 35k</code> <button class="lnk" type="button" id="teaCopy">chép</button></p>
+          </div>
+        </div>
+      </details>
+      <p class="tthanks">Chuyển xong không cần báo em đâu ạ – tên chị em hiện trong sao kê, em ghi sổ hết 📒</p>
     </div>
   </div>
 </section>
@@ -1171,14 +1208,6 @@ const MON=[['Thịt chưng mắm tép','Nồi cơm nóng là đủ, khỏi nghĩ
 let last=-1;
 $('#spin').addEventListener('click',()=>{let n;do{n=Math.random()*MON.length|0}while(n===last);last=n;const p=$('#pick');p.classList.remove('pop');void p.offsetWidth;p.classList.add('pop');p.innerHTML=`<b>${MON[n][0]}</b><span>${MON[n][1]}</span>`});
 
-/* ===== mời trà sữa ===== */
-let cupV=35000,cupT='Ly vừa, full trân châu';
-const teaMsg=()=>{const nm=$('#teaName').value.trim()||'Ban doc';const plain=nm.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D');$('#teaMsg').textContent=`Moi Co Ky tra sua ${cupV/1000}k - ${plain}`;$('#teaFill').setAttribute('d',cupV===25000?'M48 140 h104 l-9 98 q-1 8 -10 8 h-66 q-9 0 -10 -8z':cupV===35000?'M46 110 h108 l-11 128 q-1 8 -10 8 h-66 q-9 0 -10 -8z':'M44 84 h112 l-13 154 q-1 8 -10 8 h-66 q-9 0 -10 -8z')};
-document.querySelectorAll('.opts button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.opts button').forEach(o=>o.setAttribute('aria-checked',o===b));cupV=+b.dataset.v;cupT=b.dataset.t;teaMsg()}));
-$('#teaName').addEventListener('input',teaMsg);teaMsg();
-$('#accCopy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('342668311');$('#accCopy').textContent='Đã chép'}catch(e){$('#accCopy').textContent='342668311'}});
-$('#teaCopy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#teaMsg').textContent);$('#teaCopy').textContent='Đã sao chép – cảm ơn bạn!'}catch(e){$('#teaCopy').textContent='Bạn chép nội dung bên trên giúp em nhé'}});
-
 /* ===== đi đây đó ===== */
 const TR=[['thuong-hai-dem.jpg','Thượng Hải về đêm – cuộc đời bao khúc bể dâu'],['thuong-hai-ngay.jpg','Tặng nhau chữ Tín bắc cầu Phúc duyên'],['di-choi-vom-cay.jpg','3 năm sau 🗓⏳👣'],['sap-tet.jpg','Sắp Tết rồi các bác ơi'],['ve-que-2.jpg','Về quê 24/11']];
 const rail=$('#rail');
@@ -1225,5 +1254,7 @@ $('#yr').textContent=new Date().getFullYear();
 }
 </script>
 <script src="menu-do-vat.js"></script>
+<script src="tra-sua.js"></script>
+<script src="giao-dien.js"></script>
 </body>
 </html>
