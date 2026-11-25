@@ -258,10 +258,11 @@ dialog .x{position:absolute;top:10px;right:10px;width:44px;height:44px;border-ra
 .opts button{min-height:64px;min-width:110px;border-radius:16px;border:0;background:var(--card);color:var(--ink);font:15px/1.3 "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer;box-shadow:inset 0 0 0 2px var(--line)}
 .opts button[aria-checked=true]{box-shadow:inset 0 0 0 3px var(--red)}
 .tname{display:flex;flex-direction:column;gap:4px;max-width:360px;font-size:14px;font-weight:500}
-.bank{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;margin-top:16px;background:var(--card);border-radius:18px;padding:16px;align-items:center}
+.bank{display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;margin-top:16px;background:var(--card);border-radius:18px;padding:16px;align-items:center}
+.qr.qrimg{margin:0;display:block;text-align:center;border:0;aspect-ratio:auto;background:#fff;padding:8px;border-radius:12px;color:#6d5a50;font-size:13px}.qr.qrimg img{width:100%;height:auto;image-rendering:pixelated}
 .qr{aspect-ratio:1;border-radius:12px;border:2px dashed var(--line);display:grid;place-content:center;text-align:center;font-size:14px;color:var(--mute)}
 .bank code{font-size:15px;background:var(--paper);padding:4px 8px;border-radius:8px;display:inline-block;margin-top:4px}
-@media(max-width:700px){.teagrid{grid-template-columns:1fr}.cup svg{max-width:160px}.bank{grid-template-columns:1fr}.qr{max-width:160px}}
+@media(max-width:700px){.teagrid{grid-template-columns:1fr}.cup svg{max-width:160px}.bank{grid-template-columns:1fr}.qr{max-width:240px}}
 dialog .when{margin:0 0 6px}
 
 .ofields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
@@ -477,7 +478,7 @@ footer small{color:#bba99c}
     </div>
     <div>
       <h2>Em là Kỹ – “con sen” của ông chủ, “thợ làm” của Bếp Cô Kỹ</h2>
-      <p class="lead">Con gái út của Bố Mẹ, vợ của ông chủ, mẹ của một bạn trai đang lớn. Ngày của em bắt đầu và kết thúc ở dưới bếp: ninh, nấu, chưng, phi… rồi lên Facebook kể chuyện cho các bác, các mom cười tí cho vận động cơ mồm.</p>
+      <p class="lead">Con gái út của Bố Mẹ, vợ của ông chủ, mẹ của một bạn trai đang lớn. Ngày của em bắt đầu và kết thúc ở dưới bếp: ninh, nấu, chưng, phi… rồi lên <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Facebook</a> kể chuyện cho các bác, các mom cười tí cho vận động cơ mồm.</p>
       <p>Từ sáng đến đêm cứ cho em được ở trong nhà, dưới bếp, “múa may quay cuồng với mấy món đồ hàng” là em thỏa trí tang bồng với niềm đam mê nhỏ bé của em rồi. Món em làm, nhà em ăn trước – ngon, sạch, không chất bảo quản thì em mới dám mời mọi người.</p>
       <p class="hand">“Sống thật vui, thật tử tế – như Bố Mẹ đã sống và dạy chúng con.”</p>
       <ul class="facts"><li>Hải Phòng</li><li>Vợ · Mẹ · Con gái út · Nàng dâu</li><li>Mê nấu, mê trồng cây</li><li>Thích đi đây đó</li><li>Bán món nhà làm qua Zalo</li></ul>
@@ -796,8 +797,8 @@ footer small{color:#bba99c}
       </div>
       <label class="tname">Tên người mời<input id="teaName" placeholder="VD: Hương Hải Phòng"></label>
       <div class="bank">
-        <div class="qr">Mã QR chuyển khoản<br><small>chờ chị Kỹ gửi</small></div>
-        <div><p style="margin:0">Ngân hàng: <b>(chờ cập nhật)</b><br>Số tài khoản: <b>(chờ cập nhật)</b><br>Chủ tài khoản: <b>TRAN THI KY</b></p><p style="margin:8px 0 0">Nội dung chuyển khoản:<br><code id="teaMsg"></code></p><button class="btn" type="button" id="teaCopy" style="margin-top:10px">Sao chép nội dung</button></div>
+        <figure class="qr qrimg"><img src="img/qr-vib.svg" width="330" height="330" alt="Mã VietQR chuyển khoản VIB 342668311 – TRAN THI KY"><figcaption>Quét bằng app ngân hàng</figcaption></figure>
+        <div><p style="margin:0">Ngân hàng: <b>VIB</b> (Ngân hàng Quốc tế)<br>Số tài khoản: <b id="teaAcc">342668311</b> <button class="btn ghost" type="button" id="accCopy" style="min-height:34px;padding:0 12px;font-size:14px">Chép số</button><br>Chủ tài khoản: <b>TRAN THI KY</b> (Trần Thị Kỹ)</p><p style="margin:8px 0 0">Nội dung chuyển khoản:<br><code id="teaMsg"></code></p><button class="btn" type="button" id="teaCopy" style="margin-top:10px">Sao chép nội dung</button></div>
       </div>
     </div>
   </div>
@@ -829,7 +830,7 @@ footer small{color:#bba99c}
         <h3>Câu hỏi thường gặp</h3>
         <details><summary>Đặt món rồi bao giờ có hàng?</summary><p>Em làm một mình theo mẻ nhỏ. Em sẽ gọi lại báo ngày làm, giá và cách giao. Mùa Tết nên đặt sớm.</p></details>
         <details><summary>Trang có lưu thông tin của tôi không?</summary><p>Không. Phiếu đặt món chỉ tạo đoạn tin nhắn ngay trên máy bạn; thông tin chỉ đến em khi bạn tự gửi qua Zalo.</p></details>
-        <details><summary>Muốn góp ý, hỏi bài thì liên hệ đâu?</summary><p>Zalo Bếp Cô Kỹ: 0342.668.311, hoặc Facebook Trần Thị Kỹ.</p></details>
+        <details><summary>Muốn góp ý, hỏi bài thì liên hệ đâu?</summary><p>Zalo Bếp Cô Kỹ: 0342.668.311, hoặc <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Facebook Trần Thị Kỹ</a>.</p></details>
       </div>
     </div>
     <div class="legal" id="mien-tru">
@@ -851,7 +852,7 @@ footer small{color:#bba99c}
 <footer>
   <div class="wrap">
     <div><strong style="font:700 24px Oswald">Bếp Cô Kỹ</strong><p>Món nhà làm từ căn bếp nhỏ ở Hải Phòng. Uy tín – Chất lượng – 100% không chất bảo quản.</p></div>
-    <div><strong>Đặt món</strong><p>Zalo: <a href="https://zalo.me/0342668311" target="_blank" rel="noopener">0342.668.311</a><br>Facebook: Trần Thị Kỹ</p></div>
+    <div><strong>Đặt món</strong><p>Zalo: <a href="https://zalo.me/0342668311" target="_blank" rel="noopener">0342.668.311</a><br>Facebook: <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Trần Thị Kỹ</a></p></div>
     <div><strong>Nhận thực đơn mỗi tuần</strong><p>Kết bạn Zalo Bếp Cô Kỹ, nhắn “thực đơn” – em gửi món mới mỗi cuối tuần.</p></div>
     <div><small><b>Quyền riêng tư:</b> trang không dùng cookie, không có bộ đếm theo dõi, không lưu thông tin bạn nhập; phiếu đặt món chỉ tạo tin nhắn trên máy bạn.<br><a href="#huong-dan">Hướng dẫn</a> · <a href="#cai-dat">Cài lên điện thoại</a> · <a href="#mien-tru">Miễn trừ trách nhiệm</a><br>© <span id="yr">2026</span> Trần Thị Kỹ · bepcoky.com<br><a href="#moi-tra-sua">Mời Cô Kỹ ly trà sữa</a><br>Chị em xem trang của ông chủ tại <a href="https://nguyenducdungvn.github.io" target="_blank" rel="noopener">nguyenducdungvn.github.io</a></small></div>
   </div>
@@ -1046,6 +1047,7 @@ let cupV=35000,cupT='Ly vừa, full trân châu';
 const teaMsg=()=>{const nm=$('#teaName').value.trim()||'Ban doc';const plain=nm.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D');$('#teaMsg').textContent=`Moi Co Ky tra sua ${cupV/1000}k - ${plain}`;$('#teaFill').setAttribute('d',cupV===25000?'M48 140 h104 l-9 98 q-1 8 -10 8 h-66 q-9 0 -10 -8z':cupV===35000?'M46 110 h108 l-11 128 q-1 8 -10 8 h-66 q-9 0 -10 -8z':'M44 84 h112 l-13 154 q-1 8 -10 8 h-66 q-9 0 -10 -8z')};
 document.querySelectorAll('.opts button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.opts button').forEach(o=>o.setAttribute('aria-checked',o===b));cupV=+b.dataset.v;cupT=b.dataset.t;teaMsg()}));
 $('#teaName').addEventListener('input',teaMsg);teaMsg();
+$('#accCopy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('342668311');$('#accCopy').textContent='Đã chép'}catch(e){$('#accCopy').textContent='342668311'}});
 $('#teaCopy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#teaMsg').textContent);$('#teaCopy').textContent='Đã sao chép – cảm ơn bạn!'}catch(e){$('#teaCopy').textContent='Bạn chép nội dung bên trên giúp em nhé'}});
 
 /* ===== đi đây đó ===== */
