@@ -2,6 +2,22 @@
 window.KIEN_THUC_MUC = [{"k": "dung-cu", "t": "Dụng cụ bếp", "ic": "🔪"}, {"k": "an-toan", "t": "An toàn thực phẩm", "ic": "🛡️"}, {"k": "nguyen-lieu", "t": "Nguyên liệu & món", "ic": "🥬"}, {"k": "ruou-bia", "t": "Rượu – bia", "ic": "🍶"}, {"k": "nuoc-mam", "t": "Nước mắm", "ic": "🐟"}, {"k": "gia-vi", "t": "Gia vị", "ic": "🌶️"}];
 window.KIEN_THUC = [
 {
+"slug": "nha-dam-het-dang",
+"tieu_de": "Nha đam ăn sao cho hết đắng: lần trước em hỏng, lần này 9 điểm – và điều nên biết về lớp nhựa vàng",
+"muc": "an-toan",
+"anh": "nha-dam-be.jpg",
+"tom_tat": "Vị đắng nằm ở lớp nhựa vàng sát vỏ, chất này còn gây đau bụng, tiêu chảy. Bỏ vỏ cho sạch, xả hết nhựa là phần thịt trong veo ăn mát miệng.",
+"ngay": "2026-11-27"
+},
+{
+"slug": "kim-chi-nha-lam",
+"tieu_de": "Kim chi nhà làm: vì sao em chỉ làm khi trời nắng, cân thế nào cho sòng phẳng, cất tủ ra sao",
+"muc": "nguyen-lieu",
+"anh": "kim-chi-nguyen-lieu.jpg",
+"tom_tat": "Mẻ 40–50 kg, làm đến 2 giờ sáng, có mẻ lỡ tay mặn phải lên xin lỗi quý zị. Kinh nghiệm bếp nhà và mấy điều nên biết khi cất kim chi trong tủ lạnh.",
+"ngay": "2026-11-27"
+},
+{
 "slug": "vo-gao",
 "tieu_de": "Vo gạo hay “giặt gạo”? Vo nhẹ 1–2 lần là đủ, kẻo trôi mất vitamin B1",
 "muc": "nguyen-lieu",

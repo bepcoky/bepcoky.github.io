@@ -31,3 +31,10 @@ Tệp này bắt đầu bằng dấu gạch dưới nên không hiện trên tra
 - Mỗi tuần: xem bài mới đã lên trang, link Zalo/Shopee còn chạy.
 - Mỗi tháng: tải bản sao lưu (Code › Download ZIP).
 - Mỗi năm: xem lại phần Về em, thông tin liên hệ, gia hạn tên miền.
+
+## Cập nhật 27/11/2026
+- **Nhật ký bếp**: 164 bài trong `bai-viet.js`; 145 bài nhập từ ảnh chụp Facebook (thư mục `Cac bai viet cu/_md` trên máy anh Dũng), ảnh ở `img/fb/<tên tệp gốc>-NN.jpg` (rộng tối đa 900 px). Không đưa bài có trẻ em, chuyện riêng, bình luận người khác.
+- **Học tiếng Anh**: kho từ `tu-vung.js` (~1.700 từ/câu, 45 chủ đề – thêm từ theo dạng `word=nghĩa;`), logic `tieng-anh.js`: mỗi lần tải trang 5 từ mới theo thứ tự xáo riêng từng máy, tiến độ lưu localStorage (`ckEn.*`). Ô "Từ tiếng Anh hôm nay" ở đầu trang.
+- **Em làm thế nào** (`#em-lam`): 6 thẻ ảnh thật – sửa trực tiếp trong `index.html`.
+- **Dải ảnh chạy** dưới căn bếp: mảng `R` trong khối script "dải ảnh thật" của `index.html`.
+- Giá trên thẻ món (`g` trong mảng `P`) là giá Cô Kỹ đăng gần nhất – sửa khi giá đổi.

@@ -8,14 +8,14 @@
 (function () {
   'use strict';
   var NHANH = {
-    'vuon': [['🌿', 'Nhà & vườn', '#vuon'], ['🥬', 'Nguyên liệu & món', 'kien-thuc/#nguyen-lieu'], ['🐌', 'Ốc bươu nhồi', 'kien-thuc/oc-buou-nhoi.html'], ['🍚', 'Vo gạo nhẹ tay', 'kien-thuc/vo-gao.html']],
+    'vuon': [['🌿', 'Nhà & vườn', '#vuon'], ['🥬', 'Nguyên liệu & món', 'kien-thuc/#nguyen-lieu'], ['🐌', 'Ốc bươu nhồi', 'kien-thuc/oc-buou-nhoi.html'], ['🍚', 'Vo gạo nhẹ tay', 'kien-thuc/vo-gao.html'], ['🌵', 'Nha đam hết đắng', 'kien-thuc/nha-dam-het-dang.html']],
     'noi-ngoai': [['👨‍👩‍👧‍👦', 'Nội ngoại', '#noi-ngoai'], ['🎵', 'Bài hát về em', '#bai-hat'], ['💞', 'Bước chung một đời', '#bai-hat:p8jLZq9B_s0'], ['🙏', 'Những điều em tin', '#triet-ly']],
     'di-day-di-do': [['🧭', 'Đi đây đó', '#di-day-di-do'], ['☁️', 'Anh yêu nắng hay yêu em?', '#bai-hat:r6IUzZCaynQ'], ['🍃', 'Thở đi nhẹ một kiếp người', '#bai-hat:VtI6BtRhSJE'], ['🌍', 'Trái đất này ta đến một lần thôi', '#bai-hat:jYRa-MkkHow']],
-    'gian-hang': [['🫙', 'Gian hàng', '#gian-hang'], ['🛒', 'Đặt Cô Kỹ làm', '#dat-hang'], ['🔎', 'Soi cùng Cô Kỹ', 'https://soi.bepcoky.com/'], ['🛡️', 'Kiểm chứng trước khi mua', '#cung-thong-tin']],
+    'gian-hang': [['🫙', 'Gian hàng', '#gian-hang'], ['🛒', 'Đặt Cô Kỹ làm', '#dat-hang'], ['🦐', 'Em làm thế nào', '#em-lam'], ['🔎', 'Soi cùng Cô Kỹ', 'https://soi.bepcoky.com/'], ['🛡️', 'Kiểm chứng trước khi mua', '#cung-thong-tin']],
     've-em': [['👩‍🍳', 'Về em', '#ve-em'], ['🍽️', 'Hôm nay ăn gì?', '#cung-an-gi'], ['📒', 'Nhật ký bếp', '#nhat-ky'], ['😂', 'Vợ là sếp – chồng là nhất', '#bai-hat:5JOihj8f0yc']],
     'moi-tra-sua': [['🧋', 'Mời Cô Kỹ ly trà sữa', '#moi-tra-sua'], ['❓', 'Hướng dẫn', '#huong-dan'], ['📲', 'Cài lên điện thoại', '#cai-dat']],
-    'cung-co-ky': [['📖', 'Kiến thức bếp', '#kien-thuc'], ['🍳', 'Cùng nấu ăn', '#cung-nau-an'], ['🗣️', 'Học ngoại ngữ', '#cung-ngoai-ngu'], ['💄', 'Làm đẹp', '#cung-lam-dep'], ['🛍️', 'Đồ em dùng', '#cung-do-dung']],
-    'nhat-ky': [['📒', 'Nhật ký bếp', '#nhat-ky'], ['🍳', 'Chảo lồi giữa', 'kien-thuc/chao-loi-giua.html'], ['🔪', 'Rãnh trên lưỡi dao', 'kien-thuc/ranh-tren-luoi-dao.html'], ['🧽', 'Miếng rửa chén', 'kien-thuc/mieng-rua-chen.html'], ['🥣', 'Phễu lọc chóp nón', 'kien-thuc/pheu-loc-chop-non.html']],
+    'cung-co-ky': [['📖', 'Kiến thức bếp', '#kien-thuc'], ['🍳', 'Cùng nấu ăn', '#cung-nau-an'], ['🗣️', '5 từ tiếng Anh hôm nay', '#cung-ngoai-ngu'], ['💄', 'Làm đẹp', '#cung-lam-dep'], ['🛍️', 'Đồ em dùng', '#cung-do-dung']],
+    'nhat-ky': [['📒', 'Nhật ký bếp', '#nhat-ky'], ['🥬', 'Kim chi nhà làm', 'kien-thuc/kim-chi-nha-lam.html'], ['🍳', 'Chảo lồi giữa', 'kien-thuc/chao-loi-giua.html'], ['🔪', 'Rãnh trên lưỡi dao', 'kien-thuc/ranh-tren-luoi-dao.html'], ['🧽', 'Miếng rửa chén', 'kien-thuc/mieng-rua-chen.html'], ['🥣', 'Phễu lọc chóp nón', 'kien-thuc/pheu-loc-chop-non.html']],
     'song-khoe': [['🌿', 'Sống khỏe', '#song-khoe'], ['🐟', 'Gỏi cá & sán lá gan', 'kien-thuc/goi-ca-san-la-gan.html'], ['🥤', 'Máy xay & vi nhựa', 'kien-thuc/may-xay-vi-nhua.html'], ['🔎', 'Soi cùng Cô Kỹ', 'https://soi.bepcoky.com/']]
   };
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
