@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /quan-ly/
 
 Sitemap: https://bepcoky.com/sitemap.xml

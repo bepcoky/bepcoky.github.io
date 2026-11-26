@@ -21,7 +21,7 @@ MUC = [  # khóa, tên, biểu tượng, lời giới thiệu
     ('dung-cu', 'Dụng cụ bếp', '🔪', 'Dao, chảo, nồi, tạp dề… dùng đúng thì bền, mua đúng thì đỡ tiền.'),
     ('an-toan', 'An toàn thực phẩm', '🛡️', 'Những điều nhà mình nên biết để ăn ngon mà vẫn yên tâm.'),
     ('nguyen-lieu', 'Nguyên liệu & món', '🥬', 'Vì sao các cụ nấu thế – nhìn bằng con mắt bếp nhà.'),
-    ('ruou-bia', 'Rượu – bia', '🍶', 'Sắp có: rượu ngâm, rượu nấu, bia – uống sao cho phải phép.'),
+    ('ruou-bia', 'Rượu – bia', '🍶', 'Em không thích rượu bia, nhưng tìm hiểu để biết mà giới thiệu cho các bác. Uống để thưởng thức chứ đừng để say, đã uống rượu bia thì không lái xe. Tìm hiểu sâu hơn ở ứng dụng Thưởng thức rượu bia (đang phát triển, sắp mở tại ruoubia.bepcoky.com).'),
     ('nuoc-mam', 'Nước mắm', '🐟', 'Sắp có: độ đạm, mắm truyền thống – mắm công nghiệp, cách chọn.'),
     ('gia-vi', 'Gia vị', '🌶️', 'Sắp có: tiêu, hồi, quế, thảo quả… mua ở đâu, cất thế nào.'),
 ]

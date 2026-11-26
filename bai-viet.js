@@ -12,7 +12,7 @@
    số điện thoại hay thông tin của khách vào đây.
    ========================================================= */
 window.BAI_VIET = [
-/* ---- 145 bài nhập từ ảnh chụp Facebook 01–10/2026 (thư mục Cac bai viet cu/_md), cập nhật 27/11/2026 ---- */
+/* ---- 145 bài nhập từ ảnh chụp Facebook 01–10/2026 (D:\New App 2026\Bep co Ky Web\Cac bai viet 2026\_md), cập nhật 27/11/2026 ---- */
 {ngay:"2026-10-19", muc:"noingoai", tieuDe:"Anh Chí xuống bếp xem Nở nấu gì", anh:["fb/191026-01.jpg"], nguon:"Facebook",
 noiDung:`Đi làm về anh Chí xuống bếp xem Nở nấu gì mà thơm từ ngõ thơm vào thế😜😜😜.
 - Anh Chí: Này không được rồi, phải tống em đi chơi thôi chứ để ở nhà như này nghịch lắm😜😜😜

@@ -18,11 +18,51 @@ window.KIEN_THUC = [
 "ngay": "2026-11-27"
 },
 {
+"slug": "whisky-lam-the-nao",
+"tieu_de": "Whisky làm ra thế nào? Từ hạt lúa mạch đến \"phần của các thiên thần\"",
+"muc": "ruou-bia",
+"anh": "whisky-quy-trinh.svg",
+"tom_tat": "Ủ mầm, nghiền, nấu ra nước đường, lên men, chưng cất, ủ thùng gỗ sồi. Vì sao rượu trong thùng mỗi năm vơi đi một ít, và vì sao màu vàng là nhờ cái thùng.",
+"ngay": "2026-11-26"
+},
+{
+"slug": "whisky-la-gi",
+"tieu_de": "Whisky là gì? Bài tổng quan cho người chưa biết gì, như em",
+"muc": "ruou-bia",
+"anh": "whisky-ban-do.svg",
+"tom_tat": "Whisky là rượu mạnh chưng cất từ ngũ cốc rồi ủ trong thùng gỗ. Single malt, blended, bourbon, rye khác nhau thế nào; vì sao có chai viết whisky, có chai viết whiskey.",
+"ngay": "2026-11-26"
+},
+{
 "slug": "vo-gao",
 "tieu_de": "Vo gạo hay “giặt gạo”? Vo nhẹ 1–2 lần là đủ, kẻo trôi mất vitamin B1",
 "muc": "nguyen-lieu",
 "anh": "vo-gao.svg",
 "tom_tat": "Chuyện bệnh tê phù của nhà giàu Nhật thời Edo, giải Nobel 1929 và lý do các cụ chỉ dặn khuấy nước một hai lần cho trôi bụi.",
+"ngay": "2026-11-26"
+},
+{
+"slug": "thuong-thuc-whisky",
+"tieu_de": "Thưởng thức whisky mà không say: một ly nhỏ, ba lần ngửi, vài giọt nước",
+"muc": "ruou-bia",
+"anh": "ly-thuong-thuc.svg",
+"tom_tat": "Mùi vị phần lớn nằm ở mũi chứ không ở lưỡi. Ly miệng hẹp, rót ít, ngửi kỹ, nhấp chậm, thêm vài giọt nước để mùi mở ra – và vì sao cho nhiều đá lại ít tan hơn.",
+"ngay": "2026-11-26"
+},
+{
+"slug": "ruou-vang-nhap-mon",
+"tieu_de": "Rượu vang nhập môn: đỏ, trắng, hồng, sủi tăm – và chuyện uống lạnh hay để nguyên",
+"muc": "ruou-bia",
+"anh": "vang-nhap-mon.svg",
+"tom_tat": "Vang làm từ nho lên men. Vang đỏ có chát vì vỏ nho, vang trắng chua thanh, vang hồng nhẹ nhàng, vang sủi để chúc mừng. Vài giống nho hay gặp trên nhãn và mẹo chọn vang đi cùng món ăn.",
+"ngay": "2026-11-26"
+},
+{
+"slug": "ruou-bia-mo-dau",
+"tieu_de": "Em không thích rượu bia – thế mà Bếp Cô Kỹ lại mở chuyên mục Rượu – bia",
+"muc": "ruou-bia",
+"anh": "ruou-bia-mo-dau.svg",
+"tom_tat": "Bài mở đầu chuỗi Rượu – bia của Bếp Cô Kỹ: vì sao một người không thích rượu lại đi tìm hiểu, ba điều em dặn trước, và lộ trình các bài tiếp theo về whisky, rượu vang.",
 "ngay": "2026-11-26"
 },
 {
@@ -71,6 +111,14 @@ window.KIEN_THUC = [
 "muc": "an-toan",
 "anh": "goi-ca-vong-doi.svg",
 "tom_tat": "Sán lá gan nhỏ trong cá nước ngọt được Tổ chức Nghiên cứu Ung thư Quốc tế xếp nhóm 1 – cùng nhóm thuốc lá. Cách duy nhất chắc ăn là nấu chín.",
+"ngay": "2026-11-26"
+},
+{
+"slug": "doc-nhan-chai-whisky",
+"tieu_de": "Đọc nhãn chai whisky: \"12 năm\" là 12 năm cái gì, và mấy chữ tiếng Anh nên biết",
+"muc": "ruou-bia",
+"anh": "nhan-chai-whisky.svg",
+"tom_tat": "Tuổi ghi trên nhãn là tuổi của phần rượu trẻ nhất trong chai. Single malt, blended, cask strength, độ cồn, non chill-filtered – đọc được là đỡ mua nhầm, đỡ bị lóa vì cái hộp đẹp.",
 "ngay": "2026-11-26"
 },
 {

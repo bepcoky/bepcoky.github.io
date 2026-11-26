@@ -112,6 +112,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 .prod p{margin:0;font-size:14.5px;color:#6d5a50}
 .qty{display:flex;align-items:center;gap:6px}
 .qty button{width:44px;height:44px;border-radius:12px;border:0;background:#fff0ea;color:#c62a1e;font:700 22px/1 "Be Vietnam Pro",system-ui,sans-serif;cursor:pointer}
+.qty .done{width:auto;padding:0 14px;margin-left:auto;background:var(--red,#c62a1e);color:#fff;font-size:15px;white-space:nowrap}
 .qty output{min-width:34px;text-align:center;font:700 18px "Be Vietnam Pro",system-ui,sans-serif}
 .unit{font-size:13px;color:#c62a1e;font-weight:700;margin-top:auto}
 .order{margin-top:18px;background:#fff;color:#2a1a14;border-radius:18px;padding:16px}
@@ -446,6 +447,7 @@ footer small{color:#bba99c}
 .howgrid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 .howgrid figcaption{padding:14px 16px 18px;font-size:15px;line-height:1.5}
 .howgrid figcaption b{display:block;font-size:17px;margin-bottom:4px;color:var(--red)}
+.bepnghi{margin:14px 0;padding:14px 16px;border-radius:16px;background:#fdecea;border:1px solid #f3b7ae;color:#7a1d14;font-size:16px}.bepnghi.mini{margin:10px 0 0;padding:8px 12px;font-size:14px;max-width:520px}
 </style>
 </head>
 <body>
@@ -478,7 +480,8 @@ footer small{color:#bba99c}
         <button class="again" type="button" id="again">Em chào câu khác nhé</button>
         <p class="en-teaser" id="enTeaser" hidden></p>
       </div>
-      <div class="cta"><a class="btn" href="#dat-hang">Đặt Cô Kỹ làm</a><a class="btn ghost" href="#nhat-ky">Đọc chuyện bếp</a></div>
+      <p class="bepnghi mini" id="bepNghiTop" role="status" hidden></p>
+      <div class="cta"><a class="btn" href="#dat-hang">Đặt Bếp Cô Kỹ làm</a><a class="btn ghost" href="#nhat-ky">Đọc chuyện bếp</a></div>
     </div>
   </div>
   <div class="scene">
@@ -646,7 +649,7 @@ footer small{color:#bba99c}
       <p class="hand">“Chỉ cần mình làm nghề bằng cái tâm thì món ăn quê sẽ tự tìm được đường đến với những người thương nó.”</p>
       <p>Tết Bính Ngọ 2026 là tròn 3 năm Bếp Cô Kỹ. Những người đặt lần đầu vì tin, quay lại nhiều lần vì ngon – em biết ơn từng đơn hàng, từng lời góp ý. Mẻ nào lỡ tay mặn, em nói thật và xin lỗi, rồi làm mẻ khác nhạt hơn.</p>
       <p class="hand">“Sống thật vui, thật tử tế – như Bố Mẹ đã sống và dạy chúng con.”</p>
-      <ul class="facts"><li>Hải Phòng</li><li>Vợ · Mẹ ba con · Con gái út</li><li>3 năm Bếp Cô Kỹ</li><li>Tự tay làm, tự tay đi giao</li><li>Mê trồng rau, trầu không, nha đam</li><li>Thích đi đây đó</li><li>Làm thơ ứng khẩu</li></ul>
+      <ul class="facts"><li>Hải Phòng</li><li>Vợ · Mẹ ba con · Con gái út</li><li>3 năm Bếp Cô Kỹ</li><li>Tự tay làm, tự tay đi giao</li><li>Đại lý tỏi đen SNG tại Hải Phòng</li><li>Mê trồng rau, trầu không, nha đam</li><li>Thích đi đây đó</li><li>Làm thơ ứng khẩu</li></ul>
     </div>
   </div>
   <div class="wrap journey">
@@ -677,14 +680,15 @@ footer small{color:#bba99c}
         <p>Các chị em cứ đi làm kiếm xèng, mấy việc vặt này cứ để em lo nhé ạ!</p>
       </div>
     </div>
-    <h3 style="margin-top:34px;font-size:26px" id="dat-hang">Đặt Cô Kỹ làm</h3>
+    <h3 style="margin-top:34px;font-size:26px" id="dat-hang">Đặt Bếp Cô Kỹ làm</h3>
     <p style="max-width:70ch;margin:0 0 4px">Em làm một mình, theo từng mẻ nhỏ cho tươi và kỹ. Chị em chọn món, để lại tên và số điện thoại – em sẽ gọi lại xác nhận ngày làm, giá và cách giao, rồi mới vào bếp.</p>
+    <div class="bepnghi" id="bepNghi" role="status" hidden></div>
     <div class="prods" id="prods"></div>
     <form class="order" id="orderForm">
       <strong>Thông tin người đặt</strong>
       <div class="ofields">
         <label>Tên của bạn<input name="Tên" autocomplete="name" required></label>
-        <label>Số điện thoại để em gọi lại<input name="Điện thoại" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <label>Số điện thoại để Bếp Cô Kỹ gọi lại<input name="Điện thoại" type="tel" autocomplete="tel" inputmode="tel" required></label>
         <label>Khu vực nhận hàng<input name="Khu vực" placeholder="VD: Lê Chân, Hải Phòng"></label>
         <label>Muốn nhận khoảng ngày<input name="Ngày muốn nhận" type="date"></label>
         <label class="wide">Ghi chú (mặn nhạt, cay, để biếu…)<input name="Ghi chú"></label>
@@ -695,7 +699,7 @@ footer small{color:#bba99c}
         <span class="note" id="copied">Bấm gửi: đơn được sao chép, bạn mở Zalo 0342.668.311 và dán vào. Em sẽ gọi lại xác nhận.</span>
       </div>
     </form>
-    <p class="draft">Giá ghi trên thẻ là giá em đã đăng gần nhất; giá thực tế em báo lại khi gọi xác nhận – theo mẻ, theo mùa ạ. Dịp Tết em ngừng nhận đơn đi miền Nam, miền Trung từ 16 tháng Chạp, các tỉnh lân cận từ 18 tháng Chạp, quanh Hải Phòng đến 23 tháng Chạp.</p>
+    <p class="draft">Giá từng món Bếp Cô Kỹ trao đổi khi gọi lại xác nhận – theo mẻ, theo mùa ạ. Dịp Tết em ngừng nhận đơn đi miền Nam, miền Trung từ 16 tháng Chạp, các tỉnh lân cận từ 18 tháng Chạp, quanh Hải Phòng đến 23 tháng Chạp.</p>
   </div>
 </section>
 
@@ -1043,7 +1047,7 @@ footer small{color:#bba99c}
         <h3>Dùng trang thế nào</h3>
         <ul class="ticks">
           <li><b>Căn bếp đầu trang:</b> bấm vào từng đồ vật (hũ thịt chưng, nồi phở, chậu trầu không…), các nhánh liên quan tỏa ra thành vòng tròn quanh đồ vật; nút vàng “Vào góc…” đưa các bác tới phần đó. Bấm ra ngoài hoặc phím Esc để đóng. Trên điện thoại, dùng hàng nút tròn ngay dưới căn bếp.</li>
-          <li><b>Đặt Cô Kỹ làm:</b> bấm + ở món muốn đặt, điền tên và số điện thoại, bấm “Gửi đơn qua Zalo”. Đơn được sao chép, bạn mở Zalo và dán vào; em gọi lại xác nhận rồi mới làm. Trang không thu tiền.</li>
+          <li><b>Đặt Bếp Cô Kỹ làm:</b> bấm + ở món muốn đặt rồi bấm “Chọn xong ↓” để xuống ngay phần gửi đơn, điền tên và số điện thoại, bấm “Gửi đơn qua Zalo”. Đơn được sao chép, bạn mở Zalo và dán vào; em gọi lại xác nhận rồi mới làm. Trang không thu tiền.</li>
           <li><b>Nhật ký bếp:</b> lọc theo chủ đề hoặc theo năm, bấm vào bài để đọc hết.</li>
           <li><b>Cùng Cô Kỹ:</b> chọn từng ô (Học tiếng Anh, Kiểm chứng thông tin…). Ở Học tiếng Anh, bấm “Nghe” để máy đọc – cần bật âm lượng.</li>
         </ul>
@@ -1148,24 +1152,35 @@ document.querySelectorAll('.hot').forEach(g=>{const go=()=>document.querySelecto
 /* ===== sản phẩm + tin nhắn Zalo ===== */
 const P=[
  {id:'tc',n:'Thịt chưng mắm tép',u:'hũ 500g',d:'Món chủ đạo của bếp. Ăn liền, không chất bảo quản, để tủ lạnh dùng dần. Gửi được đi tỉnh, cả miền Trung, miền Nam.',img:'fb/280126-01.jpg'},
- {id:'kc',n:'Kim chi cải thảo',u:'kg',g:'125k/kg · từ 2 kg 120k · từ 5 kg 110k',d:'Có lê, táo, củ cải, hành tây. Em chỉ cân phần rau, nước sốt tặng thêm. Làm khi trời nắng, mẻ 40–50 kg, hết là hết.',img:'fb/030426-01.jpg'},
- {id:'cn',n:'Chả nem tôm, chả nem thịt',u:'hộp',g:'tôm vàng 16 cái 240k · tôm trắng 10 cái 220k · thịt 10 cái 150–170k (giá Tết 2026)',d:'Tôm để nguyên con, bánh đa đặt làm riêng cho giòn và nhạt, hành tự phi. Có loại rán sơ về rán lại lửa hai. Miễn ship từ 2 hộp trong 5 km.',img:'fb/050226-01.jpg'},
- {id:'tb',n:'Tôm luộc bóc nõn',u:'kg',d:'Tôm sống dãy đành đạch, qua 4 công đoạn cẩn thận mới luộc, bóc, rút chỉ – nhà mình chỉ việc chế biến.',img:'tom-boc-non.jpg'},
+ {id:'kc',n:'Kim chi cải thảo',u:'kg',d:'Có lê, táo, củ cải, hành tây. Em chỉ cân phần rau, nước sốt tặng thêm. Làm khi trời nắng, mẻ 40–50 kg, hết là hết.',img:'fb/030426-01.jpg'},
+ {id:'cn',n:'Chả nem tôm, chả nem thịt',u:'hộp',d:'Tôm để nguyên con, bánh đa đặt làm riêng cho giòn và nhạt, hành tự phi. Có loại rán sơ về rán lại lửa hai. Hộp 10 hoặc 16 cái.',img:'fb/050226-01.jpg'},
+ {id:'tb',n:'Tôm luộc bóc nõn',u:'kg',d:'Tôm sống dãy đành đạch, qua 4 công đoạn: luộc → bóc → bổ sống lưng lấy chỉ đen và dạ dày tôm → đóng hộp. Nhà mình chỉ việc chế biến.',img:'tom-boc-non.jpg'},
  {id:'xv',n:'Xôi vò',u:'suất',d:'Tơi rời, khô dẻo, vàng màu chanh – lên mâm cúng đẹp mắt. Nhận theo dịp, đặt sớm giúp em.',img:'xoi-vo.jpg'},
  {id:'pt',n:'Pate nhà làm',u:'hộp',d:'Mỗi mẻ ninh nấu gần chục cân – hết là hết, mẻ sau em báo.',img:'pate-2.jpg'},
  {id:'hp',n:'Hành phi',u:'túi',d:'Hành tự phi, thơm nức mũi cả xóm. Ai ăn báo em gom đơn làm mẻ mới.',img:'hanh-phi-2.jpg'},
  {id:'dp',n:'Tinh dầu phở Bò – Gà',u:'chai',d:'Cho chị em bận rộn tự nấu bát phở cuối tuần mà không phải lùng mua gia vị lắt nhắt.',img:'tinh-dau-pho.jpg'}];
 const q={};P.forEach(p=>q[p.id]=0);
-$('#prods').innerHTML=P.map(p=>`<article class="prod"><img src="img/${p.img}" alt="${p.n}" loading="lazy"><div class="b"><h3>${p.n}</h3><p>${p.d}</p><div class="unit">${p.u} · ${p.g||'giá báo qua Zalo'}</div><div class="qty"><button type="button" data-id="${p.id}" data-d="-1" aria-label="Bớt ${p.n}">−</button><output id="q-${p.id}">0</output><button type="button" data-id="${p.id}" data-d="1" aria-label="Thêm ${p.n}">+</button></div></div></article>`).join('');
+$('#prods').innerHTML=P.map(p=>`<article class="prod"><img src="img/${p.img}" alt="${p.n}" loading="lazy"><div class="b"><h3>${p.n}</h3><p>${p.d}</p><div class="unit">${p.u} · giá trao đổi khi đặt</div><div class="qty"><button type="button" data-id="${p.id}" data-d="-1" aria-label="Bớt ${p.n}">−</button><output id="q-${p.id}">0</output><button type="button" data-id="${p.id}" data-d="1" aria-label="Thêm ${p.n}">+</button><button type="button" class="done" data-xong="${p.id}" aria-label="Chọn xong ${p.n}, chuyển xuống phần gửi đơn">Chọn xong ↓</button></div></div></article>`).join('');
 const msg=$('#msg'),of=$('#orderForm');
 const write=()=>{const l=P.filter(p=>q[p.id]>0).map(p=>`- ${p.n}: ${q[p.id]} ${p.u}`);const info=[...new FormData(of)].filter(([,v])=>String(v).trim()).map(([k,v])=>`${k}: ${v}`);
- msg.value=`Chào Bếp Cô Kỹ, em muốn đặt Cô Kỹ làm:\n${l.length?l.join('\n'):'- (chưa chọn món – bấm + ở món phía trên)'}\n${info.join('\n')}\nNhờ Cô Kỹ gọi lại xác nhận giúp em ạ.`};
-$('#prods').addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b)return;const id=b.dataset.id;q[id]=Math.max(0,q[id]+ +b.dataset.d);$('#q-'+id).textContent=q[id];write()});
+ msg.value=(window.BEP_NGHI?'(Tôi biết Bếp Cô Kỹ đang nghỉ, gửi trước để Bếp Cô Kỹ trả lời khi quay lại.)\n':'')+`Chào Bếp Cô Kỹ, tôi muốn đặt Bếp Cô Kỹ làm:\n${l.length?l.join('\n'):'- (chưa chọn món – bấm + ở món phía trên)'}\n${info.join('\n')}\nNhờ Bếp Cô Kỹ gọi lại xác nhận giúp tôi nhé.`};
+$('#prods').addEventListener('click',e=>{const x=e.target.closest('button[data-xong]');if(x){const id=x.dataset.xong;if(!q[id]){q[id]=1;$('#q-'+id).textContent=1;write()}of.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});setTimeout(()=>{const f=of.querySelector('input[name="Tên"]');if(f&&!f.value)f.focus({preventScroll:true})},450);return}const b=e.target.closest('button[data-id]');if(!b)return;const id=b.dataset.id;q[id]=Math.max(0,q[id]+ +b.dataset.d);$('#q-'+id).textContent=q[id];write()});
 of.addEventListener('input',write);write();
 of.addEventListener('submit',async e=>{e.preventDefault();if(!P.some(p=>q[p.id]>0)){$('#copied').textContent='Bạn chọn ít nhất một món (bấm +) giúp em nhé.';return}
  write();let ok=false;try{await navigator.clipboard.writeText(msg.value);ok=true}catch(err){msg.select()}
  $('#copied').innerHTML=(ok?'Đã sao chép đơn! ':'Bạn sao chép đơn ở ô trên giúp em nhé. ')+'<a href="https://zalo.me/0342668311" target="_blank" rel="noopener">Mở Zalo 0342.668.311</a>, dán vào và gửi – em gọi lại xác nhận.'});
 
+
+/* ===== trạng thái Bếp đang nghỉ (Cô Kỹ đặt ở /quan-ly/ bằng mã PIN) ===== */
+fetch('https://bep-trang-thai.nddzungx.workers.dev/status',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+ const homNay=new Date(Date.now()+7*36e5).toISOString().slice(0,10);
+ if(!d||!d.nghi||(d.den&&d.den<homNay))return;
+ window.BEP_NGHI=true;const den=d.den?` đến hết ngày ${d.den.split('-').reverse().join('/')}`:'';
+ const loi=(d.loi||'').replace(/[<>&]/g,'');
+ const a=document.getElementById('bepNghi');a.innerHTML=`<b>🌙 Bếp Cô Kỹ đang nghỉ${den}.</b> ${loi||'Các bác vẫn gửi đơn được, Bếp Cô Kỹ sẽ trả lời khi quay lại ạ.'}`;a.hidden=false;
+ const t=document.getElementById('bepNghiTop');t.textContent=`🌙 Bếp đang nghỉ${den} – đơn gửi vào sẽ được trả lời khi Bếp Cô Kỹ quay lại.`;t.hidden=false;
+ const b=document.getElementById('copy');if(b)b.textContent='Gửi đơn trước qua Zalo';write();
+}).catch(()=>{});
 /* ===== hũ 3D ===== */
 const jar=$('#jar3d');
 const mkLabel=()=>{const c=document.createElement('canvas');c.width=1400;c.height=520;const x=c.getContext('2d');
@@ -1305,7 +1320,7 @@ $('#gear').addEventListener('keydown',e=>{const t=e.target.closest('[data-g]');i
 const ZALO='0342.668.311';
 document.querySelectorAll('form.mini').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();
  const lines=[...new FormData(f)].filter(([,v])=>String(v).trim()).map(([k,v])=>`- ${k}: ${v}`);
- const text=`Chào Bếp Cô Kỹ, em gửi ${f.dataset.kind.toLowerCase()}:\n${lines.join('\n')}`;const out=f.querySelector('.out');
+ const text=`Chào Bếp Cô Kỹ, tôi gửi ${f.dataset.kind.toLowerCase()}:\n${lines.join('\n')}`;const out=f.querySelector('.out');
  let ok=false;try{await navigator.clipboard.writeText(text);ok=true}catch(err){}
  out.innerHTML=`<pre>${esc(text)}</pre>${ok?'Đã sao chép. ':'Bạn bôi đen và sao chép đoạn trên nhé. '}<a href="https://zalo.me/0342668311" target="_blank" rel="noopener">Mở Zalo ${ZALO}</a> và dán vào.`}));
 

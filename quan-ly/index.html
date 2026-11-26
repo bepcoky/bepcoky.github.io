@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bếp Cô Kỹ – Đặt trạng thái bếp</title>
+<style>
+:root{--red:#c62a1e;--leaf:#2f7a3e;--ink:#2a1a14;--line:#ead9c6;--paper:#fbf1e3}
+*{box-sizing:border-box}body{margin:0;font:17px/1.55 "Be Vietnam Pro",system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+main{max-width:480px;margin:0 auto;padding:22px 18px 60px}
+h1{font-size:26px;color:var(--red);margin:6px 0 4px}p{margin:6px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:16px}
+label{display:block;font-weight:700;margin:12px 0 6px}
+input,textarea{width:100%;min-height:48px;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font:inherit}
+textarea{min-height:84px}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+button{min-height:56px;border:0;border-radius:16px;font:700 18px inherit;font-family:inherit;cursor:pointer}
+.mo{background:var(--leaf);color:#fff}.nghi{background:var(--red);color:#fff}.phu{background:#fff;border:1px solid var(--line);color:var(--ink);min-height:46px;font-size:15px;width:100%;margin-top:10px}
+.st{font-size:20px;font-weight:700;padding:12px 14px;border-radius:14px;background:#eef7ef;color:var(--leaf)}.st.off{background:#fdecea;color:var(--red)}
+.msg{min-height:24px;font-weight:600;margin-top:10px}.msg.err{color:var(--red)}
+.mau{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.mau button{min-height:38px;font-size:14px;padding:0 12px;background:var(--paper);border:1px solid var(--line);font-weight:600}
+small{color:#7a6658}
+a{color:var(--red)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Trạng thái Bếp Cô Kỹ</h1>
+  <p>Trang này chỉ dành cho Cô Kỹ. Nhập mã PIN rồi bấm <b>Bếp mở</b> hoặc <b>Bếp nghỉ</b>; trang chủ sẽ hiện thông báo cho khách trong vòng 1 phút.</p>
+  <div class="card">
+    <div class="st" id="st">Đang xem trạng thái…</div>
+    <label for="pin">Mã PIN</label>
+    <input id="pin" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Nhập mã PIN">
+    <label for="loi">Lời nhắn cho khách (khi nghỉ)</label>
+    <textarea id="loi" maxlength="200" placeholder="VD: Em đi về quê mấy hôm, đơn gửi vào em trả lời khi về nhé!"></textarea>
+    <div class="mau" id="mau">
+      <button type="button">Em nghỉ mệt mấy hôm, đơn gửi vào em trả lời sau nhé!</button>
+      <button type="button">Em đi về quê, về đến nhà em gọi lại ngay ạ!</button>
+      <button type="button">Bếp tạm hết hàng, mẻ sau em báo nhé!</button>
+    </div>
+    <label for="den">Nghỉ đến hết ngày (không bắt buộc)</label>
+    <input id="den" type="date">
+    <small>Qua ngày này trang tự coi là bếp đã mở lại.</small>
+    <div class="big"><button class="mo" id="bMo" type="button">Bếp mở<br><small style="color:#dff0e1">nhận đơn</small></button><button class="nghi" id="bNghi" type="button">Bếp nghỉ<br><small style="color:#fde0dc">tạm dừng</small></button></div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+  </div>
+  <div class="card">
+    <b>Đổi mã PIN</b>
+    <label for="pinMoi">Mã PIN mới (4–12 chữ số)</label>
+    <input id="pinMoi" type="password" inputmode="numeric" autocomplete="new-password">
+    <button class="phu" id="bPin" type="button">Đổi mã PIN (nhập mã cũ ở ô Mã PIN phía trên)</button>
+  </div>
+  <p style="margin-top:18px"><a href="/">← Về trang Bếp Cô Kỹ</a></p>
+</main>
+<script>
+const API='https://bep-trang-thai.nddzungx.workers.dev';
+const $=s=>document.querySelector(s);
+const show=d=>{const st=$('#st');if(d.nghi){st.className='st off';st.textContent='Bếp đang NGHỈ'+(d.den?' đến hết '+d.den.split('-').reverse().join('/'):'');$('#loi').value=d.loi||'';$('#den').value=d.den||''}else{st.className='st';st.textContent='Bếp đang MỞ – nhận đơn bình thường'}};
+const say=(t,err)=>{const m=$('#msg');m.textContent=t;m.className='msg'+(err?' err':'')};
+fetch(API+'/status',{cache:'no-store'}).then(r=>r.json()).then(show).catch(()=>{$('#st').textContent='Chưa kết nối được máy chủ trạng thái.'});
+try{const p=sessionStorage.getItem('ckPin');if(p)$('#pin').value=p}catch(e){}
+$('#mau').addEventListener('click',e=>{const b=e.target.closest('button');if(b)$('#loi').value=b.textContent});
+const loiTxt=(r,d)=>d.loi==='sai-pin'?'Sai mã PIN, còn '+d.conLan+' lần thử.':d.loi==='tam-khoa'?'Sai nhiều lần, tạm khóa '+d.con+' phút.':d.loi==='pin-moi-khong-hop-le'?'Mã PIN mới phải 4–12 chữ số.':'Lỗi '+r.status;
+async function gui(path,body){const pin=$('#pin').value.trim();if(!pin){say('Nhập mã PIN trước đã nhé.',1);return}
+  try{const r=await fetch(API+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pin,...body})});const d=await r.json();
+   if(!r.ok){say(loiTxt(r,d),1);return null}try{sessionStorage.setItem('ckPin',body.pinMoi||pin)}catch(e){}return d}catch(e){say('Không gửi được, kiểm tra mạng rồi thử lại.',1)}}
+$('#bMo').onclick=async()=>{const d=await gui('/status/set',{nghi:false,loi:'',den:''});if(d){show(d);say('Đã mở bếp. Khách đặt món bình thường.')}};
+$('#bNghi').onclick=async()=>{const d=await gui('/status/set',{nghi:true,loi:$('#loi').value.trim(),den:$('#den').value});if(d){show(d);say('Đã đặt Bếp nghỉ. Trang chủ hiện lời nhắn cho khách.')}};
+$('#bPin').onclick=async()=>{const m=$('#pinMoi').value.trim();const d=await gui('/status/pin',{pinMoi:m});if(d){$('#pin').value=m;$('#pinMoi').value='';say('Đã đổi mã PIN. Nhớ mã mới nhé!')}};
+</script>
+</body>
+</html>
