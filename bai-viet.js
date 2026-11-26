@@ -12,6 +12,10 @@
    số điện thoại hay thông tin của khách vào đây.
    ========================================================= */
 window.BAI_VIET = [
+/* ---- Bài mới (thêm 26/11/2026) ---- */
+{ngay:"2026-11-26", muc:"bep", tieuDe:"Giữa tuần lên nguyên combo Bò", anh:["fb/261126-01.jpg", "fb/261126-02.jpg", "fb/261126-03.jpg", "fb/261126-04.jpg"], nguon:"Facebook",
+noiDung:`Giữa tuần ăn món gì cho lạ mà ấm bụng? Vẫn là chiều lòng hợp ý của các cô chiêu cậu ấm nhà ông chủ thì nay em lên nguyên combo Bò nha quý zị😂😂😂`},
+
 /* ---- 145 bài nhập từ ảnh chụp Facebook 01–10/2026 (D:\New App 2026\Bep co Ky Web\Cac bai viet 2026\_md), cập nhật 27/11/2026 ---- */
 {ngay:"2026-10-19", muc:"noingoai", tieuDe:"Anh Chí xuống bếp xem Nở nấu gì", anh:["fb/191026-01.jpg"], nguon:"Facebook",
 noiDung:`Đi làm về anh Chí xuống bếp xem Nở nấu gì mà thơm từ ngõ thơm vào thế😜😜😜.
