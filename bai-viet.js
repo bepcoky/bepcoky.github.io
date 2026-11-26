@@ -8,6 +8,10 @@
    - anh    : tên ảnh trong thư mục img/, ảnh đầu là ảnh bìa
    - noiDung: nguyên văn bài, xuống dòng bình thường
    - nguon  : "Facebook" nếu bài đăng lần đầu trên Facebook
+   - loa    : (tùy chọn) bài Cô Kỹ KÊU GỌI ĐẶT HÀNG thì ghi một câu ngắn, vd  loa:"Mẻ kim chi mới, nhận đơn đến hết thứ Bảy ạ!"
+              → trang chủ hiện cái loa rung + nút "📣 Đang nhận đơn" (tin-moi.js). Bếp đang nghỉ thì loa tự ẩn.
+   - loaDen : (tùy chọn) loa hiện đến hết ngày này, dạng "2026-11-30"; bỏ trống = 3 ngày sau ngày đăng
+   Bài mới nhất tự lên bảng TIN MỚI trên căn bếp. Link mở thẳng bài: bepcoky.com/#bai=<tên ảnh bìa bỏ -01.jpg>, vd #bai=261126
    LƯU Ý: kho GitHub công khai – không đưa ảnh các con, ảnh chụp tin nhắn,
    số điện thoại hay thông tin của khách vào đây.
    ========================================================= */

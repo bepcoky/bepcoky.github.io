@@ -10,6 +10,10 @@
 <link rel="manifest" href="manifest.webmanifest?v=2">
 <link rel="icon" href="img/icon-192.png?v=2" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=2">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bếp Cô Kỹ">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bếp Cô Kỹ">
 <meta property="og:locale" content="vi_VN">
@@ -448,6 +452,37 @@ footer small{color:#bba99c}
 .howgrid figcaption{padding:14px 16px 18px;font-size:15px;line-height:1.5}
 .howgrid figcaption b{display:block;font-size:17px;margin-bottom:4px;color:var(--red)}
 .bepnghi{margin:14px 0;padding:14px 16px;border-radius:16px;background:#fdecea;border:1px solid #f3b7ae;color:#7a1d14;font-size:16px}.bepnghi.mini{margin:10px 0 0;padding:8px 12px;font-size:14px;max-width:520px}
+/* Tin mới + loa (tin-moi.js) */
+#tinMoiBang.co-tin .chalk{animation:tinSang 1.6s ease-in-out infinite}
+@keyframes tinSang{0%,100%{stroke:#f2b705;stroke-width:0}50%{stroke:#f2b705;stroke-width:5}}
+#tinMoiBang.co-tin #tinMoiDem{animation:tinNay 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes tinNay{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.loa-bep{cursor:pointer}.loa-bep:focus-visible{outline:3px solid var(--gold)}
+.loa-than{transform-box:fill-box;transform-origin:20% 60%;animation:loaRung 1.4s ease-in-out infinite}
+@keyframes loaRung{0%,60%,100%{transform:rotate(0)}10%{transform:rotate(-9deg)}20%{transform:rotate(8deg)}30%{transform:rotate(-6deg)}40%{transform:rotate(4deg)}}
+.loa-song path{animation:loaSong 1.4s ease-out infinite;opacity:0}.loa-song path:nth-child(2){animation-delay:.2s}.loa-song path:nth-child(3){animation-delay:.4s}
+@keyframes loaSong{0%{opacity:0}30%{opacity:1}100%{opacity:0}}
+.rm-ic.rm-img{position:relative;overflow:visible;padding:0}.rm-img img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.rm-img i{position:absolute;right:-7px;top:-7px;font-style:normal;font-size:15px;width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+#tin-moi{background:#2f4a3a;color:#fff7e0;box-shadow:none}#tin-moi b{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-left:4px;border-radius:10px;background:#c62a1e;color:#fff;font-size:12px}
+.chips .chip-loa{background:#c62a1e;color:#fff;box-shadow:none;font-weight:700}
+.loa-noi{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:55;font-family:"Be Vietnam Pro",sans-serif}
+.loa-nut{display:flex;align-items:center;gap:8px;border:0;border-radius:999px;background:#c62a1e;color:#fff;padding:10px 16px 10px 12px;font:700 15px "Be Vietnam Pro",sans-serif;box-shadow:0 8px 22px rgba(0,0,0,.3);cursor:pointer;position:relative}
+.loa-ic{font-size:22px;display:inline-block;animation:loaRung 1.4s ease-in-out infinite}
+.loa-noi.moi .loa-nut::before{content:"";position:absolute;inset:-6px;border-radius:999px;border:3px solid #c62a1e;animation:loaVong 1.6s ease-out infinite}
+@keyframes loaVong{0%{opacity:.9;transform:scale(.95)}100%{opacity:0;transform:scale(1.25)}}
+.loa-the{position:absolute;left:0;bottom:62px;width:min(330px,calc(100vw - 28px));background:#fffdf8;color:#2a1a14;border-radius:16px;padding:16px;box-shadow:0 14px 40px rgba(0,0,0,.3);border-top:6px solid #c62a1e}
+.loa-the[hidden]{display:none}
+.loa-x{position:absolute;right:8px;top:6px;border:0;background:none;font-size:26px;line-height:1;color:#888;cursor:pointer}
+.loa-dau{margin:0 0 4px;font-weight:800;color:#c62a1e}.loa-loi{margin:0 0 10px;font-size:16px;line-height:1.45}
+.loa-bai{display:flex;gap:10px;align-items:center;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:12px;padding:8px;margin-bottom:10px;cursor:pointer;font:600 14px/1.35 "Be Vietnam Pro",sans-serif;color:inherit}
+.loa-bai img{width:56px;height:56px;object-fit:cover;border-radius:8px;flex:none}.loa-bai small{display:block;font-weight:400;color:#7a6a5a;margin-top:2px}
+.loa-dat{display:flex;justify-content:center;align-items:center;width:100%;box-sizing:border-box}
+body.bep-nghi .loa-noi,body.bep-nghi #loaBep,body.bep-nghi .chip-loa{display:none!important}
+@media(prefers-reduced-motion:reduce){#tinMoiBang .chalk,#tinMoiDem,.loa-than,.loa-ic,.loa-song path,.loa-noi.moi .loa-nut::before{animation:none!important}.loa-song path{opacity:1}}
+#btnCai[hidden],#daCai[hidden],.bepnghi[hidden]{display:none!important}
+.rm-item.co-anh{width:160px}.rm-item.co-anh .rm-t{max-width:160px;font-size:12.5px}.rm-item.co-anh .rm-t small{display:block;font-weight:400;color:#7a6a5a;font-size:11.5px}
+@media(max-width:600px){.rm-item.co-anh{width:128px}.rm-item.co-anh .rm-t{max-width:128px;font-size:12px}.rm-item.co-anh .rm-ic{width:52px;height:52px}}
 </style>
 </head>
 <body>
@@ -623,10 +658,32 @@ footer small{color:#bba99c}
         </g>
         <g class="tag"><rect x="740" y="270" width="120" height="32" rx="16" fill="#2a1a14"/><text x="800" y="291" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Sống khỏe</text></g>
       </g>
+      <!-- bảng Tin mới: bấm → 5 bài mới nhất tỏa ra (tin-moi.js + menu-do-vat.js) -->
+      <g class="hot" id="tinMoiBang" data-go="#tin-moi" tabindex="0" role="link" aria-label="Bảng tin trên tường – Tin mới">
+        <rect class="ring" x="752" y="2" width="156" height="98" rx="10"/>
+        <g class="lift">
+          <path d="M770 30 L830 8 L890 30" stroke="#6b4a2a" stroke-width="2" fill="none"/><circle cx="830" cy="8" r="4" fill="#6b4a2a"/>
+          <rect x="760" y="28" width="140" height="64" rx="7" fill="var(--wood2)"/>
+          <rect class="chalk" x="767" y="35" width="126" height="50" rx="4" fill="#2f4a3a"/>
+          <text x="830" y="62" text-anchor="middle" style="font-family:Oswald,sans-serif;font-weight:700;font-size:24px;fill:#fff7e0;letter-spacing:1px">TIN MỚI</text>
+          <text id="tinMoiSub" x="830" y="78" text-anchor="middle" style="font-family:'Be Vietnam Pro',sans-serif;font-size:11px;fill:#f2d98a">bấm xem bài mới</text>
+          <g id="tinMoiDem" style="display:none"><circle cx="897" cy="31" r="13" fill="#c62a1e" stroke="#fff" stroke-width="2.5"/><text x="897" y="36" text-anchor="middle" style="font-family:'Be Vietnam Pro',sans-serif;font-weight:800;font-size:14px;fill:#fff">1</text></g>
+        </g>
+        <g class="tag"><rect x="770" y="100" width="120" height="32" rx="16" fill="#2a1a14"/><text x="830" y="121" text-anchor="middle" fill="#fff" font-size="15" font-family="Be Vietnam Pro">Tin mới</text></g>
+      </g>
+      <!-- loa: chỉ hiện khi có bài kêu gọi đặt hàng (trường loa trong bai-viet.js) -->
+      <g id="loaBep" class="loa-bep" style="display:none" tabindex="0" role="button" aria-label="Loa: Cô Kỹ đang nhận đơn – bấm để xem thông báo">
+        <rect x="902" y="18" width="94" height="84" fill="transparent"/>
+        <g class="loa-than"><path d="M926 50 L956 34 L956 82 L926 66 Z" fill="#f2b705" stroke="#2a1a14" stroke-width="2.5" stroke-linejoin="round"/>
+          <rect x="912" y="48" width="16" height="20" rx="3" fill="#c62a1e" stroke="#2a1a14" stroke-width="2.5"/>
+          <ellipse cx="956" cy="58" rx="6" ry="24" fill="#c62a1e" stroke="#2a1a14" stroke-width="2.5"/>
+          <path d="M920 68 l-3 16 h8 l3 -16" fill="#2a1a14"/></g>
+        <g class="loa-song" fill="none" stroke="#c62a1e" stroke-width="3.5" stroke-linecap="round"><path d="M968 48 q7 10 0 20"/><path d="M976 40 q12 18 0 36"/><path d="M984 32 q17 26 0 52"/></g>
+      </g>
     </svg>
     <p class="hint">Bấm vào từng đồ vật trong bếp – các nhánh sẽ tỏa ra, chọn nhánh để ghé · <a href="#huong-dan">Lần đầu ghé thăm?</a></p>
     <div class="chips" aria-label="Các góc trong bếp">
-      <a href="#gian-hang">Gian hàng</a><a href="#em-lam">Em làm thế nào</a><a href="#nhat-ky">Nhật ký bếp</a><a href="#cung-co-ky">Cùng Cô Kỹ</a><a href="#ve-em">Về em</a><a href="#noi-ngoai">Nội ngoại</a><a href="#vuon">Nhà &amp; vườn</a><a href="#song-khoe">Sống khỏe</a><a href="#di-day-di-do">Đi đây đó</a><a href="#moi-tra-sua">Mời trà sữa</a><a href="#huong-dan">Hướng dẫn</a>
+      <a href="#nhat-ky" id="tin-moi">🔔 Tin mới</a><a href="#gian-hang">Gian hàng</a><a href="#em-lam">Em làm thế nào</a><a href="#nhat-ky">Nhật ký bếp</a><a href="#cung-co-ky">Cùng Cô Kỹ</a><a href="#ve-em">Về em</a><a href="#noi-ngoai">Nội ngoại</a><a href="#vuon">Nhà &amp; vườn</a><a href="#song-khoe">Sống khỏe</a><a href="#di-day-di-do">Đi đây đó</a><a href="#moi-tra-sua">Mời trà sữa</a><a href="#huong-dan">Hướng dẫn</a>
     </div>
     <div class="reel" aria-label="Ảnh thật từ bếp nhà em – bấm để đọc chuyện"><div class="reel-track" id="reel"></div></div>
   </div>
@@ -1055,12 +1112,14 @@ footer small{color:#bba99c}
       <div>
         <h3 id="cai-dat">Cài lên điện thoại</h3>
         <p>Để mở trang bằng một chạm như ứng dụng:</p>
+        <p><button type="button" class="btn" id="btnCai" hidden>📲 Cài ứng dụng Bếp Cô Kỹ</button><span id="daCai" hidden>✓ Bạn đang mở Bếp Cô Kỹ dạng ứng dụng.</span></p>
         <ol class="steps">
           <li>Nếu đang mở trong Zalo hoặc Facebook: bấm dấu <b>⋯</b> → <b>Mở bằng trình duyệt</b>.</li>
-          <li><b>Android (Chrome):</b> bấm dấu <b>⋮</b> góc trên → <b>Thêm vào màn hình chính</b> (hoặc <b>Cài đặt ứng dụng</b>).</li>
-          <li><b>iPhone (Safari):</b> bấm nút <b>Chia sẻ</b> (ô vuông có mũi tên lên) → <b>Thêm vào MH chính</b>.</li>
+          <li><b>Android (Chrome):</b> bấm nút <b>Cài ứng dụng</b> ở trên, hoặc dấu <b>⋮</b> góc trên → <b>Cài đặt ứng dụng</b> → <b>Cài đặt</b>.</li>
+          <li><b>iPhone (Safari):</b> bấm nút <b>Chia sẻ</b> (ô vuông có mũi tên lên) → <b>Thêm vào MH chính</b> → để bật <b>Mở dưới dạng ứng dụng web</b> → <b>Thêm</b>.</li>
         </ol>
         <h3>Câu hỏi thường gặp</h3>
+        <details><summary>Cài lại mà chỉ ra lối tắt, không ra ứng dụng?</summary><p><b>Android:</b> kéo biểu tượng ra khỏi màn hình chính chỉ là ẩn đi, ứng dụng vẫn còn trong máy nên Chrome chỉ cho tạo lối tắt. Vào <b>Cài đặt → Ứng dụng → Bếp Cô Kỹ → Gỡ cài đặt</b> (hoặc giữ biểu tượng trong ngăn ứng dụng → Gỡ cài đặt), xóa luôn lối tắt vừa tạo, rồi mở lại bepcoky.com bằng Chrome → <b>⋮ → Cài đặt ứng dụng</b>. <b>iPhone:</b> xóa biểu tượng, mở bepcoky.com bằng <b>Safari</b> (không mở trong Zalo/Facebook hay Chrome cũ), Chia sẻ → Thêm vào MH chính, nhớ bật <b>Mở dưới dạng ứng dụng web</b>.</p></details>
         <details><summary>Đặt món rồi bao giờ có hàng?</summary><p>Em làm một mình theo mẻ nhỏ. Em sẽ gọi lại báo ngày làm, giá và cách giao. Mùa Tết nên đặt sớm.</p></details>
         <details><summary>Trang có lưu thông tin của tôi không?</summary><p>Không. Phiếu đặt món chỉ tạo đoạn tin nhắn ngay trên máy bạn; thông tin chỉ đến em khi bạn tự gửi qua Zalo.</p></details>
         <details><summary>Muốn góp ý, hỏi bài thì liên hệ đâu?</summary><p>Zalo Bếp Cô Kỹ: 0342.668.311, hoặc <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Facebook Trần Thị Kỹ</a>.</p></details>
@@ -1097,7 +1156,7 @@ footer small{color:#bba99c}
   <div class="b"><p class="when" id="dlgD"></p><h3 id="dlgT"></h3><div class="txt" id="dlgB"></div><div id="dlgL" class="row"></div></div>
 </dialog>
 
-<script src="bai-viet.js?v=20261126b"></script>
+<script src="bai-viet.js?v=20261126c"></script>
 <script src="tu-vung.js"></script>
 <script src="tieng-anh.js"></script>
 <script src="gioi-thieu.js"></script>
@@ -1179,7 +1238,7 @@ fetch('https://bep-trang-thai.nddzungx.workers.dev/status',{cache:'no-store'}).t
  const loi=(d.loi||'').replace(/[<>&]/g,'');
  const a=document.getElementById('bepNghi');a.innerHTML=`<b>🌙 Bếp Cô Kỹ đang nghỉ${den}.</b> ${loi||'Các bác vẫn gửi đơn được, Bếp Cô Kỹ sẽ trả lời khi quay lại ạ.'}`;a.hidden=false;
  const t=document.getElementById('bepNghiTop');t.textContent=`🌙 Bếp đang nghỉ${den} – đơn gửi vào sẽ được trả lời khi Bếp Cô Kỹ quay lại.`;t.hidden=false;
- const b=document.getElementById('copy');if(b)b.textContent='Gửi đơn trước qua Zalo';write();
+ const b=document.getElementById('copy');if(b)b.textContent='Gửi đơn trước qua Zalo';document.body.classList.add('bep-nghi');write();
 }).catch(()=>{});
 /* ===== hũ 3D ===== */
 const jar=$('#jar3d');
@@ -1227,9 +1286,12 @@ const cmp=$('#cmp');cmp.querySelector('input').addEventListener('input',e=>cmp.s
 const MUC={bep:'Chuyện bếp',ban:'Bếp bán',nha:'Chuyện nhà',noingoai:'Nội ngoại',vuon:'Nhà & vườn',khoe:'Sống khỏe',di:'Đi đây đó'};
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const raw=Array.isArray(window.BAI_VIET)?window.BAI_VIET:[];
-const D=raw.map((p,i)=>({c:p.muc||'nha',t:p.tieuDe||'',img:p.anh||[],x:p.noiDung||'',d:/^\d{4}-\d{2}-\d{2}$/.test(p.ngay||'')?p.ngay:'',src:p.nguon||'',i}))
+const D=raw.map((p,i)=>({c:p.muc||'nha',t:p.tieuDe||'',img:p.anh||[],x:p.noiDung||'',d:/^\d{4}-\d{2}-\d{2}$/.test(p.ngay||'')?p.ngay:'',src:p.nguon||'',loa:p.loa||'',loaDen:p.loaDen||'',i}))
  .sort((a,b)=>a.d&&b.d?b.d.localeCompare(a.d):a.d?-1:b.d?1:a.i-b.i);
 const fmt=d=>d?d.split('-').reverse().join('/'):'';
+/* mã bài để mở thẳng: bepcoky.com/#bai=261126 (lấy theo tên ảnh, không có ảnh thì theo ngày) */
+{const seen={};D.forEach((p,n)=>{const m=/([^/]+?)-\d+\.\w+$/.exec(p.img[0]||'');let k=m?m[1]:p.d?p.d.slice(8,10)+p.d.slice(5,7)+p.d.slice(2,4):'b'+n;if(seen[k]){seen[k]++;k+='-'+seen[k]}else seen[k]=1;p.key=k})}
+window.CK_BAI=D;
 const when=p=>[p.src?'Đăng trên '+p.src:'',fmt(p.d)].filter(Boolean).join(' · ');
 const years=[...new Set(D.filter(p=>p.d).map(p=>p.d.slice(0,4)))].sort().reverse();
 if(years.length)$('#diaryLead').textContent=`${D.length} bài viết, từ năm ${years[years.length-1]} đến nay – chuyện thật, ảnh thật từ Facebook của em. Bấm vào để đọc hết.`;
@@ -1249,7 +1311,12 @@ $('#years').addEventListener('click',e=>{const b=e.target.closest('button');if(!
 $('#more').addEventListener('click',()=>{shown+=8;render()});
 $('#dq').addEventListener('input',e=>{dq=bo(e.target.value.trim());shown=8;render()});
 const dlg=$('#dlg');
-posts.addEventListener('click',e=>{const b=e.target.closest('.post');if(!b)return;const p=D[b.dataset.i];$('#dlgT').textContent=p.t;$('#dlgD').textContent=when(p);$('#dlgB').textContent=p.x;$('#dlgL').innerHTML='';$('#dlgG').innerHTML=p.img.map(s=>`<img src="img/${esc(s)}" alt="${esc(p.t)}">`).join('');try{dlg.showModal()}catch(err){dlg.setAttribute('open','')}});
+const openPost=p=>{if(!p)return;$('#dlgT').textContent=p.t;$('#dlgD').textContent=when(p);$('#dlgB').textContent=p.x;$('#dlgL').innerHTML=`<button type="button" class="btn ghost" id="dlgShare">🔗 Chép link bài này</button>`;$('#dlgG').innerHTML=p.img.map(s=>`<img src="img/${esc(s)}" alt="${esc(p.t)}">`).join('');
+ $('#dlgShare').onclick=()=>{const u=location.origin+location.pathname+'#bai='+p.key,b=$('#dlgShare');(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{b.textContent='✓ Đã chép link – dán vào Zalo, Facebook'}).catch(()=>{prompt('Chép link bài:',u)})};
+ try{dlg.showModal()}catch(err){dlg.setAttribute('open','')}};
+window.moBai=k=>openPost(D.find(p=>p.key===k));
+posts.addEventListener('click',e=>{const b=e.target.closest('.post');if(!b)return;openPost(D[b.dataset.i])});
+{const h=()=>{const m=/^#bai=(.+)$/.exec(decodeURIComponent(location.hash));if(m){const p=D.find(x=>x.key===m[1]);if(p){$('#nhat-ky').scrollIntoView();openPost(p)}}};h();addEventListener('hashchange',h)}
 $('#dlgX').addEventListener('click',()=>dlg.close());
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 
@@ -1378,7 +1445,17 @@ $('#yr').textContent=new Date().getFullYear();
   setInterval(()=>{if(document.visibilityState==='visible')call('/ping').then(paint).catch(()=>{})},120000);}}
 }
 </script>
-<script src="menu-do-vat.js"></script>
+<script>
+/* ứng dụng: service worker (sw.js) + nút Cài ứng dụng */
+if('serviceWorker' in navigator&&/^https?:/.test(location.protocol)){addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
+{const st=navigator.standalone===true||matchMedia('(display-mode: standalone)').matches,b=document.getElementById('btnCai'),ok=document.getElementById('daCai');let dp=null;
+ if(st&&ok)ok.hidden=false;
+ addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;if(b&&!st)b.hidden=false});
+ if(b)b.addEventListener('click',()=>{if(!dp)return;dp.prompt();dp.userChoice.finally(()=>{dp=null;b.hidden=true})});
+ addEventListener('appinstalled',()=>{if(b)b.hidden=true;if(ok)ok.hidden=false});}
+</script>
+<script src="tin-moi.js?v=1"></script>
+<script src="menu-do-vat.js?v=2"></script>
 <script src="tra-sua.js"></script>
 <script src="giao-dien.js"></script>
 </body>

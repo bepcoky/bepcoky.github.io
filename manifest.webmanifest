@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "name": "Bếp Cô Kỹ",
   "short_name": "Bếp Cô Kỹ",
   "description": "Món nhà làm, chuyện bếp và chuyện nhà của Cô Kỹ ở Hải Phòng.",
@@ -33,5 +34,6 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
+  ],
+  "orientation": "any"
 }

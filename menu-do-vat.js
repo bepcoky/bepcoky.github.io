@@ -2,7 +2,8 @@
    Bấm đồ vật trong căn bếp → các nhánh tỏa ra thành vòng tròn quanh đồ vật
    (cách làm theo trang nguyenducdungvn.github.io, 26/11/2026).
    Sửa nhánh: sửa danh sách NHANH bên dưới. Khóa là id góc (data-go của đồ vật).
-   Mỗi nhánh: [biểu tượng, chữ, đường dẫn]. Đường dẫn '#bai-hat:<mã video>' sẽ mở và phát bài hát.
+   Mỗi nhánh: [biểu tượng, chữ, đường dẫn, (ảnh)]. Khóa có thể là hàm trả về danh sách (vd 'tin-moi' lấy 5 bài mới từ tin-moi.js).
+   Đường dẫn '#bai=<mã>' mở thẳng bài Nhật ký (window.moBai). Đường dẫn '#bai-hat:<mã video>' sẽ mở và phát bài hát.
    Nhánh cuối luôn là "Vào góc …" (nút vàng) – tự thêm.
    ===================================================================== */
 (function () {
@@ -16,12 +17,15 @@
     'moi-tra-sua': [['🧋', 'Mời Cô Kỹ ly trà sữa', '#moi-tra-sua'], ['❓', 'Hướng dẫn', '#huong-dan'], ['📲', 'Cài lên điện thoại', '#cai-dat']],
     'cung-co-ky': [['📖', 'Kiến thức bếp', '#kien-thuc'], ['🍳', 'Cùng nấu ăn', '#cung-nau-an'], ['🗣️', '5 từ tiếng Anh hôm nay', '#cung-ngoai-ngu'], ['💄', 'Làm đẹp', '#cung-lam-dep'], ['🛍️', 'Đồ em dùng', '#cung-do-dung']],
     'nhat-ky': [['📒', 'Nhật ký bếp', '#nhat-ky'], ['🥬', 'Kim chi nhà làm', 'kien-thuc/kim-chi-nha-lam.html'], ['🍳', 'Chảo lồi giữa', 'kien-thuc/chao-loi-giua.html'], ['🔪', 'Rãnh trên lưỡi dao', 'kien-thuc/ranh-tren-luoi-dao.html'], ['🧽', 'Miếng rửa chén', 'kien-thuc/mieng-rua-chen.html'], ['🥣', 'Phễu lọc chóp nón', 'kien-thuc/pheu-loc-chop-non.html']],
+    'tin-moi': function () { return window.TIN_MOI_NHANH ? window.TIN_MOI_NHANH() : [['📒', 'Nhật ký bếp', '#nhat-ky']]; },
     'song-khoe': [['🌿', 'Sống khỏe', '#song-khoe'], ['🐟', 'Gỏi cá & sán lá gan', 'kien-thuc/goi-ca-san-la-gan.html'], ['🥤', 'Máy xay & vi nhựa', 'kien-thuc/may-xay-vi-nhua.html'], ['🔎', 'Soi cùng Cô Kỹ', 'https://soi.bepcoky.com/']]
   };
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var layer = null, lastSpot = null, ignoreScroll = 0;
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function di(href) {
+    var b = /^#bai=(.+)$/.exec(href);
+    if (b && window.moBai) { window.moBai(b[1]); return true; }
     var m = /^#bai-hat:(.+)$/.exec(href);
     if (m && window.phatBaiHat) { window.phatBaiHat(m[1]); return true; }
     var el = href.charAt(0) === '#' && document.getElementById(href.slice(1));
@@ -48,17 +52,20 @@
   function open(spot) {
     close(); lastSpot = spot;
     var id = (spot.getAttribute('data-go') || '').replace('#', ''), ds = NHANH[id] || [];
+    if (typeof ds === 'function') ds = ds() || [];
+    if (id === 'tin-moi' && window.daXemTinMoi) window.daXemTinMoi();
     var ten = (spot.getAttribute('aria-label') || '').split('–').pop().trim();
-    var items = ds.slice(1).map(function (x) { return { ic: x[0], t: x[1], href: x[2] }; });
+    var items = ds.slice(1).map(function (x) { return { ic: x[0], t: x[1], href: x[2], img: x[3] || '' }; });
     items.push(ds[0] ? { ic: ds[0][0], t: 'Vào góc ' + ds[0][1], href: ds[0][2], corner: true } : { ic: '📍', t: 'Vào góc ' + ten, href: '#' + id, corner: true });
     var obj = spot.querySelector('.lift') || spot;
-    var r0 = obj.getBoundingClientRect(), c0 = r0.top + r0.height / 2, small = innerWidth < 600, base = small ? 100 : 130, gap = small ? 96 : 118;
+    var r0 = obj.getBoundingClientRect(), c0 = r0.top + r0.height / 2, small = innerWidth < 600, coAnh = items.some(function (it) { return it.img; }), base = small ? (coAnh ? 128 : 100) : (coAnh ? 175 : 130), gap = small ? (coAnh ? 118 : 96) : (coAnh ? 170 : 118);
     if (c0 > innerHeight - base - 100 || c0 < base + 100) { ignoreScroll = Date.now() + 800; window.scrollTo({ top: scrollY + c0 - innerHeight / 2, behavior: 'instant' }); }
     var r = obj.getBoundingClientRect(), room = spot.closest('svg').getBoundingClientRect();
     var cx = r.left + r.width / 2, cy = r.top + r.height / 2, n = items.length;
     var dirA = Math.atan2(room.top + room.height / 2 - cy, room.left + room.width / 2 - cx);
     var free = Math.min(cx, innerWidth - cx, cy, innerHeight - cy);
     var full = n >= 3 && free > Math.max(base, n * gap / (2 * Math.PI)) + 70;
+    if (coAnh && small) { full = true; cx = innerWidth / 2; var rr = Math.max(base, n * gap / (2 * Math.PI)); cy = Math.min(Math.max(cy, rr + 90), innerHeight - rr - 100); }
     var span = full ? Math.PI * 2 : Math.PI * (n > 4 ? 1.15 : 1);
     var R = full ? Math.max(base, n * gap / (2 * Math.PI)) : Math.max(base, (n - 1) * gap / span);
     var pos = items.map(function (it, i) {
@@ -72,9 +79,9 @@
     layer = document.createElement('div'); layer.className = 'rm'; layer.setAttribute('role', 'dialog'); layer.setAttribute('aria-label', ten + ': chọn nhánh');
     var h = '<div class="rm-dim"></div><button type="button" class="rm-close" style="left:' + cx + 'px;top:' + cy + 'px" aria-label="Đóng">×</button>';
     items.forEach(function (it, i) {
-      h += '<a class="rm-item' + (it.corner ? ' corner' : '') + '" href="' + esc(it.href.replace(/^#bai-hat:.*/, '#bai-hat')) + '" data-h="' + esc(it.href) + '"' + (/^https?:/.test(it.href) ? ' target="_blank" rel="noopener"' : '') +
+      h += '<a class="rm-item' + (it.corner ? ' corner' : '') + (coAnh ? ' co-anh' : '') + '" href="' + esc(it.href.replace(/^#bai-hat:.*/, '#bai-hat')) + '" data-h="' + esc(it.href) + '"' + (/^https?:/.test(it.href) ? ' target="_blank" rel="noopener"' : '') +
         ' style="--x:' + (pos[i][0] - cx).toFixed(0) + 'px;--y:' + (pos[i][1] - cy).toFixed(0) + 'px;left:' + cx + 'px;top:' + cy + 'px;transition-delay:' + (reduce ? 0 : i * 35) + 'ms">' +
-        '<span class="rm-ic" aria-hidden="true">' + it.ic + '</span><span class="rm-t">' + esc(it.t) + '</span></a>';
+        (it.img ? '<span class="rm-ic rm-img" aria-hidden="true"><img src="' + esc(it.img) + '" alt=""><i>' + it.ic + '</i></span>' : '<span class="rm-ic" aria-hidden="true">' + it.ic + '</span>') + '<span class="rm-t">' + esc(it.t).replace(/ · (\d\d\/\d\d)$/, '<small>$1</small>') + '</span></a>';
     });
     layer.innerHTML = h; document.body.appendChild(layer);
     layer.querySelector('.rm-dim').addEventListener('click', function () { close(true); });
