@@ -46,3 +46,9 @@ Tệp này bắt đầu bằng dấu gạch dưới nên không hiện trên tra
 - **Không niêm yết giá** trên web: thẻ món ghi "giá trao đổi khi đặt".
 - **Bếp đang nghỉ**: Cô Kỹ mở `bepcoky.com/quan-ly/`, nhập PIN (mặc định 114115116 – đổi được ngay trên trang), bấm Bếp nghỉ / Bếp mở. Máy chủ: Worker riêng **`bep-trang-thai`** (mã ở `_trang-thai/worker.js`, binding D1 `DB` = bep-dem, bảng `bep_status` tự tạo, PIN lưu dạng băm, sai 5 lần khóa 15 phút). Trang chủ đọc `GET /status`; khi nghỉ hiện thông báo đỏ ở đầu trang và ở phần đặt món, nút đổi thành "Gửi đơn trước qua Zalo". Worker chưa chạy thì trang coi như bếp mở.
 - **Rượu – bia** (chuyên mục `ruou-bia` của Kiến thức bếp): bài nào cũng ghi cuối "để tìm hiểu, không quảng cáo cho loại rượu hay thương hiệu nào" + cảnh báo. Luật 44/2019 cấm quảng cáo rượu từ 15 độ trở lên → **không đăng sản phẩm rượu (kể cả rượu tỏi đen SNG) lên gian hàng**, không khen thương hiệu rượu. Ứng dụng chi tiết: *Thưởng thức rượu bia*, kho `nguyenducdungvn/ruoubia`, dự kiến `ruoubia.bepcoky.com`.
+
+## Cập nhật 27/11/2026 – chuyên mục làm đẹp "Đẹp từ gốc" (`lam-dep/`)
+- Trang tĩnh viết tay: `lam-dep/index.html` (mục lục – mảng `C` trong script, bài đã có thì thêm link), mỗi bài một tệp `lam-dep/<slug>.html`, dùng chung `lam-dep/style.css`. Không sinh bằng `_cong-cu/dung_kien_thuc.py`.
+- Bài làm đẹp: đi từ hiểu da đến liệu pháp; số liệu y khoa đối chiếu ít nhất một nguồn độc lập; ghi Nguồn cuối bài; không hứa chữa khỏi, không nêu tên spa/thương hiệu; luôn có "khi nào đi khám".
+- Hình: tự vẽ SVG (tương tác 2D, khối 3D bằng CSS), không ảnh người thật, không chép hình tài liệu.
+- Thêm bài: cập nhật thẻ "Bài sau" của bài trước, mảng `C`, thẻ chuyên mục trong tab Làm đẹp (`#cung-lam-dep`) của `index.html`, `sitemap.xml`.
