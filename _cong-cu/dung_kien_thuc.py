@@ -65,8 +65,8 @@ def khung(tieu_de, mo_ta, url, anh_og, than, ve='../'):
 <meta name="description" content="{e(mo_ta)}">
 <link rel="canonical" href="https://bepcoky.com/{url}">
 <meta name="theme-color" content="#c62a1e">
-<link rel="icon" href="{ve}img/icon-192.png" type="image/png">
-<link rel="apple-touch-icon" href="{ve}img/apple-touch-icon.png">
+<link rel="icon" href="{ve}img/icon-192.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="{ve}img/apple-touch-icon.png?v=2">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Bếp Cô Kỹ">
 <meta property="og:locale" content="vi_VN">
