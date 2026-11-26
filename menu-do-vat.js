@@ -15,7 +15,7 @@
     'gian-hang': [['🫙', 'Gian hàng', '#gian-hang'], ['🛒', 'Đặt Bếp Cô Kỹ làm', '#dat-hang'], ['🦐', 'Em làm thế nào', '#em-lam'], ['🔎', 'Soi cùng Cô Kỹ', 'https://soi.bepcoky.com/'], ['🛡️', 'Kiểm chứng trước khi mua', '#cung-thong-tin']],
     've-em': [['👩‍🍳', 'Về em', '#ve-em'], ['🍽️', 'Hôm nay ăn gì?', '#cung-an-gi'], ['📒', 'Nhật ký bếp', '#nhat-ky'], ['😂', 'Vợ là sếp – chồng là nhất', '#bai-hat:5JOihj8f0yc']],
     'moi-tra-sua': [['🧋', 'Mời Cô Kỹ ly trà sữa', '#moi-tra-sua'], ['❓', 'Hướng dẫn', '#huong-dan'], ['📲', 'Cài lên điện thoại', '#cai-dat']],
-    'cung-co-ky': [['📖', 'Kiến thức bếp', '#kien-thuc'], ['🍳', 'Cùng nấu ăn', '#cung-nau-an'], ['🗣️', '5 từ tiếng Anh hôm nay', '#cung-ngoai-ngu'], ['💄', 'Làm đẹp', '#cung-lam-dep'], ['🛍️', 'Đồ em dùng', '#cung-do-dung']],
+    'cung-co-ky': [['📖', 'Kiến thức bếp', '#kien-thuc'], ['🍳', 'Cùng nấu ăn', '#cung-nau-an'], ['🗣️', '5 từ tiếng Anh hôm nay', '#cung-ngoai-ngu'], ['💄', 'Làm đẹp', '#cung-lam-dep'], ['🌸', 'Đẹp từ gốc', 'lam-dep/'], ['🛍️', 'Đồ em dùng', '#cung-do-dung']],
     'nhat-ky': [['📒', 'Nhật ký bếp', '#nhat-ky'], ['🥬', 'Kim chi nhà làm', 'kien-thuc/kim-chi-nha-lam.html'], ['🍳', 'Chảo lồi giữa', 'kien-thuc/chao-loi-giua.html'], ['🔪', 'Rãnh trên lưỡi dao', 'kien-thuc/ranh-tren-luoi-dao.html'], ['🧽', 'Miếng rửa chén', 'kien-thuc/mieng-rua-chen.html'], ['🥣', 'Phễu lọc chóp nón', 'kien-thuc/pheu-loc-chop-non.html']],
     'tin-moi': function () { return window.TIN_MOI_NHANH ? window.TIN_MOI_NHANH() : [['📒', 'Nhật ký bếp', '#nhat-ky']]; },
     'song-khoe': [['🌿', 'Sống khỏe', '#song-khoe'], ['🐟', 'Gỏi cá & sán lá gan', 'kien-thuc/goi-ca-san-la-gan.html'], ['🥤', 'Máy xay & vi nhựa', 'kien-thuc/may-xay-vi-nhua.html'], ['🔎', 'Soi cùng Cô Kỹ', 'https://soi.bepcoky.com/']]

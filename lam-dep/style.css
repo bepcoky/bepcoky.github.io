@@ -1,0 +1,80 @@
+/*
+VOICE: ấm, thật thà, chị em kể chuyện; chi tiết khoa học vẽ tỉ mỉ, ít màu.
+IDEA: cuốn sổ tay da liễu bếp nhà – mỗi khái niệm là một lát cắt da có thể sờ, kéo, tách lớp.
+PICTURE: lát cắt da (biểu bì hồng đào, trung bì hồng, hạ bì vàng bơ, sắc tố nâu) làm hình chính mỗi bài.
+COLOUR: nền trắng ấm, dải hồng da phủ đầu trang; nâu melanin là chữ nhấn; xanh mòng két chỉ cho "việc nên làm".
+TYPE: Be Vietnam Pro 800 cho tiêu đề, 400/600 cho thân; 4 cỡ. LAYOUT: cột chữ 700px, hình rộng 1000px, xếp chồng dưới 600px.
+*/
+:root{color-scheme:light dark;
+--bg:light-dark(#fffbf8,#171112);--ink:light-dark(#2b1d19,#f3e6e0);--mute:light-dark(#735e57,#bba49c);
+--band:light-dark(#fbe1d5,#2a1b1b);--card:light-dark(#ffffff,#211819);--line:light-dark(#ecd9d0,#3b2b2a);
+--corn:light-dark(#fdebd9,#5b4236);--epi:light-dark(#f7cfb5,#7a5240);--basal:light-dark(#efb998,#8b5a44);
+--derm:light-dark(#f1aaa4,#6f3a40);--hypo:light-dark(#f6dd8e,#64552a);--mel:light-dark(#6a3720,#d8a07a);
+--vessel:light-dark(#c0313d,#ff6b74);--teal:light-dark(#0b7a78,#4fd1c5);--warn:light-dark(#c2410c,#fb923c);
+--cellline:light-dark(rgba(110,60,40,.28),rgba(255,220,200,.25))}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:clip}
+a{color:var(--teal)}
+.band{padding:clamp(28px,4vw,56px) max(5vw,16px)}
+.top{background:var(--band)}
+.wrap{max-width:1000px;margin:0 auto}
+.col{max-width:700px;margin:0 auto}
+.crumb{font-size:14px;color:var(--mute);margin:0 0 14px}
+.crumb a{color:inherit}
+h1{font-weight:800;font-size:clamp(30px,5vw,48px);line-height:1.08;margin:0 0 14px;text-wrap:balance}
+h2{font-weight:800;font-size:clamp(22px,3vw,28px);line-height:1.2;margin:2.2em 0 .6em;text-wrap:balance}
+.lede{font-size:19px;max-width:700px;margin:0}
+.meta{font-size:14px;color:var(--mute);margin-top:12px}
+p{margin:0 0 1em}
+ul,ol{padding-left:1.3em;margin:0 0 1em}li{margin:.3em 0}
+strong{color:var(--mel)}
+.nav{display:flex;gap:8px 18px;overflow-x:auto;font-size:15px;padding:12px max(5vw,16px);border-bottom:1px solid var(--line);background:var(--bg);white-space:nowrap}
+.nav a{flex:none;color:var(--mute);text-decoration:none}.nav a:hover{color:var(--ink)}
+@media(min-width:900px){.nav{position:sticky;top:0;z-index:5}}
+figure{margin:28px auto 34px;max-width:1000px}
+figure.wide{max-width:1000px}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;overflow:hidden}
+figcaption{font-size:15px;color:var(--mute);margin-top:10px;max-width:700px}
+figcaption b{color:var(--ink)}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:"Be Vietnam Pro",system-ui,sans-serif;fill:var(--ink)}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ctrl button,.btn{font:600 15px/1.2 inherit;font-family:inherit;min-height:44px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;white-space:nowrap}
+.ctrl button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px}
+.readout>div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:15px}
+.readout>div>b:first-child{display:block;font-size:13px;color:var(--mute);font-weight:600;margin-bottom:2px}
+.meter{height:10px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:6px}
+.meter i{display:block;height:100%;background:var(--warn);border-radius:6px;transition:width .4s}
+input[type=range]{width:100%;min-height:44px;accent-color:var(--teal)}
+.callout{border-left:0;background:var(--band);border-radius:14px;padding:14px 16px;margin:1.2em 0}
+.todo{list-style:none;padding:0}.todo li{padding-left:30px;position:relative}
+.todo li::before{content:"";position:absolute;left:4px;top:.45em;width:14px;height:14px;border-radius:50%;border:2px solid var(--teal)}
+.alarm li::before{border-color:var(--warn);border-radius:3px}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:10px 0 1em}
+th,td{text-align:left;border-bottom:1px solid var(--line);padding:9px 8px;vertical-align:top}
+th{font-size:14px;color:var(--mute);font-weight:600}
+.next{display:block;background:var(--ink);color:var(--bg);text-decoration:none;border-radius:16px;padding:18px 20px;margin:2em 0;font-weight:600}
+.next span{display:block;font-weight:400;font-size:14px;opacity:.8}
+.small{font-size:14px;color:var(--mute)}
+details{border:1px dashed var(--line);border-radius:12px;padding:10px 14px;margin:1.5em 0;font-size:14px}
+summary{cursor:pointer;font-weight:600;min-height:32px}
+.scroll{overflow-x:auto}
+footer{border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+@media(max-width:600px){body{font-size:16px}.lede{font-size:17px}.fig{padding:10px;border-radius:14px}
+table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mute)}.stack td:empty{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.sv>svg{min-width:600px}
+@media(max-width:600px){.sv{margin:0 -10px;padding:0 10px}.sv::after{content:'← kéo ngang để xem hết hình →';display:block;font-size:13px;color:var(--mute);text-align:left;position:sticky;left:0;margin-top:4px;width:max-content}}
+
+/* thanh đầu trang chung của bepcoky.com */
+.site{position:sticky;top:0;z-index:6;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site>div{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px max(5vw,16px)}
+.logo{text-decoration:none;color:var(--ink);font:800 20px/1.05 "Be Vietnam Pro",sans-serif}
+.logo small{display:block;font:400 12px "Be Vietnam Pro",sans-serif;color:var(--mute)}
+.back{font-size:14.5px;text-decoration:none;padding:8px 12px;border-radius:10px;background:var(--band);color:var(--ink);white-space:nowrap;min-height:40px;display:inline-flex;align-items:center}
+@media(min-width:900px){.nav{top:57px}}

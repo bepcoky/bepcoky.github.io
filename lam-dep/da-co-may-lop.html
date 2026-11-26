@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Da mình có mấy lớp? Lột mặt chạm tới đâu, còn nám nằm ở đâu – Bếp Cô Kỹ</title>
+<meta name="description" content="Khối da 3D tách từng tầng, hành trình 28 ngày của một tế bào da, tế bào hắc tố và “hậu trường” trung bì giục nám – hiểu da trước rồi mới làm đẹp.">
+<link rel="canonical" href="https://bepcoky.com/lam-dep/da-co-may-lop.html">
+<meta name="theme-color" content="#c62a1e">
+<link rel="icon" href="../img/icon-192.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png?v=2">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Bếp Cô Kỹ">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:url" content="https://bepcoky.com/lam-dep/da-co-may-lop.html">
+<meta property="og:title" content="Da mình có mấy lớp? Lột mặt chạm tới đâu, còn nám nằm ở đâu">
+<meta property="og:description" content="Khối da 3D tách từng tầng, hành trình 28 ngày của một tế bào da, tế bào hắc tố và “hậu trường” trung bì giục nám – hiểu da trước rồi mới làm đẹp.">
+<meta property="og:image" content="https://bepcoky.com/img/og/trang-chu.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.scene{position:relative;height:460px;perspective:1300px;display:grid;place-items:center;touch-action:none;cursor:grab;user-select:none}
+.scene:active{cursor:grabbing}
+.block{--s:1;position:relative;width:0;height:0;transform-style:preserve-3d;transform:scale(var(--s)) rotateX(var(--rx)) rotateY(var(--ry))}
+.slab{position:absolute;left:-150px;width:300px;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1);cursor:pointer}
+.face{position:absolute;left:0;top:0;overflow:hidden;outline:1px solid rgba(0,0,0,.12)}
+.face svg{width:100%;height:100%}
+.slab.sel .face{outline:3px solid var(--teal)}
+.tag{position:absolute;left:316px;white-space:nowrap;font:600 15px/1.2 "Be Vietnam Pro",sans-serif;background:var(--card);border:1px solid var(--line);padding:6px 10px;border-radius:10px;pointer-events:none}
+@media(max-width:600px){.scene{height:380px}.block{--s:.68}.tag{font-size:17px}}
+.two{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:start}
+@media(max-width:760px){.two{grid-template-columns:minmax(0,1fr)}}
+#info h3{margin:0 0 6px;font-size:20px}#info p{font-size:15px;margin:0 0 .6em}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head><body>
+<header class="site"><div><a class="logo" href="../">Bếp Cô Kỹ<small>Đẹp từ gốc cùng Cô Kỹ</small></a><a class="back" href="../">← Trang chủ</a></div></header>
+
+<header class="band top"><div class="wrap">
+<p class="crumb"><a href="../">Trang chủ</a> › <a href="./">Đẹp từ gốc</a> · Bài 2 · Hiểu làn da</p>
+<h1>Da mình có mấy lớp? Lột mặt chạm tới đâu, còn nám nằm ở đâu</h1>
+<p class="lede">Bài trước em kể chuyện lột mặt tiền mất tật mang. Nhiều chị em hỏi: “Nám nằm bên trong là bên trong chỗ nào?” Hôm nay em mời các mom “bổ” một lát da ra xem, như bổ cái bánh chưng ấy ạ 😂</p>
+
+<figure class="wide" id="h-3d">
+<div class="fig two">
+<div>
+<div class="ctrl"><button id="ex" aria-pressed="false">Tách lớp</button><button id="rs">Đặt lại góc nhìn</button></div>
+<div class="scene" id="scene" role="img" aria-label="Khối da 3D gồm biểu bì, trung bì và hạ bì; kéo để xoay, bấm Tách lớp để tách các tầng"><div class="block" id="blk"></div></div>
+</div>
+<div>
+<div class="ctrl" role="group" aria-label="Chọn lớp" id="lb"></div>
+<div id="info" aria-live="polite"></div>
+</div>
+</div>
+<figcaption><b>Hình 1. Lát cắt da 3D.</b> Kéo để xoay, bấm “Tách lớp”, bấm từng tầng để đọc. Biểu bì được vẽ dày lên cho dễ nhìn – thật ra nó mỏng hơn trung bì khoảng 10–40 lần.</figcaption>
+</figure>
+<p class="meta">Chuyên mục Đẹp từ gốc · Trần Thị Kỹ · 27/11/2026</p>
+</div></header>
+
+<nav class="nav" aria-label="Mục trong bài"><a href="#co-quan">Một cơ quan</a><a href="#ba-tang">Ba tầng</a><a href="#bieu-bi">Phóng to biểu bì</a><a href="#tu-lot">Da tự lột</a><a href="#hac-to">Tế bào hắc tố</a><a href="#hau-truong">Hậu trường</a><a href="#bang">Đặt cạnh nhau</a></nav>
+
+<main class="band"><div class="col">
+
+<h2 id="co-quan">Da là cả một cơ quan, không phải tờ giấy gói</h2>
+<p>☘️ Da là <strong>cơ quan lớn nhất</strong> của cơ thể: người lớn có khoảng <b>2 m² da</b>, nặng chừng <b>5 kg</b>. Nó làm đủ việc: chắn vi khuẩn, hóa chất, tia nắng; giữ nước; điều hòa nhiệt; cảm nhận nóng lạnh, đau, chạm; canh gác miễn dịch; làm vitamin D và làm cả <b>sắc tố melanin</b> để tự che nắng.</p>
+<p>Một cơ quan bận rộn thế mà mình cứ đem ra “lột” như lột vỏ hành thì nó dỗi là phải 😜</p>
+
+<h2 id="ba-tang">Ba tầng của da</h2>
+<p><strong>1. Biểu bì – tầng vỏ ngoài.</strong> Trung bình chỉ khoảng <b>0,1 mm, cỡ tờ giấy</b>; mí mắt còn mỏng hơn, gót chân dày gấp mấy lần. Biểu bì <b>không có mạch máu</b>. Đây là tầng mình nhìn thấy, bôi kem lên, và là tầng mà lột mặt bóc đi.</p>
+<p><strong>2. Trung bì – tầng “ruột” chắc nịch.</strong> Dày khoảng <b>1–4 mm</b> tùy chỗ: collagen và sợi đàn hồi giữ da căng, mạch máu nuôi da, chân lông, tuyến dầu, tuyến mồ hôi, đầu dây thần kinh. Nếp nhăn sâu, da chảy, sẹo rỗ là chuyện của tầng này.</p>
+<p><strong>3. Hạ bì – tầng mỡ đệm.</strong> Giữ ấm, làm đệm, tạo nét đầy đặn cho khuôn mặt. Ít dính dáng đến nám.</p>
+<p>Giữa biểu bì và trung bì có <b>màng đáy</b> – như tấm giấy nến lót giữa hai tầng bánh: vừa gắn hai tầng lại, vừa là cửa cho tín hiệu qua lại. Nhớ tấm giấy nến này nhé, lát nữa nó quan trọng lắm.</p>
+
+<h2 id="bieu-bi">Phóng to biểu bì: một dây chuyền không nghỉ</h2>
+<p>Da mặt có <b>4 lớp</b> biểu bì (lòng bàn tay, bàn chân có thêm một lớp thành 5). Đi từ dưới lên:</p>
+<ul>
+<li><strong>Lớp đáy</strong> – một hàng tế bào sát màng đáy. Đây là “xưởng”: tế bào da mới sinh ra ở đây. Cũng ở đây có <b>tế bào hắc tố</b> – cứ chừng <b>10 tế bào lớp đáy thì có 1</b>. Nhân vật chính của chuyện nám đây ạ.</li>
+<li><strong>Lớp gai</strong> – tế bào được đẩy lên, nối với nhau bằng những “gai” nhỏ, nhận sắc tố từ tế bào hắc tố.</li>
+<li><strong>Lớp hạt</strong> – bắt đầu tiết chất béo làm “keo” gắn kết, chống mất nước.</li>
+<li><strong>Lớp sừng</strong> – trên cùng, khoảng <b>10–30 lớp</b> tế bào đã chết, dẹt, không nhân, bong ra hằng ngày. Đây là <b>hàng rào bảo vệ</b> quan trọng nhất.</li>
+</ul>
+
+<figure id="h-tuong">
+<div class="fig">
+<div class="ctrl" role="group" aria-label="Tình trạng hàng rào" id="wb"></div>
+<div class="scroll sv"><svg id="wall" viewBox="0 0 760 330" role="img" aria-label="Lớp sừng như bức tường gạch vữa: khi lành chặn chất kích ứng và giữ nước; khi bị lột quá đà thì thủng, nước thoát ra, chất kích ứng lọt vào, tế bào hắc tố bị báo động"></svg></div>
+</div>
+<figcaption><b>Hình 2. Hàng rào da – bức tường gạch vữa.</b> Tế bào sừng là gạch, chất béo giữa chúng là vữa. Bấm “Bị lột quá đà” để xem chuyện gì xảy ra khi tường thủng. Bài 4 em kể kỹ về bức tường này.</figcaption>
+</figure>
+
+<h2 id="tu-lot">Da tự “lột” khoảng mỗi tháng một lần</h2>
+<p>Tế bào sinh ra ở lớp đáy, đi dần lên, chết đi thành tế bào sừng rồi bong ra. Cả hành trình ở người trẻ mất <b>khoảng 4 tuần</b>. Càng lớn tuổi càng chậm: có nghiên cứu đo thấy người lớn tuổi chậm hơn người trẻ <b>hơn 10 ngày</b>, và tốc độ giảm rõ từ <b>sau tuổi 50</b>. Các mom kéo thanh trượt dưới đây để theo một tế bào đi hết hành trình:</p>
+
+<figure id="h-hanh-trinh">
+<div class="fig">
+<div class="ctrl" role="group" aria-label="Độ tuổi" id="ag"></div>
+<div class="scroll sv"><svg id="trip" viewBox="0 0 760 380" role="img" aria-label="Hành trình của một tế bào da từ lớp đáy qua lớp gai, lớp hạt, lớp sừng rồi bong ra, mang theo sắc tố"></svg></div>
+<div style="display:flex;gap:10px;align-items:center;margin-top:8px"><button class="btn" id="play">▶ Chạy</button><input type="range" id="day" min="0" max="28" value="0" step="0.5" aria-label="Ngày trong hành trình"></div>
+<div class="readout"><div id="tr" style="grid-column:1/-1"></div></div>
+</div>
+<figcaption><b>Hình 3. Hành trình của một tế bào da.</b> Mốc thời gian là minh họa: khoảng 4 tuần ở người trẻ; người lớn tuổi chậm hơn trên 10 ngày. Chấm nâu là sắc tố – nó đi lên và bong ra cùng tế bào.</figcaption>
+</figure>
+
+<ul>
+<li>Sắc tố đã nằm trong tế bào sừng sẽ <b>tự đi lên và bong ra</b> theo chu kỳ. Nên khi “cắt nguồn” làm sắc tố mới, phần nám ở lớp trên tự mờ dần.</li>
+<li>Muốn đánh giá một cách chăm da có tác dụng hay không, cần chờ <b>2–3 chu kỳ, tức khoảng 8–12 tuần</b>.</li>
+<li>Da mình <b>tự lột nhẹ nhàng, không đỏ, không rát</b> mỗi tháng. Mình không cần bóc hộ nó đâu các mom ạ 😜</li>
+</ul>
+
+<h2 id="hac-to">Tế bào hắc tố: mỗi “cô” chăm khoảng 36 nhà</h2>
+<p>Tế bào hắc tố nằm ở lớp đáy, có những cái tay dài như bạch tuộc vươn ra xung quanh. Mỗi tế bào hắc tố “phục vụ” khoảng <b>36–40 tế bào sừng</b> hàng xóm – cả cụm gọi là <b>đơn vị biểu bì – sắc tố</b>. Nó làm ra <b>melanin</b>, đóng thành từng gói nhỏ rồi chuyền sang tế bào hàng xóm. Vào tế bào rồi, melanin tụ lên phía trên nhân, <b>như cái ô che cho nhân khỏi tia nắng</b>.</p>
+
+<figure id="h-hac-to">
+<div class="fig">
+<div class="ctrl" role="group" aria-label="Trạng thái" id="mb"></div>
+<div class="scroll sv"><svg id="mel" viewBox="0 0 760 400" role="img" aria-label="Đơn vị biểu bì sắc tố: một tế bào hắc tố ở lớp đáy chuyền sắc tố lên các tế bào sừng; khi đi nắng và khi bị nám lượng sắc tố tăng nhưng số tế bào hắc tố không đổi"></svg></div>
+<div class="readout"><div id="mr" style="grid-column:1/-1"></div></div>
+</div>
+<figcaption><b>Hình 4. Một “cô” tế bào hắc tố và khu phố của cô.</b> Bấm ba trạng thái để so: số tế bào hắc tố không đổi, chỉ có lượng sắc tố và những “người giục” bên dưới thay đổi. Hình chỉ vẽ vài tế bào sừng cho dễ nhìn.</figcaption>
+</figure>
+
+<p>Thế nên đi nắng bị sạm là da đang <b>tự bảo vệ</b>. Lúc rám nắng, <b>số tế bào hắc tố không tăng lên, chỉ là chúng làm việc hăng hơn</b>.</p>
+<div class="callout">Một điều nhiều tài liệu nói sai mà em mới biết: <b>da trắng hay da đen không phải vì nhiều hay ít tế bào hắc tố</b> – số lượng ở cùng một vùng cơ thể gần như ngang nhau giữa các chủng tộc. Khác nhau là ở <b>hạt sắc tố</b>: nhiều hay ít, to hay nhỏ, loại nào, xếp thế nào. Chỗ nám với chỗ da lành trên mặt mình cũng vậy – không phải mọc thêm “thợ”, mà là <b>thợ làm quá tay</b>.</div>
+
+<h2 id="hau-truong">Tầng dưới: “hậu trường” giục nám chạy</h2>
+<p>Trước đây người ta nghĩ nám chỉ là chuyện của biểu bì. Mấy năm gần đây các nghiên cứu thấy <b>trung bì mới là hậu trường</b> liên tục giục xưởng sắc tố làm tiếp (bấm “Nám” ở Hình 4 để xem):</p>
+<ul>
+<li><b>Tấm giấy nến (màng đáy) bị hỏng</b> ở phần lớn vùng nám – một nghiên cứu ghi nhận ở khoảng <b>96%</b> mẫu da nám. Màng đáy thủng thì sắc tố có thể <b>lọt xuống trung bì</b>, bị tế bào dọn dẹp nuốt vào rồi nằm đó rất lâu. Đây là lý do nám ở tầng dưới khó trị.</li>
+<li><b>Mạch máu tăng</b> ở vùng nám – có mảng nám ấn vào thấy nền hơi hồng đỏ.</li>
+<li><b>Tế bào viêm</b> (tế bào mast) tăng, vừa kích thích làm sắc tố, vừa phá màng đáy.</li>
+<li><b>Sợi da bị nắng làm hỏng</b>, tế bào làm collagen “già” đi vì nắng, cũng tiết tín hiệu giục sắc tố.</li>
+</ul>
+<p>Nói gọn: <strong>nám là chuyện của cả một khu phố, không chỉ một cái xưởng</strong>. Vì thế nó hay tái phát nếu chỉ chăm cái ngọn.</p>
+
+<h2 id="bang">Giờ đặt mọi thứ cạnh nhau</h2>
+<table class="stack"><thead><tr><th>Chuyện</th><th>Nằm ở đâu</th><th>Lột mặt có chạm tới?</th></tr></thead><tbody>
+<tr><td>Da xỉn, sần, bong vảy</td><td>Lớp sừng</td><td>Có</td></tr>
+<tr><td><b>Xưởng làm sắc tố</b></td><td>Lớp đáy – tầng thấp nhất của biểu bì</td><td>Lột thường: không</td></tr>
+<tr><td>Nám ở lớp trên</td><td>Sắc tố dư trong biểu bì</td><td>Một phần, tạm thời</td></tr>
+<tr><td>Nám ở lớp dưới</td><td>Sắc tố lọt xuống trung bì</td><td>Không</td></tr>
+<tr><td>“Người giục” nám: mạch máu, tế bào viêm, sợi da hỏng</td><td>Trung bì</td><td>Không</td></tr>
+<tr><td>Nếp nhăn sâu, da chảy</td><td>Collagen, sợi đàn hồi ở trung bì</td><td>Không</td></tr>
+</tbody></table>
+<p>Nhìn bảng này em mới vỡ lẽ: lột mặt chủ yếu bóc mái ngói, trong khi <b>cái bếp làm sắc tố nằm dưới đáy</b>, còn <b>người đứng quạt lửa thì ở tầng dưới nữa</b>. Bóc mái mà bếp vẫn đỏ lửa, người vẫn quạt, thì khói lại bay lên thôi các mom ạ 😂😂😂 Chưa kể mái bị bóc mỏng thì nắng chiếu thẳng xuống, bếp lại càng có cớ đỏ lửa hơn.</p>
+
+<h2>Mang về nhà 3 điều</h2>
+<ul class="todo">
+<li><b>Muốn xử lý gì trên da, hỏi trước: nó nằm ở lớp nào?</b> Rồi hỏi tiếp: cách mình định làm có chạm tới lớp ấy không, có làm hại lớp khác không.</li>
+<li><b>Da tự thay mới khoảng mỗi tháng</b> – mọi cải thiện thật cần ít nhất 2–3 tháng, đừng tin “trắng sau 7 ngày”.</li>
+<li><b>Giữ bức tường lớp sừng lành lặn là bước đầu tiên</b>: rửa nhẹ, dưỡng ẩm, chống nắng.</li>
+</ul>
+
+<a class="next" href="./">Bài sau → Một tháng da thay một lần áo: vì sao “lột cấp tốc” là đi ngược với da<span>Sắp có · Xem mục lục chuỗi bài</span></a>
+<p class="small"><a href="vet-nam-va-lot-mat.html">← Bài 1: Vết nám nhỏ và những lần lột mặt</a></p>
+
+<p class="small"><i>Chia sẻ từ tìm hiểu cá nhân, không thay khám và điều trị của bác sĩ da liễu.</i></p>
+<p class="small"><b>Nguồn:</b> Cẩm nang trị nám toàn diện 2026, Ch.1–4 (tư liệu nội bộ) · Đại học Leeds, Histology Guide – Skin layers, Pigmentation · SEER (Viện Ung thư Quốc gia Hoa Kỳ) – Layers of the Skin · StatPearls NBK441980 · Đại học Utah, Dermatology · DermNet – Structure of the epidermis · Grove & Kligman, J Gerontol 1983 (PMID 6827031) · Toda & cs., Nature New Biology 1972 · PMC3834696 · Rattananukrom & cs., Clin Cosmet Investig Dermatol 2022 (PMC8747646) · PMC11148313.</p>
+
+</div></main>
+
+<footer class="band"><div class="col"><small>© 2026 Trần Thị Kỹ · bepcoky.com · <a href="./">Mục lục Đẹp từ gốc</a> · <a href="../kien-thuc/">Kiến thức bếp</a> · <a href="../#mien-tru">Miễn trừ trách nhiệm</a> · Zalo <a href="https://zalo.me/0342668311" target="_blank" rel="noopener">0342.668.311</a> · <a href="https://www.facebook.com/tran.ky.794" target="_blank" rel="noopener">Facebook Trần Thị Kỹ</a></small></div></footer>
+
+<script>{
+const $=s=>document.querySelector(s);
+let seed=1;const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280};
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- Hình 1: khối da 3D ---------- */
+const W=300,D=200;
+const pat={
+epi:(w,h)=>{seed=2;let s=`<rect width="${w}" height="${h}" fill="var(--epi)"/><rect width="${w}" height="9" fill="var(--corn)"/>`;
+ for(let x=4;x<w;x+=18)s+=`<line x1="${x}" y1="4" x2="${x+9}" y2="4" stroke="var(--cellline)"/>`;
+ for(let y=15;y<h-10;y+=9)for(let x=5+(y%2)*4;x<w;x+=10)s+=`<circle cx="${x}" cy="${y}" r="3.6" fill="none" stroke="var(--cellline)"/>`;
+ s+=`<rect y="${h-8}" width="${w}" height="8" fill="var(--basal)"/>`;for(let x=20;x<w;x+=46)s+=`<circle cx="${x}" cy="${h-4}" r="3" fill="var(--mel)"/><path d="M${x} ${h-6} l-5 -9 M${x} ${h-6} l5 -10" stroke="var(--mel)" stroke-width="1.4"/>`;return s},
+derm:(w,h)=>{let s=`<rect width="${w}" height="${h}" fill="var(--derm)"/>`;
+ for(let y=12;y<h;y+=14){let p=`M0 ${y}`;for(let x=0;x<w;x+=24)p+=` q6 -5 12 0 t12 0`;s+=`<path d="${p}" fill="none" stroke="var(--cellline)" stroke-width="1.6"/>`}
+ s+=`<path d="M10 ${h*.55} C${w*.3} ${h*.35} ${w*.5} ${h*.8} ${w-10} ${h*.5}" fill="none" stroke="var(--vessel)" stroke-width="6" opacity=".6"/>`;
+ if(w>250){s+=`<path d="M${w*.68} 0 v${h*.62}" stroke="var(--mute)" stroke-width="7"/><ellipse cx="${w*.68}" cy="${h*.7}" rx="9" ry="12" fill="var(--mute)"/><ellipse cx="${w*.76}" cy="${h*.3}" rx="11" ry="8" fill="var(--hypo)" stroke="var(--cellline)"/><path d="M${w*.22} 0 v${h*.6} c0 10 14 10 14 0 s-14 -10 -14 0" fill="none" stroke="var(--teal)" stroke-width="2.5"/>`}
+ return s},
+hypo:(w,h)=>{seed=4;let s=`<rect width="${w}" height="${h}" fill="var(--hypo)"/>`;for(let y=10;y<h;y+=18)for(let x=8+(y%36?9:0);x<w;x+=19)s+=`<circle cx="${x}" cy="${y}" r="${8+rnd()*2}" fill="none" stroke="var(--cellline)" stroke-width="1.5"/>`;return s},
+top:(w,h)=>{seed=6;let s=`<rect width="${w}" height="${h}" fill="var(--corn)"/>`;for(let i=0;i<40;i++)s+=`<circle cx="${(rnd()*w).toFixed(1)}" cy="${(rnd()*h).toFixed(1)}" r="1.6" fill="var(--cellline)"/>`;
+ for(let i=0;i<9;i++){const x=rnd()*w,y=rnd()*h;s+=`<path d="M${x} ${y} l${20+rnd()*30} ${rnd()*10-5}" stroke="var(--cellline)"/>`}return s}};
+const S=[
+{k:'Biểu bì',h:46,y0:-128,y1:-210,p:'epi',
+ t:'<h3>Biểu bì – tầng vỏ ngoài</h3><p><b>Dày:</b> khoảng 0,1 mm, mỏng như tờ giấy. Không có mạch máu.</p><p><b>Có gì:</b> tế bào sừng (chiếm phần lớn), tế bào hắc tố ở lớp đáy, tế bào miễn dịch canh gác.</p><p><b>Liên quan:</b> lột mặt, tẩy da chết, peel nông tác động ở đây. Nám lớp trên nằm ở đây. Xưởng sắc tố nằm ở đáy tầng này.</p>'},
+{k:'Trung bì',h:130,y0:-82,y1:-104,p:'derm',
+ t:'<h3>Trung bì – tầng “ruột”</h3><p><b>Dày:</b> khoảng 1–4 mm tùy chỗ.</p><p><b>Có gì:</b> collagen, sợi đàn hồi, mạch máu (đường đỏ), chân lông, tuyến dầu, tuyến mồ hôi (đường xanh), đầu dây thần kinh, tế bào mast.</p><p><b>Liên quan:</b> nếp nhăn sâu, sẹo rỗ; nám lớp dưới và “người giục” nám ở đây. Lột thông thường không chạm tới.</p>'},
+{k:'Hạ bì',h:80,y0:48,y1:84,p:'hypo',
+ t:'<h3>Hạ bì – tầng mỡ đệm</h3><p><b>Dày:</b> vài mm đến vài cm tùy vùng.</p><p><b>Có gì:</b> các thùy mỡ, vách xơ, mạch máu lớn.</p><p><b>Liên quan:</b> giữ ấm, làm đệm, tạo nét đầy đặn; chảy xệ. Ít dính dáng đến nám.</p>'}];
+const blk=$('#blk');let rx=-24,ry=-34,ex=false,sel=0;
+const face=(w,h,tf,inner,extra='')=>`<div class="face" style="width:${w}px;height:${h}px;${extra}transform:${tf}"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">${inner}</svg></div>`;
+blk.innerHTML=S.map((l,i)=>{const h=l.h,f=pat[l.p];return`<div class="slab" data-i="${i}" style="height:${h}px">`+
+ face(W,h,`translateZ(${D/2}px)`,f(W,h))+face(W,h,`rotateY(180deg) translateZ(${D/2}px)`,f(W,h))+
+ face(D,h,`rotateY(90deg) translateZ(${W/2}px)`,f(D,h),`left:${(W-D)/2}px;`)+face(D,h,`rotateY(-90deg) translateZ(${W/2}px)`,f(D,h),`left:${(W-D)/2}px;`)+
+ face(W,D,`rotateX(90deg) translateZ(${h/2}px)`,i===0?pat.top(W,D):`<rect width="${W}" height="${D}" fill="var(--${l.p})"/>`,`top:${(h-D)/2}px;`)+
+ face(W,D,`rotateX(-90deg) translateZ(${h/2}px)`,`<rect width="${W}" height="${D}" fill="var(--${l.p})"/>`,`top:${(h-D)/2}px;`)+
+ `<span class="tag" style="top:${h/2-16}px;transform:translateZ(${D/2}px)">${l.k}</span></div>`}).join('');
+const slabs=[...blk.querySelectorAll('.slab')];
+function place(){blk.style.setProperty('--rx',rx+'deg');blk.style.setProperty('--ry',ry+'deg');
+ slabs.forEach((s,i)=>{s.style.transform=`translateY(${ex?S[i].y1:S[i].y0}px)`;s.classList.toggle('sel',i===sel)});
+ $('#ex').textContent=ex?'Ghép lại':'Tách lớp';$('#ex').setAttribute('aria-pressed',ex);
+ $('#info').innerHTML=S[sel].t;document.querySelectorAll('#lb button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.i===sel))}
+$('#lb').innerHTML=S.map((l,i)=>`<button data-i="${i}">${l.k}</button>`).join('');
+$('#lb').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;sel=+b.dataset.i;place()});
+$('#ex').addEventListener('click',()=>{ex=!ex;place()});
+$('#rs').addEventListener('click',()=>{rx=-24;ry=-34;place()});
+let drag=null,moved=0;const sc=$('#scene');
+sc.addEventListener('pointerdown',e=>{drag=[e.clientX,e.clientY,rx,ry];moved=0;sc.setPointerCapture(e.pointerId)});
+sc.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag[0],dy=e.clientY-drag[1];moved=Math.abs(dx)+Math.abs(dy);ry=drag[3]+dx*.45;rx=Math.max(-80,Math.min(15,drag[2]-dy*.35));place()});
+sc.addEventListener('pointerup',e=>{const was=moved;drag=null;if(was<6){const t=document.elementsFromPoint(e.clientX,e.clientY).map(n=>n.closest&&n.closest('.slab')).find(Boolean);if(t){sel=+t.dataset.i;place()}}});
+place();
+if(!RM)setTimeout(()=>{ex=true;place()},900);
+
+/* ---------- Hình 2: tường gạch ---------- */
+let wbad=false;
+function wall(){
+ let s=`<defs><marker id="aw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--warn)"/></marker><marker id="at" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--teal)"/></marker></defs>`;
+ s+=`<rect x="20" y="70" width="720" height="122" fill="var(--hypo)" opacity=".55"/>`;
+ seed=8;const holes=new Set(wbad?[3,9,16,22,27,33,8,20]:[]);let n=0;
+ for(let r=0;r<4;r++)for(let x=(r%2?-31:0);x<720;x+=62){const bx=Math.max(0,x),bw=Math.min(x+56,720)-bx;if(bw<8)continue;const k=n++;
+  if(holes.has(k))continue;s+=`<rect x="${20+bx}" y="${74+r*30}" width="${bw}" height="24" rx="4" fill="var(--corn)" stroke="var(--cellline)" stroke-width="1.5"/>`}
+ s+=`<rect x="20" y="196" width="720" height="70" fill="var(--epi)"/><text x="30" y="290" font-size="13">Phần da sống bên dưới</text><text x="30" y="22" font-size="13">Bên ngoài: bụi, vi khuẩn, chất kích ứng, nắng</text>`;
+ s+=`<g><circle cx="600" cy="244" r="9" fill="var(--mel)"/><path d="M600 238 l-12 -20 M600 238 l4 -24 M600 238 l16 -16" stroke="var(--mel)" stroke-width="3" fill="none"/></g>`;
+ if(!wbad){[120,300,480].forEach(x=>s+=`<path d="M${x} 32 L${x+20} 64" stroke="var(--warn)" stroke-width="2.5"/><path d="M${x+20} 64 L${x+44} 36" stroke="var(--warn)" stroke-width="2.5" marker-end="url(#aw)"/>`);
+  [200,400].forEach(x=>s+=`<path d="M${x} 250 q8 -14 0 -24 q-8 10 0 24" fill="var(--teal)" opacity=".8"/>`);
+  s+=`<text x="380" y="316" text-anchor="middle" font-size="14" font-weight="600" style="fill:var(--teal)">Tường lành: chặn được từ ngoài vào, giữ được nước bên trong. Da yên.</text>`}
+ else{[[210,32,226,230],[410,32,425,230],[540,32,560,232]].forEach(([a,b,c,d])=>s+=`<path d="M${a} ${b} L${c} ${d}" stroke="var(--warn)" stroke-width="2.5" marker-end="url(#aw)"/>`);
+  [[260,250,280,36],[470,250,450,36]].forEach(([a,b,c,d])=>s+=`<path d="M${a} ${b} L${c} ${d}" stroke="var(--teal)" stroke-width="2.5" stroke-dasharray="5 5" marker-end="url(#at)"/>`);
+  s+=`<path d="M582 226 l-10 -8 M620 226 l10 -8 M600 222 v-10" stroke="var(--warn)" stroke-width="3"/><text x="640" y="248" font-size="13" font-weight="600" style="fill:var(--warn)">báo động!</text>`;
+  s+=`<text x="380" y="316" text-anchor="middle" font-size="14" font-weight="600" style="fill:var(--warn)">Tường thủng: nước thoát ra, chất kích ứng lọt vào, da viêm – xưởng sắc tố làm thêm.</text>`}
+ $('#wall').innerHTML=s;document.querySelectorAll('#wb button').forEach(b=>b.setAttribute('aria-pressed',(b.dataset.i==='1')===wbad))}
+$('#wb').innerHTML=`<button data-i="0">Tường lành</button><button data-i="1">Bị lột quá đà</button>`;
+$('#wb').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;wbad=b.dataset.i==='1';wall()});wall();
+
+/* ---------- Hình 3: hành trình tế bào ---------- */
+const AG=[{k:'Người trẻ · khoảng 4 tuần',T:28},{k:'Người lớn tuổi · chậm hơn trên 10 ngày',T:40}];
+let ai=0,day=0,timer=null;
+const BANDS=[[40,110,'Lớp sừng','var(--corn)'],[110,160,'Lớp hạt','var(--epi)'],[160,280,'Lớp gai','var(--epi)'],[280,320,'Lớp đáy','var(--basal)'],[322,380,'Trung bì','var(--derm)']];
+const STG=[[0,.06,'Lớp đáy','Vừa sinh ra từ tế bào gốc, nằm cạnh tế bào hắc tố.'],[.06,.40,'Lớp gai','Được đẩy lên, nhận gói sắc tố; sắc tố tụ thành “cái ô” trên nhân.'],[.40,.50,'Lớp hạt','Tiết chất béo làm “vữa” gắn kết, bắt đầu mất nhân.'],[.50,.96,'Lớp sừng','Đã chết, dẹt như vảy, làm “viên gạch” của hàng rào – vẫn mang sắc tố theo lên.'],[.96,1.01,'Bong ra','Bong ra tự nhiên: da tự “lột” nhẹ nhàng, không đỏ, không rát.']];
+function trip(){const T=AG[ai].T,t=Math.min(1,day/T);
+ let s='';BANDS.forEach(([a,b,n,c])=>s+=`<rect x="20" y="${a}" width="600" height="${b-a}" fill="${c}"/><text x="632" y="${(a+b)/2+5}" font-size="14">${n}</text>`);
+ s+=`<line x1="20" y1="321" x2="620" y2="321" stroke="var(--ink)" stroke-width="2"/>`;
+ for(let x=30;x<620;x+=30)s+=`<ellipse cx="${x}" cy="300" rx="12" ry="15" fill="none" stroke="var(--cellline)"/>`;
+ for(let y=180;y<275;y+=32)for(let x=36+(y%64?15:0);x<620;x+=32)s+=`<circle cx="${x}" cy="${y}" r="14" fill="none" stroke="var(--cellline)"/>`;
+ for(let x=40;x<620;x+=40)s+=`<ellipse cx="${x}" cy="135" rx="19" ry="8" fill="none" stroke="var(--cellline)"/>`;
+ for(let y=52;y<108;y+=11)for(let x=30+(y%22?10:0);x<580;x+=44)s+=`<rect x="${x}" y="${y}" width="36" height="5" rx="2" fill="none" stroke="var(--cellline)"/>`;
+ s+=`<g><circle cx="140" cy="300" r="8" fill="var(--mel)"/><path d="M140 294 l-10 -30 M140 294 l6 -34 M140 294 l20 -24" stroke="var(--mel)" stroke-width="2.5"/></g>`;
+ let y,rxx,ryy,x=330,op=1;
+ const K=[[0,300],[.06,300],[.40,160],[.50,110],[.96,56]];if(t<.96){let j=0;while(t>K[j+1][0])j++;const f=(t-K[j][0])/(K[j+1][0]-K[j][0]||1);y=K[j][1]+(K[j+1][1]-K[j][1])*f;} else {y=56-(t-.96)/.04*40;x+=(t-.96)/.04*30;op=1-(t-.96)/.04*.8}
+ const fl=t<.4?0:Math.min(1,(t-.4)/.2);rxx=17+fl*17;ryy=17-fl*13;
+ s+=`<g opacity="${op.toFixed(2)}"><ellipse cx="${x}" cy="${y}" rx="${rxx}" ry="${ryy}" fill="var(--card)" stroke="var(--teal)" stroke-width="3"/>`;
+ if(t<.5)s+=`<ellipse cx="${x}" cy="${y+2}" rx="${6-fl*3}" ry="${6-fl*3}" fill="var(--mute)" opacity="${(1-fl).toFixed(2)}"/>`;
+ if(t>.08){const n=t<.5?5:4;for(let i=0;i<n;i++){const dx=(i-(n-1)/2)*(t<.5?3.4:6);s+=`<circle cx="${x+dx}" cy="${y-(t<.5?7:0)}" r="${t<.5?2.2:1.8}" fill="var(--mel)"/>`}}
+ s+=`</g>`;
+ if(t<.08)s+=`<path d="M152 280 Q240 250 ${x-20} ${y-6}" fill="none" stroke="var(--mel)" stroke-dasharray="4 4" stroke-width="2"/>`;
+ $('#trip').innerHTML=s;
+ const st=STG.find(([a,b])=>t>=a&&t<b)||STG[4];
+ $('#tr').innerHTML=`<b>Ngày ${Math.round(day)} / ${T} · ${st[2]}</b>${st[3]}`;
+ document.querySelectorAll('#ag button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.i===ai))}
+$('#ag').innerHTML=AG.map((a,i)=>`<button data-i="${i}">${a.k}</button>`).join('');
+const rg=$('#day');
+$('#ag').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const f=day/AG[ai].T;ai=+b.dataset.i;rg.max=AG[ai].T;day=f*AG[ai].T;rg.value=day;trip()});
+rg.addEventListener('input',()=>{day=+rg.value;trip()});
+$('#play').addEventListener('click',()=>{if(timer){clearInterval(timer);timer=null;$('#play').textContent='▶ Chạy';return}
+ if(day>=AG[ai].T)day=0;$('#play').textContent='❚❚ Dừng';
+ timer=setInterval(()=>{day=Math.min(AG[ai].T,day+AG[ai].T/120);rg.value=day;trip();if(day>=AG[ai].T){clearInterval(timer);timer=null;$('#play').textContent='▶ Chạy lại'}},50)});
+trip();
+
+/* ---------- Hình 4: đơn vị sắc tố ---------- */
+const MS=[{k:'Bình thường',g:3,o:.35,d:'Tế bào hắc tố: <b>1</b>. Sắc tố vừa đủ, màu da đều theo “thiết kế gen”.'},
+{k:'Đi nắng – rám',g:6,o:.65,d:'Tế bào hắc tố: <b>vẫn 1</b>, không mọc thêm. Chỉ làm việc hăng hơn: nhiều gói sắc tố hơn, “ô” trên nhân đậm hơn. Đây là da tự bảo vệ, hết nắng thì nhạt dần.'},
+{k:'Nám',g:10,o:.9,d:'Tế bào hắc tố: <b>vẫn 1</b> – nhưng chạy quá tay, không chịu dừng. Bên dưới: màng đáy đứt, sắc tố rơi xuống trung bì; mạch máu và tế bào viêm liên tục gửi tín hiệu “giục”.'}];
+let mi=0;
+function mel(){const m=MS[mi];seed=12;
+ let s=`<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--warn)"/></marker></defs>`;
+ s+=`<rect x="20" y="30" width="600" height="220" fill="var(--epi)"/><rect x="20" y="250" width="600" height="42" fill="var(--basal)"/><rect x="20" y="294" width="600" height="96" fill="var(--derm)"/>`;
+ [[40,'Lớp gai'],[262,'Lớp đáy'],[310,'Trung bì']].forEach(([y,t])=>s+=`<text x="632" y="${y+12}" font-size="14">${t}</text>`);
+ s+=mi===2?`<line x1="20" y1="293" x2="250" y2="293" stroke="var(--ink)" stroke-width="2"/><line x1="250" y1="293" x2="510" y2="293" stroke="var(--ink)" stroke-width="2" stroke-dasharray="14 10"/><line x1="510" y1="293" x2="620" y2="293" stroke="var(--ink)" stroke-width="2"/>`:`<line x1="20" y1="293" x2="620" y2="293" stroke="var(--ink)" stroke-width="2"/>`;
+ const kc=[];for(let x=70;x<600;x+=78)kc.push([x,88]);for(let x=108;x<600;x+=78)kc.push([x,172]);
+ const tips=[];
+ kc.forEach(([x,y])=>{s+=`<rect x="${x-32}" y="${y-30}" width="64" height="62" rx="20" fill="var(--card)" opacity=".55" stroke="var(--cellline)" stroke-width="1.5"/><ellipse cx="${x}" cy="${y+6}" rx="11" ry="10" fill="var(--mute)" opacity=".55"/>`;
+  s+=`<path d="M${x-14} ${y-4} q14 -14 28 0" fill="none" stroke="var(--mel)" stroke-width="6" stroke-linecap="round" opacity="${m.o}"/>`;
+  for(let i=0;i<m.g;i++)s+=`<circle cx="${(x-12+rnd()*24).toFixed(1)}" cy="${(y-12+rnd()*8).toFixed(1)}" r="1.8" fill="var(--mel)"/>`;
+  if(Math.abs(x-320)<200)tips.push([x,y+24])});
+ for(let x=40;x<600;x+=40){if(Math.abs(x-320)<22)continue;s+=`<ellipse cx="${x}" cy="271" rx="16" ry="17" fill="none" stroke="var(--cellline)"/>`}
+ tips.forEach(([x,y])=>{s+=`<path d="M320 266 Q${(x+320)/2} ${y+60} ${x} ${y}" fill="none" stroke="var(--mel)" stroke-width="3" stroke-linecap="round"/>`;
+  for(let i=1;i<=Math.ceil(m.g/3);i++){const f=i/(Math.ceil(m.g/3)+1),qx=(1-f)**2*320+2*(1-f)*f*((x+320)/2)+f*f*x,qy=(1-f)**2*266+2*(1-f)*f*(y+60)+f*f*y;s+=`<circle cx="${qx.toFixed(1)}" cy="${qy.toFixed(1)}" r="2.6" fill="var(--mel)"/>`}});
+ s+=`<circle cx="320" cy="270" r="15" fill="var(--mel)"/><path d="M336 272 L626 296" stroke="var(--mel)" stroke-width="1.5" stroke-dasharray="4 4"/><text x="632" y="300" font-size="13" font-weight="600" style="fill:var(--mel)">tế bào hắc tố</text>`;
+ if(mi===2){[[270,320],[300,345],[360,330],[420,358],[455,322]].forEach(([x,y])=>s+=`<circle cx="${x}" cy="${y}" r="10" fill="var(--mel)" opacity=".5"/><circle cx="${x+2}" cy="${y-2}" r="3" fill="var(--mel)"/>`);
+  [[300,288,290,312],[360,288,372,318]].forEach(([a,b,c,d])=>s+=`<path d="M${a} ${b} L${c} ${d}" stroke="var(--mel)" stroke-width="2" stroke-dasharray="3 3"/>`);
+  s+=`<path d="M40 360 C120 340 180 380 240 352" fill="none" stroke="var(--vessel)" stroke-width="9" stroke-linecap="round" opacity=".7"/><text x="40" y="384" font-size="12">mạch máu tăng</text>`;
+  s+=`<circle cx="560" cy="352" r="16" fill="var(--card)" stroke="var(--warn)" stroke-width="2"/>`;for(let i=0;i<7;i++)s+=`<circle cx="${552+rnd()*16}" cy="${344+rnd()*16}" r="2" fill="var(--warn)"/>`;
+  s+=`<text x="512" y="384" font-size="12">tế bào viêm (mast)</text>`;
+  s+=`<path d="M200 346 Q260 300 304 276" fill="none" stroke="var(--warn)" stroke-width="2.5" marker-end="url(#am)"/><path d="M544 344 Q440 300 338 276" fill="none" stroke="var(--warn)" stroke-width="2.5" marker-end="url(#am)"/>`;
+  s+=`<text x="632" y="358" font-size="13" font-weight="600" style="fill:var(--warn)">tín hiệu “giục”</text><text x="262" y="390" font-size="12">sắc tố rơi xuống, nằm lại lâu</text>`}
+ $('#mel').innerHTML=s;$('#mr').innerHTML=`<b>${m.k}</b>${m.d}`;
+ document.querySelectorAll('#mb button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.i===mi))}
+$('#mb').innerHTML=MS.map((m,i)=>`<button data-i="${i}">${m.k}</button>`).join('');
+$('#mb').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;mi=+b.dataset.i;mel()});mel();
+}</script>
+</body></html>
