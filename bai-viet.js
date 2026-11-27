@@ -10,12 +10,59 @@
    - nguon  : "Facebook" nếu bài đăng lần đầu trên Facebook
    - loa    : (tùy chọn) bài Cô Kỹ KÊU GỌI ĐẶT HÀNG thì ghi một câu ngắn, vd  loa:"Mẻ kim chi mới, nhận đơn đến hết thứ Bảy ạ!"
               → trang chủ hiện cái loa rung + nút "📣 Đang nhận đơn" (tin-moi.js). Bếp đang nghỉ thì loa tự ẩn.
+   - link   : (tùy chọn) {href:"youtube/", chu:"chữ trên nút"} – nút dẫn sang trang/khối khác trong khung đọc bài
    - loaDen : (tùy chọn) loa hiện đến hết ngày này, dạng "2026-11-30"; bỏ trống = 3 ngày sau ngày đăng
    Bài mới nhất tự lên bảng TIN MỚI trên căn bếp. Link mở thẳng bài: bepcoky.com/#bai=<tên ảnh bìa bỏ -01.jpg>, vd #bai=261126
    LƯU Ý: kho GitHub công khai – không đưa ảnh các con, ảnh chụp tin nhắn,
    số điện thoại hay thông tin của khách vào đây.
    ========================================================= */
 window.BAI_VIET = [
+/* ---- Bài mới (thêm 28/11/2026) ---- */
+{ngay:"2026-11-28", muc:"bep", tieuDe:"Bếp Cô Kỹ có kênh YouTube rồi các bác ơi!", anh:["youtube-bepcoky-01.webp"], nguon:"Bếp Cô Kỹ",
+link:{href:"youtube/", chu:"▶ Đọc bài và bấm Đăng ký kênh"},
+noiDung:`Các bác ơi, Bếp Cô Kỹ mở kênh YouTube rồi ạ: Bếp Cô Kỹ – @bepcoky 🥰
+
+Chọn đúng · Nấu lành · Khỏe đẹp cả nhà. Ông chủ có kênh Gieo Mầm Sức Khỏe "gieo" hiểu biết về sức khỏe, còn em xin phần "chăm, nuôi lớn" hiểu biết ấy ngay trong căn bếp: đi chợ chọn đúng, soi nhãn, nấu và bảo quản cho lành để cả nhà khỏe từ trong, đẹp ra ngoài.
+
+Mỗi tuần em lên sóng 4 buổi:
+- Thứ Hai – Nấu lành: món nhà làm và vì sao em làm thế
+- Thứ Tư – Chọn đúng: đi chợ, soi nhãn, giải oan đồ bếp
+- Thứ Sáu – Mâm cơm cả nhà: món quê, chuyện nội ngoại
+- Chủ nhật – Bí mật của…: chuyện đằng sau một gia vị
+
+01/12 em ra mắt trailer "Em là Kỹ – chào các bác". Các bác bấm Đăng ký kênh và bật chuông giúp em nhé, em cảm ơn nhiều ạ!
+
+Các bác muốn em làm video món gì, soi nhãn gì, để lại lời nhắn cho em nhé.`},
+
+/* ---- Bài Facebook 26–27/11/2026 (ảnh chụp ở D:\New App 2026\Bep co Ky Web\Bai viet cap nhat) ---- */
+{ngay:"2026-11-27", muc:"nha", tieuDe:"Ông chủ bảo: Thế này đã được chưa?", anh:["fb/271126a-01.jpg"], nguon:"Facebook",
+noiDung:`Ông chủ bảo: Thế này đã được chưa😜😜😜`},
+
+{ngay:"2026-11-27", muc:"ban", tieuDe:"Mẻ xôi vò cuối cùng trong ngày", anh:["fb/271126b-01.jpg", "fb/271126b-02.jpg", "fb/271126b-03.jpg"], nguon:"Facebook",
+noiDung:`Hạt gạo tròn to căng mọng làm xôi gì cũng ngon chị em ạ! Mẻ xôi vò cuối cùng trong ngày giờ em mới kịp lên bài ạ!`},
+
+{ngay:"2026-11-27", muc:"vuon", tieuDe:"Ai cần cây si, em cho cả cây lẫn chậu", anh:["fb/271126c-01.jpg"], nguon:"Facebook",
+noiDung:`Nhà em có cây si như này không cần dùng nữa. Anh chị em ai cần em cho cả cây lẫn chậu và đến rinh về giúp em ạ!`},
+
+{ngay:"2026-11-27", muc:"ban", tieuDe:"Gạo nếp Thái Nguyên về rồi – em nhận đơn xôi vò", anh:["fb/271126d-01.jpg", "fb/271126b-01.jpg"], nguon:"Facebook",
+loa:"Gạo nếp Thái Nguyên về rồi – em nhận đơn xôi vò ạ!", loaDen:"2026-12-04",
+noiDung:`🌹☘️👉 Một năm rồi nay em mới lại có gạo nếp siêu ngon siêu dẻo thơm nhé cả nhà! Có nhiều bác hỏi xôi vò nhưng em đều báo chưa mua được gạo em ưng ý nên em chưa nấu được ạ.
+
+Bác bảo: em cứ ra chợ mua đại gạo nếp cái hoa vàng cũng ngon mà😂. Cá nhân em từng mua nhiều rồi nhưng khi em biết đến gạo nếp Thái Nguyên này thì em thấy những gạo khác không ngon bằng đâu ạ, nên là nhất định em không bán khi thực phẩm em mua chưa ưng ý. Em không phải người làm ăn bất chấp nên các mom thông cảm cho em nhé, ngon em sẽ làm còn không ngon thì các bác nói nào cũng không thuyết phục được em😂.
+
+Em có mối xịn từ mẹ đẻ của em dâu tận trên Thái Nguyên, giá tuy cao hơn chút nhưng em ưng cái bụng. Với em đắt tí cũng được nhưng ngon là được.
+Em thiên về chất lượng chứ không phải giá rẻ nên mom nào thích xôi vò của #BẾP_CÔ_KỸ thì lên đơn em nấu nhé ạ! Em bắt đầu nhận đơn xôi vò từ ngày mai ạ!
+
+📞 Zalo 0342.668.311 alo hoặc ib vùng kín cho em nha😂`},
+
+{ngay:"2026-11-26", muc:"nha", tieuDe:"Mẹ chưa cần các con phải nấu cho mẹ ăn", anh:["fb/261126b-01.jpg", "fb/261126b-02.jpg"], nguon:"Facebook",
+noiDung:`❤️❤️❤️ Mẹ chưa cần các con phải nấu cho mẹ ăn, chăm sóc mẹ những lúc mẹ còn khỏe và tỉnh táo mà việc đó hãy để cho mẹ được vui khi có cơ hội chăm bữa ăn cho các con mỗi ngày như này.
+Và điều bù đắp lại cho mẹ là các con thường xuyên thay nhau hỏi mẹ nay mẹ muốn ăn gì không ạ? Rồi gửi 1 list đồ ăn cho mẹ chọn để con mua trên đường đi làm về. Mẹ không thích ăn vặt nhưng có mấy món thi thoảng mẹ thèm nó đơn giản lắm các con vẫn chiều mẹ! Những lúc mẹ đi công tác với bố con cũng chuyển khoản cho mẹ chúc mẹ vui vẻ, hạnh phúc bên bố. Ngày lễ hay sinh nhật các con đều không quên và bảo nhau chúc mừng và có quà cho bố mẹ. Biết mẹ hay thiếu tiền tiêu 😜 con luôn chủ động hỏi mẹ còn tiền không con chuyển cho ạ🥰
+
+Từ ngày các con biết kiếm ra những đồng tiền mồ hôi nước mắt của mình dù vừa đi học vẫn muốn đi làm lấy tiền tiêu vặt chứ không muốn xin mẹ mãi mặc dù mẹ vẫn cho con số tiền nhất định để tiêu bởi các con được truyền thừa lại từ bố mẹ là không thích dựa dẫm, ỉ lại vào người khác khi các con có khả năng tự lo được.
+
+Mẹ nhìn thấy hết tất cả những gì chị em con đang làm và chưa bao giờ mẹ mong cầu các con phải trở thành ai mà hãy luôn là chính mình. Luôn được bình an, khỏe mạnh, đạo đức, trí tuệ và sống tử tế có tình có nghĩa biết trước biết sau là mẹ mãn nguyện rồi! 😘😘😘`},
+
 /* ---- Bài mới (thêm 26/11/2026) ---- */
 {ngay:"2026-11-26", muc:"bep", tieuDe:"Giữa tuần lên nguyên combo Bò", anh:["fb/261126-01.jpg", "fb/261126-02.jpg", "fb/261126-03.jpg", "fb/261126-04.jpg"], nguon:"Facebook",
 noiDung:`Giữa tuần ăn món gì cho lạ mà ấm bụng? Vẫn là chiều lòng hợp ý của các cô chiêu cậu ấm nhà ông chủ thì nay em lên nguyên combo Bò nha quý zị😂😂😂`},

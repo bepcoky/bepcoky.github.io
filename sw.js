@@ -5,9 +5,9 @@
    - Ảnh, phông chữ: dùng bản đã lưu cho nhanh, đồng thời tải bản mới về thay.
    - Không đụng tới địa chỉ ngoài (Zalo, YouTube, máy đếm, Worker bếp nghỉ) và trang quan-ly.
    Đổi cách lưu thì tăng PHIEN_BAN. */
-const PHIEN_BAN = 'bepcoky-2026-11-26a';
+const PHIEN_BAN = 'bepcoky-2026-11-28a';
 const LUU_SAN = ['./', 'index.html', 'bai-viet.js', 'tin-moi.js', 'menu-do-vat.js', 'manifest.webmanifest',
-  'img/icon-192.png', 'img/icon-512.png', 'img/icon-maskable-512.png', 'img/apple-touch-icon.png'];
+  'favicon.svg', 'img/icon-192.png', 'img/icon-512.png', 'img/icon-maskable-512.png', 'img/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(PHIEN_BAN).then(c => Promise.all(LUU_SAN.map(u => c.add(u).catch(() => {})))).then(() => self.skipWaiting()));

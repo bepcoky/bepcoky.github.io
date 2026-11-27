@@ -11,6 +11,8 @@ tham_khao: Ý tưởng từ bài chia sẻ của anh Dinh Phong Nguyen (facebook
 ---
 Con dao santoku, dao thái thịt nguội, dao lạng cá hay có một hàng lõm hình bầu dục chạy dọc gần lưỡi. Hỏi người bán thì câu trả lời quen thuộc lắm: “rãnh để giảm ma sát, dao lướt êm hơn chị ạ”. Nghe xuôi tai thế thôi, chứ đây lại là câu nói sai phổ biến nhất về con dao đấy các bác 😜
 
+> 🎬 **Xem bản video:** bài này có bản video trên kênh YouTube [Bếp Cô Kỹ](https://www.youtube.com/@bepcoky), lên sóng **02/12/2026** – link xem em gắn vào đây khi video lên ạ.
+
 Em ngày nào cũng thái thái băm băm, có hôm bóc cả chục cân hành, nên tò mò đi tìm hiểu cho ra nhẽ.
 
 ## Cái rãnh tên là gì, ai nghĩ ra?

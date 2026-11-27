@@ -60,16 +60,17 @@ def trang(b, tat_ca):
 <title>{t} – Bếp Cô Kỹ</title>
 <meta name="description" content="{d}">
 <link rel="canonical" href="{url}">
-<meta name="theme-color" content="#c62a1e">
-<link rel="icon" href="/img/icon-192.png?v=2" type="image/png">
-<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#A8231A">
+<link rel="icon" href="/favicon.ico?v=3" sizes="48x48">
+<link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=3">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Bếp Cô Kỹ">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{t}">
 <meta property="og:description" content="{d}">
-<meta property="og:image" content="{SITE}/img/og/trang-chu.jpg">
+<meta property="og:image" content="{SITE}/img/og/bepcoky.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">

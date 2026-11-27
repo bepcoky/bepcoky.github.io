@@ -64,9 +64,10 @@ def khung(tieu_de, mo_ta, url, anh_og, than, ve='../'):
 <title>{e(tieu_de)} – Bếp Cô Kỹ</title>
 <meta name="description" content="{e(mo_ta)}">
 <link rel="canonical" href="https://bepcoky.com/{url}">
-<meta name="theme-color" content="#c62a1e">
-<link rel="icon" href="{ve}img/icon-192.png?v=2" type="image/png">
-<link rel="apple-touch-icon" href="{ve}img/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#A8231A">
+<link rel="icon" href="{ve}favicon.ico?v=3" sizes="48x48">
+<link rel="icon" href="{ve}favicon.svg?v=3" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{ve}img/apple-touch-icon.png?v=3">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Bếp Cô Kỹ">
 <meta property="og:locale" content="vi_VN">
@@ -121,7 +122,7 @@ def dung():
 {f'<div class="more"><h2>Cùng chuyên mục</h2><ul>{khac}</ul></div>' if khac else ''}
 <div class="cta"><a class="btn" href="./">Xem mọi bài kiến thức</a><a class="btn ghost" href="../#dat-hang">Đặt món Cô Kỹ làm</a></div>
 </article>'''
-        anh_og = 'img/kien-thuc/' + b['anh'] if b.get('anh', '').endswith('.jpg') else 'img/og/trang-chu.jpg'
+        anh_og = 'img/kien-thuc/' + b['anh'] if b.get('anh', '').endswith('.jpg') else 'img/og/bepcoky.jpg'
         open(os.path.join(GOC, 'kien-thuc', b['slug'] + '.html'), 'w', encoding='utf-8').write(
             khung(b['tieu_de'], b['tom_tat'], f'kien-thuc/{b["slug"]}.html', anh_og, noi))
 
@@ -141,7 +142,7 @@ def dung():
 <nav class="chips" aria-label="Chuyên mục">{chips}</nav>
 {''.join(the)}'''
     open(os.path.join(GOC, 'kien-thuc', 'index.html'), 'w', encoding='utf-8').write(
-        khung('Kiến thức bếp', 'Kiến thức bếp nhà kể theo giọng Cô Kỹ: dụng cụ, an toàn thực phẩm, nguyên liệu, rượu bia, nước mắm, gia vị.', 'kien-thuc/', 'img/og/trang-chu.jpg', noi))
+        khung('Kiến thức bếp', 'Kiến thức bếp nhà kể theo giọng Cô Kỹ: dụng cụ, an toàn thực phẩm, nguyên liệu, rượu bia, nước mắm, gia vị.', 'kien-thuc/', 'img/og/bepcoky.jpg', noi))
 
     # dữ liệu cho trang chủ
     ds = [{k: b.get(k, '') for k in ('slug', 'tieu_de', 'muc', 'anh', 'tom_tat', 'ngay')} for b in bai]
